@@ -3,15 +3,21 @@ import { Container } from 'react-bootstrap';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DetalleProducto from './components/views/DetalleProducto';
 import './App.css';
-import NavBar from './components/common/NavBar'
-import Footer from './components/common/Footer'
+import Inicio from './components/views/Inicio'
+import Navegar from './components/common/Navegar'
+import Pie from './components/common/Pie'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
     <Container>
-      <NavBar></NavBar>
+<Navegar></Navegar>
    <BrowserRouter>
    <Routes>
+    <Route
+    exact
+    path='/'
+    element={<Inicio></Inicio>}></Route>
     <Route 
      exact
      path="/detalle-producto/:id"
@@ -19,8 +25,9 @@ function App() {
     ></Route>
    </Routes>
    </BrowserRouter>
-   <Footer></Footer>
+<Pie></Pie>
    </Container>
+ 
   );
 }
 
