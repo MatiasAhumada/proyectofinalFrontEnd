@@ -6,6 +6,7 @@ import './App.css';
 import Inicio from './components/views/Inicio'
 import Navegar from './components/common/Navegar'
 import Pie from './components/common/Pie'
+import Login from './components/views/Login';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
      path="/detalle-producto/:id"
      element={<DetalleProducto></DetalleProducto>}
     ></Route>
+    <Route exact path="/login" element={<Login></Login>} />
    </Routes>
    </BrowserRouter>
 <Pie></Pie>
