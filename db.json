@@ -1,0 +1,21 @@
+{
+  "productos": [
+    {
+      "nombreProducto": "Tacos x6 unidades",
+      "precio": "1200",
+      "imagen": "https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "categoria": "comida",
+      "id": 1
+    },
+    {
+      "nombreProducto": "Quesadillas x6 unidades",
+      "precio": 1000,
+      "categoria": "comida",
+      "imagen": "https://images.pexels.com/photos/5840093/pexels-photo-5840093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 2
+    },
+    {
+      "id": 3
+    }
+  ]
+}
