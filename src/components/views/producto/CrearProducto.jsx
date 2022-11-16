@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { Form, Button } from "react-bootstrap";
-import { crearProductoAPI } from "../../helpers/queries";
+import { crearProductoApi } from "../../helpers/queries";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
@@ -15,20 +15,19 @@ const CrearProducto = () => {
     }}
   );
 
-const navegacion = useNavigate();
+const navigate = useNavigate();
 
   const onSubmit = (datos)=>{
-    // console.log(datos)
-    // console.log('desde submit')
    
-    crearProductoAPI(datos).then((respuesta)=>{
+   
+    crearProductoApi(datos).then((respuesta)=>{
       if (respuesta.status === 201){
         
         Swal.fire('Producto creado','El producto fue creado correctamente','success')
         
         reset();
        
-        navegacion('/administrador')
+        navigate('/administrador')
       }else{
         
         Swal.fire('Ocurrio un error','Vuelva a intentarlo mas tarde','error')

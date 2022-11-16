@@ -1,7 +1,8 @@
 
-const URL = 'http://localhost:3004/productos';
+const URL = 'http://localhost:4001/productos';
 
 // peticion GET
+
 
 
 export const consultarApi =async()=>{
@@ -14,4 +15,21 @@ export const consultarApi =async()=>{
     }
 }
 
+export const crearProductoAPI = async(id)=> {
+    try{
+       
+         const respuesta = await fetch(URL,{
+            method:'POST',
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(id)
+
+         });
+        
+        return respuesta;       
+    }catch(error){
+        console.log(error)
+    }
+}
 

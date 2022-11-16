@@ -2,7 +2,7 @@ import { Badge, Card, Col, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { obtenerProductoApi } from "../helpers/queris";
+import { obtenerProductoApi } from "../helpers/queries";
 
 const DetalleProducto = () => {
   const [detalle, setDetalle] = useState([]);
@@ -43,3 +43,14 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
+// import React from 'react';
+
+// const DetalleProducto = () => {
+//   return (
+//     <div>
+      
+//     </div>
+//   );
+// };
+
+// export default DetalleProducto;
