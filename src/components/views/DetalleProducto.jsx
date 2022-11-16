@@ -43,3 +43,14 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
+// import React from 'react';
+
+// const DetalleProducto = () => {
+//   return (
+//     <div>
+      
+//     </div>
+//   );
+// };
+
+// export default DetalleProducto;
