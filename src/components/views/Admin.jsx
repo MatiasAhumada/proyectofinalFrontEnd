@@ -9,9 +9,7 @@ const Admin =()=>{
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        // para ejecutar la funcion que trabaja con una promesa,
-        // cuando termine la promesa y venga la respuesta, mostrar la respuesta
-    
+        
         consultarApi().then((respuesta) => {
           console.log(respuesta);
           setProductos(respuesta);
@@ -38,7 +36,7 @@ const Admin =()=>{
             </thead>
             <tbody>
              {
-                productos.map((productos)=><ItemProducto key={productos.id} producto={productos}></ItemProducto>)
+                productos.map((productos)=><ItemProducto key={productos.id} producto={productos} setProductos={setProductos}></ItemProducto>)
              }
              
             </tbody>
