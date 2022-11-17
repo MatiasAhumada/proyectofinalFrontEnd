@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { borrarProductoAPI, consultarAPI } from "../../helpers/queries";
 
-const itemProducto = ({ producto, setProductos }) => {
+const ItemProducto = ({ producto, setProductos }) => {
   const borrarProducto = () => {
     Swal.fire({
       title: "¿Estas seguro que deseas eliminar el producto?",
@@ -59,4 +59,4 @@ const itemProducto = ({ producto, setProductos }) => {
   );
 };
 
-export default itemProducto;
+export default ItemProducto;
