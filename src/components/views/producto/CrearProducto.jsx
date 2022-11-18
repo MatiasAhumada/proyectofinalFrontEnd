@@ -104,10 +104,10 @@ const navigate = useNavigate();
             required:'Debe seleccionar una categoria'
           })}>
             <option value="">Seleccione una opcion</option>
-            <option value="bebida caliente">Comida caliente</option>
-            <option value="bebida fria">Comida rapida</option>
-            <option value="dulce">Postres</option>
-            <option value="salado">Salsas</option>
+            <option value="Comida caliente">Comida caliente</option>
+            <option value="Comida rapida">Comida rapida</option>
+            <option value="Postres">Postres</option>
+            <option value="Salsas">Salsas</option>
           </Form.Select>
           <Form.Text className="text-danger">
             {errors.categoria?.message}

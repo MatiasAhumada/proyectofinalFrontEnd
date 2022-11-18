@@ -33,3 +33,18 @@ export const crearProductoAPI = async(id)=> {
     }
 }
 
+export const obtenerProductoApi = async (id) => {
+    try {
+      
+      const respuesta = await fetch(URL + "/" + id);
+      const productoBuscado = {
+        dato: await respuesta.json(),
+        status: respuesta.status,
+      };
+  
+      // console.log(respuesta)
+      return productoBuscado;
+    } catch (error) {
+      console.log(error);
+    }
+  };
