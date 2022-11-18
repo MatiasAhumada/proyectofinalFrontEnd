@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Form, Button } from "react-bootstrap/lib/Navbar"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { obtenerProductoApi } from "../../helpers/queries";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
@@ -40,8 +40,17 @@ const editarProducto = ()=>{
     },[])
 
     const onSubmit = (producto )=>{
-        
+        editarProductoApi(id, producto).then((respuesta)=>{
+            if(respuesta.status === 200){
+                Swal.fire ('Producto actualizado','el producto fue actualizado correctamente','success')
+                navegacion('/admin')
+            }else{
+                Swal.fire('Ocurrio un error','Intente este paso en unos minutos','error')               
+            }
+        })
     }
+
+    const navegacion = useNavigate();
 
     return (
         <section className="container mainSection">
