@@ -1,16 +1,15 @@
-import { Container } from "react-bootstrap";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DetalleProducto from "./components/views/DetalleProducto";
 import "./App.css";
 import Inicio from "./components/views/Inicio";
-import Navegar from "./components/common/Navegar";
+import Nav from "./components/common/Nav";
 import Pie from "./components/common/Pie";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <Container>
-      <Navegar></Navegar>
+    <section>
+      <Nav></Nav>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
@@ -22,7 +21,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Pie></Pie>
-    </Container>
+    </section>
   );
 }
 
