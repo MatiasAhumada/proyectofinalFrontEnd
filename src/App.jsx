@@ -3,8 +3,9 @@ import DetalleProducto from "./components/views/DetalleProducto";
 import "./App.css";
 import Inicio from "./components/views/Inicio";
 import Nav from "./components/common/Nav";
-import Pie from "./components/common/Pie";
+import Footer from "./components/common/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           ></Route>
         </Routes>
       </BrowserRouter>
-      <Pie></Pie>
+      <Footer></Footer>
     </section>
   );
 }
