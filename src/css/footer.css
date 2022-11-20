@@ -64,7 +64,7 @@ top: -100px;
 left: 0;
 width: 100%;
 height: 200px;
-background: url(img/fuegoAlto-01.png);
+background: url(../img/fuegoAlto-01.png);
 background-size: 1000px 200px;
 }
 footer .fire#fire1{

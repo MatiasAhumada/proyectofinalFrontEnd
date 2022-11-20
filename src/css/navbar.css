@@ -11,7 +11,7 @@ html {
   
 }
 section{
-    background: url(img/RojoGranulado-02.png); 
+    background: url(../img/RojoGranulado-02.png); 
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -31,7 +31,7 @@ a.nav__brand{
   align-items: center;
   justify-content: space-around;
   height: 8vh;
-  background: rgb(176, 57, 60) url(img/RojoGranulado-02.png);
+  background: url(../img/RojoGranulado-02.png);
   
 }
 .nav__brand {
@@ -89,7 +89,7 @@ div .nav__toggler{
     right: 0;
     height: 93vh;
     width: 100vw;
-    background: url(img/RojoGranulado-02.png);
+    background: url(../img/RojoGranulado-02.png);
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;

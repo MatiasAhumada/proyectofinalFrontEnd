@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../navbar.css";
+import "../../css/navbar.css";
 
 function Nav() {
   const [active, setActive] = useState("nav__menu");
