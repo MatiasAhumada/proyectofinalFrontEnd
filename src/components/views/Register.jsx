@@ -1,6 +1,5 @@
-import { Button, Card, Container } from "react-bootstrap";
+import { Button, Card, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Form } from "react-router-dom";
 import Swal from "sweetalert2";
 import { crearUsuario } from "../helpers/queris";
 

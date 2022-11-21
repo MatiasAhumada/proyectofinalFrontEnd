@@ -46,7 +46,7 @@ export const borrarProductoAPI = async (id) => {
 
   export const crearUsuario = async (usuario) =>{
     try {
-        const respuesta = await fetch(urlUsuario,{
+        const respuesta = await fetch(URL,{
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
