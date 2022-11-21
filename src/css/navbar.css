@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section{
+    background: url(../../public/img/RojoGranulado-02.png); 
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a.nav__brand{
+    color: rgb(241, 241, 228);
+    font-weight: 600;
+    font-size: 35px;
+}
+a.nav__brand:hover{
+  color: rgb(241, 241, 228);
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: url(../../public/img/RojoGranulado-02.png);
+  
+}
+.nav__brand {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+  margin-top: 13px;
+  z-index: 5;
+  
+}
+
+
+ul .nav__link{
+    color: rgb(241, 241, 228);
+    text-decoration: none;
+}
+
+ul .nav__link:hover{
+    background-color: rgb(241, 241, 228);
+    color: rgb(176, 57, 60);
+    text-decoration: none;
+    transition: .5s;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.nav__toggler {
+  display: none;
+}
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: rgb(241, 241, 228);
+  transition: 0.3s ease-in;
+
+}
+
+div .nav__toggler{
+    color: rgb(241, 241, 228);
+}
+@media screen and (max-width: 768px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__menu {
+    position: fixed;
+    top: 5vh;
+    right: 0;
+    height: 93vh;
+    width: 100vw;
+    background: url(../../public/img/RojoGranulado-02.png);
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+  ul .nav__link:hover{
+    background-color: rgb(241, 241, 228);
+    color: rgb(176, 57, 60);
+    text-decoration: none;
+    transition: .5s;
+    padding: 7px;
+    border-radius: 10px;
+}
+}
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+}

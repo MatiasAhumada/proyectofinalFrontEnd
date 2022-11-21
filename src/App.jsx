@@ -1,4 +1,5 @@
 
+
 import { Container } from 'react-bootstrap';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import DetalleProducto from './components/views/DetalleProducto';
@@ -7,14 +8,17 @@ import Inicio from './components/views/Inicio'
 import Navegar from './components/common/Navegar'
 import Pie from './components/common/Pie'
 import Login from './components/views/Login';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from 'react';
+
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
   const [usuarioLogeado, setUsuarioLogeado] = useState(usuario)
 
   return (
+
     <Container>
 <Navegar></Navegar>
    <BrowserRouter>
@@ -34,6 +38,7 @@ function App() {
 <Pie></Pie>
    </Container>
  
+
   );
 }
 

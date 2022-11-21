@@ -1,10 +1,15 @@
 import React from 'react';
+import "../../css/inicio.css";
+import Portada from "../home/Portada"
+import Info from "../home/Info"
 
 const Inicio = () => {
     return (
-        <div className='text-center'>
-            <h1>hola mundo</h1>
-        </div>
+        <section>
+            <Portada></Portada>
+            <Info></Info>
+        </section>
+        
     );
 };
 
