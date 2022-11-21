@@ -9,7 +9,7 @@ const Portada = () => {
             
             <video src="/videos/menu3.mp4" autoPlay loop muted></video>
              </div>
-             <hr />
+            
             </section>
         
     );
