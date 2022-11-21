@@ -8,7 +8,7 @@ const Register = () => {
   const {
     register,
     handleSubmit,
-    fromState: { errors },
+    formState: { errors },
   } = useForm({
     defaultValues: {
       nombre: "",
@@ -51,9 +51,9 @@ const Register = () => {
                   },
                 })}
               />
-              <Form.text className="text-danger">
+              <Form.Text className="text-danger">
                 {errors.nombre?.message}
-              </Form.text>
+              </Form.Text>
             </Form.Group>
             <Form.Group controlId="formEmail">
               <Form.Label>Email</Form.Label>
@@ -76,9 +76,9 @@ const Register = () => {
                   },
                 })}
               />
-              <Form.text className="text-danger">
+              <Form.Text className="text-danger">
                 {errors.email?.message}
-              </Form.text>
+              </Form.Text>
             </Form.Group>
             <Form.Group controlId="formPassword">
               <Form.Label>Password</Form.Label>
@@ -101,9 +101,9 @@ const Register = () => {
                   },
                 })}
               />
-              <Form.text className="text-danger">
+              <Form.Text className="text-danger">
                 {errors.password?.message}
-              </Form.text>
+              </Form.Text>
             </Form.Group>
             <Button type="submit" className="mt-3">Crear Usuario</Button>
           </Form>
