@@ -1,8 +1,12 @@
 import { Button, Card, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { usuarioLogin } from "../helpers/queris";
 
-const Login = () => {
+const Login = ({ setUsuarioLogeado }) => {
+  const navegar = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -14,12 +18,23 @@ const Login = () => {
     },
   });
 
+  const onSubmit = (dato) => {
+    usuarioLogin(dato).then((respuesta) => {
+      if (respuesta) {
+        localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
+        setUsuarioLogeado(respuesta);
+      } else {
+        Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
+      }
+    });
+  };
+
   return (
     <Container>
       <Card className="mt-4">
         <Card.Header as="h4">Login</Card.Header>
         <Card.Body>
-          <Form onSubmit={handleSubmit()}>
+          <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="email">
               <Form.Label>Email</Form.Label>
               <Form.Control

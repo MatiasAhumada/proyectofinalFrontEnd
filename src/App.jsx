@@ -8,8 +8,12 @@ import Navegar from './components/common/Navegar'
 import Pie from './components/common/Pie'
 import Login from './components/views/Login';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from 'react';
 
 function App() {
+  const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
+  const [usuarioLogeado, setUsuarioLogeado] = useState(usuario)
+
   return (
     <Container>
 <Navegar></Navegar>
@@ -24,7 +28,7 @@ function App() {
      path="/detalle-producto/:id"
      element={<DetalleProducto></DetalleProducto>}
     ></Route>
-    <Route exact path="/login" element={<Login></Login>} />
+    <Route exact path="/login" element={<Login setUsuarioLogeado={setUsuarioLogeado}></Login>} />
    </Routes>
    </BrowserRouter>
 <Pie></Pie>
