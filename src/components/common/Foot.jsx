@@ -1,7 +1,7 @@
 import "../../css/footer.css";
 
 
-const Footer = () => {
+const Foot = () => {
     return (
       <footer>
         <div className="fire">
@@ -26,5 +26,5 @@ const Footer = () => {
     );
   };
   
-  export default Footer;
+  export default Foot;
   

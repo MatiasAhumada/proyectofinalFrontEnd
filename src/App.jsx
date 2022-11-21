@@ -16,7 +16,7 @@ function App() {
 
   return (
     <section>
-      <Foot></Foot>
+      <Nav></Nav>
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
@@ -33,7 +33,8 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-      <Nav></Nav>
+      <Foot></Foot>
+    
     </section>
   );
 }

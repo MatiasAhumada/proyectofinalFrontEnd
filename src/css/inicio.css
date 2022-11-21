@@ -11,7 +11,7 @@ video {
 h1.titulo{
   color: rgb(241, 241, 228);
   font-size: 60px;
-  background-image: url(../../public/img/fondoVerde.png);
+  
 }
 
 p{
@@ -28,10 +28,10 @@ span.importante{
 
 
 img{
-  width: 50%;
+  width: 30%;
   float: left;
   margin-right: 20px;
-  margin-top: 15px;
+  
 }
 
 
@@ -39,7 +39,8 @@ img{
   width: 100%;
   padding: 3%;
   text-align: center;
-
+  background-image: url(../../public/img/VerdeGranulado.png);
+  margin-bottom: 20px;
 }
 
 
