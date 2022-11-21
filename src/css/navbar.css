@@ -24,6 +24,9 @@ a.nav__brand{
     font-weight: 600;
     font-size: 35px;
 }
+a.nav__brand:hover{
+  color: rgb(241, 241, 228);
+}
 
 
 .nav {
@@ -45,6 +48,7 @@ a.nav__brand{
   justify-content: space-around;
   gap: 5rem;
   margin-top: 13px;
+  z-index: 5;
   
 }
 
@@ -85,7 +89,7 @@ div .nav__toggler{
   }
   .nav__menu {
     position: fixed;
-    top: 7vh;
+    top: 5vh;
     right: 0;
     height: 93vh;
     width: 100vw;

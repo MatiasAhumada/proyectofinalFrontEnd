@@ -1,11 +1,13 @@
 import React from 'react';
 import "../../css/inicio.css";
+import Portada from "../home/Portada"
 
 const Inicio = () => {
     return (
-        <div className='text-center'>
-            <h1>hola mundo</h1>
-        </div>
+        <section>
+            <Portada></Portada>
+            </section>
+        
     );
 };
 
