@@ -10,7 +10,11 @@ import Pie from './components/common/Pie'
 import Login from './components/views/Login';
 
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import Register from "./components/views/Register";
+
 import { useState } from 'react';
+
 
 
 function App() {
@@ -18,6 +22,7 @@ function App() {
   const [usuarioLogeado, setUsuarioLogeado] = useState(usuario)
 
   return (
+
 
     <Container>
 <Navegar></Navegar>
@@ -32,12 +37,14 @@ function App() {
      path="/detalle-producto/:id"
      element={<DetalleProducto></DetalleProducto>}
     ></Route>
+      <Route exact path="/registro" element={<Register></Register>}/>
     <Route exact path="/login" element={<Login setUsuarioLogeado={setUsuarioLogeado}></Login>} />
    </Routes>
    </BrowserRouter>
 <Pie></Pie>
    </Container>
  
+
 
   );
 }
