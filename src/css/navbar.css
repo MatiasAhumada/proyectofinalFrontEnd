@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 100%;
-  
-  
-}
 section{
     background: url(../img/RojoGranulado-02.png); 
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
