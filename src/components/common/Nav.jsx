@@ -39,6 +39,11 @@ function Nav() {
             Contact
           </a>
         </li>
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+            Login
+          </a>
+        </li>
 
       </ul>
       <div onClick={navToggle} className={icon}>
