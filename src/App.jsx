@@ -35,6 +35,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Foot></Foot>
+    
     </section>
   );
 }
