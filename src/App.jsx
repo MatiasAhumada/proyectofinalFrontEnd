@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DetalleProducto from "./components/views/DetalleProducto";
+import CrearProducto from "./components/views/producto/CrearProducto"
 import "./App.css";
 import Inicio from "./components/views/Inicio";
 import Nav from "./components/common/Nav";
@@ -25,6 +26,11 @@ function App() {
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
+          <Route
+            exact
+            path="/administrar/crear"
+            element={<CrearProducto></CrearProducto>}
+          ></Route>
           <Route exact path="/registro" element={<Register></Register>} />
           <Route
             exact
@@ -34,7 +40,6 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Foot></Foot>
-    
     </section>
   );
 }
