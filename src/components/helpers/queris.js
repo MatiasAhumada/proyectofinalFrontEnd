@@ -1,5 +1,6 @@
 
 const urlUsuario = "http://localhost:3004/usuario"
+const URL = 'http://localhost:4001/apiEpik/productos'
 
 export const usuarioLogin = async (usuario) =>{
     try {
@@ -21,8 +22,6 @@ export const usuarioLogin = async (usuario) =>{
         return
     }
 }
-
-const URL = 'http://localhost:4001/apiEpik/productos'
 
 export const borrarProductoAPI = async (id) => {
     try {
@@ -71,7 +70,7 @@ export const borrarProductoAPI = async (id) => {
 
   export const crearUsuario = async (usuario) =>{
     try {
-        const respuesta = await fetch(URL,{
+        const respuesta = await fetch(urlUsuario,{
             method: "POST",
             headers:{
                 "Content-Type": "application/json"

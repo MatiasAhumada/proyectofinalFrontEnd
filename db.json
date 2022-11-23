@@ -1,10 +1,16 @@
 {
-    "usuario": [
-        {
-            "nombre": "Alvaro",
-            "email": "email@mail.com",
-            "password": "12345",
-            "id": 1
-        }
-    ]
+  "usuario": [
+    {
+      "nombre": "Alvaro",
+      "email": "email@mail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "nombre": "Alvaro Ruiz",
+      "email": "Alvaro@hotmail.com",
+      "password": "Alvaro12345",
+      "id": 2
+    }
+  ]
 }

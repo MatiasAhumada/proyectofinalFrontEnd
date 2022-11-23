@@ -9,6 +9,7 @@ const Register = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm({
     defaultValues: {
       nombre: "",
@@ -21,7 +22,7 @@ const Register = () => {
     crearUsuario(datos).then((respuesta)=>{
         if(respuesta.status === 201){
             Swal.fire("usuario creado", " El usuario se creo correctamente", "success")
-            
+            reset();
         }else{
             Swal.fire("Hubo un error inesperado", "Intentelo de nuevo mas tarde", "error")
         }
