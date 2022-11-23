@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./components/views/Register";
 import { useState } from "react";
 import "./App.css";
+import ProductosMenu from "./components/views/producto/ProductosMenu";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
@@ -32,7 +33,18 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogeado={setUsuarioLogeado}></Login>}
           />
+             <Route
+          exact
+          path="/detalle-producto/:id"
+          element={<DetalleProducto></DetalleProducto>}
+        ></Route>
+             <Route
+          exact
+          path="/menu"
+          element={<ProductosMenu></ProductosMenu>}
+        ></Route>
         </Routes>
+        
       </BrowserRouter>
       <Foot></Foot>
     

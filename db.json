@@ -6,5 +6,18 @@
             "password": "12345",
             "id": 1
         }
+    ],
+
+
+    "productos": [
+        {
+            "id":1,
+            "nombreProducto": "Alvaro",
+            "imagen": "https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "categoria": "12345",
+            "precio": "10",
+            "descripcion":"hola 123"
+        }
+    
     ]
 }
