@@ -9,6 +9,7 @@ import Login from "./components/views/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./components/views/Register";
 import { useState } from "react";
+import PedidosUsuario from "./components/views/PedidosUsuario";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
@@ -31,6 +32,7 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogeado={setUsuarioLogeado}></Login>}
           />
+          <Route exact path="/pedidos" element={<PedidosUsuario></PedidosUsuario>} ></Route>
         </Routes>
       </BrowserRouter>
       <Foot></Foot>
