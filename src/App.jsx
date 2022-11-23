@@ -12,6 +12,7 @@ import Login from "./components/views/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./components/views/Register";
 import { useState } from "react";
+import EditarProducto from "./components/views/producto/EditarProducto";
 
 import PedidosUsuario from "./components/views/PedidosUsuario";
 
@@ -39,6 +40,11 @@ function App() {
             exact
             path="/administrar/crear"
             element={<CrearProducto></CrearProducto>}
+          ></Route>
+          <Route
+            exact
+            path="/administrar/editar"
+            element={<EditarProducto></EditarProducto>}
           ></Route>
           <Route exact path="/registro" element={<Register></Register>} />
           <Route
