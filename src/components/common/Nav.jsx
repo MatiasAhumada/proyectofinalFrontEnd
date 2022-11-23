@@ -36,12 +36,17 @@ function Nav() {
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            Contact
+            Contacto
           </a>
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            Login
+            Registrarse
+          </a>
+        </li>
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+            Iniciar Sesión
           </a>
         </li>
 

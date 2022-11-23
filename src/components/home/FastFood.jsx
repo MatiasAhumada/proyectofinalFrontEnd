@@ -5,7 +5,7 @@ import "../../css/inicio.css";
 const FastFood = () => {
     return (
 
-        <section className='containerLeft2'>
+        <article className='containerLeft2'>
         
         
         
@@ -21,7 +21,7 @@ Su comida es al paso y una vez hecho el pedido, se puede agregar condimentos var
 
 Entre sus especialidades se destaca por lejos el famoso "Taco al pastor'': carne de cerdo mechada con ananá flambeada, acompañada con cebolla, piña, mucho cilantro y lima.</p>
 
-        </section>
+        </article>
         
     );
 };

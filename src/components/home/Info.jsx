@@ -5,7 +5,7 @@ import "../../css/inicio.css";
 const Portada = () => {
     return (
 
-        <section className='containerLeft'>
+        <article className='containerLeft'>
 
         
         
@@ -19,7 +19,7 @@ const Portada = () => {
 En definitiva y sin lugar a dudas, uno de los legados más preciados para todos los mexicanos es nuestra cocina, estandarte de nuestra mexicanidad. Nuestra cocina mexicana es tan reconocida y aclamada dentro de Argentina, de igual modo lo es a nivel internacional, Chile, Uruguay y próximamente Paraguay. El sabor bien mexicano no se queda aquí, sino que ha sabido romper fronteras, enamorando a los paladares alrededor del mundo entero.
 
 En todo el mundo la gente conoce los tacos, las enchiladas, los burritos y demás antojitos típicos de nuestra gastronomía. ¿Eres vegetariano, vegano o no puedes comer cierto alimento? ¡No hay problema! Existen infinidades de platillos deliciosos que no utilizan productos de origen animal y siguen siendo deliciosos.</p>
-        </section>
+        </article>
         
     );
 };

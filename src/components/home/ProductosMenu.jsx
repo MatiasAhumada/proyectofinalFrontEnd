@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 const ProductosMenu = () => {
     return (
 
-        <section className='containerRight2'>
+        <article className='containerRight2'>
         <h1 className='titulo'>LOS MÁS ELEGIDOS</h1>
         <hr />
         <br />
@@ -75,7 +75,7 @@ const ProductosMenu = () => {
     
 <br />
 <br />
-        </section>
+        </article>
         
     );
 };
