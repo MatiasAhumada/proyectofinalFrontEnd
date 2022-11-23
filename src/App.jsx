@@ -12,6 +12,7 @@ import { useState } from "react";
 import PedidosUsuario from "./components/views/PedidosUsuario";
 
 import "./App.css";
+import ProductosMenu from "./components/views/producto/ProductosMenu";
 
 
 function App() {
@@ -36,8 +37,19 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogeado={setUsuarioLogeado}></Login>}
           />
+             <Route
+          exact
+          path="/detalle-producto/:id"
+          element={<DetalleProducto></DetalleProducto>}
+        ></Route>
+             <Route
+          exact
+          path="/menu"
+          element={<ProductosMenu></ProductosMenu>}
+        ></Route>
           <Route exact path="/pedidos" element={<PedidosUsuario></PedidosUsuario>} ></Route>
         </Routes>
+        
       </BrowserRouter>
       <Foot></Foot>
     

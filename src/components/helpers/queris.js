@@ -1,6 +1,7 @@
 
 const urlUsuario = "http://localhost:3004/usuario"
 const URL = 'http://localhost:4001/apiEpik/productos'
+const URL = 'http://localhost:4001/productos'
 
 export const usuarioLogin = async (usuario) =>{
     try {
@@ -22,6 +23,23 @@ export const usuarioLogin = async (usuario) =>{
         return
     }
 }
+export const crearUsuario = async (usuario) =>{
+  try {
+      const respuesta = await fetch(URL,{
+          method: "POST",
+          headers:{
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(usuario)
+      })
+      return respuesta;
+  } catch (error) {
+      console.log(error)
+      return;
+  }
+}
+
+
 
 export const borrarProductoAPI = async (id) => {
     try {
@@ -67,20 +85,19 @@ export const borrarProductoAPI = async (id) => {
     }
   };
 
-
-  export const crearUsuario = async (usuario) =>{
+  export const consultarProductoApi = async () => {
     try {
-        const respuesta = await fetch(urlUsuario,{
-            method: "POST",
-            headers:{
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(usuario)
-        })
-        return respuesta;
-    } catch (error) {
-        console.log(error)
-        return;
-    }
-  }
+      // fetch para peticiones
+      // await para esperar
+      const respuesta = await fetch(URL);
+      // .json extrae datos en la propieda de la respuesta
+      const listaProductos = await respuesta.json();
+      console.log(respuesta);
+      return listaProductos;
 
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+ 

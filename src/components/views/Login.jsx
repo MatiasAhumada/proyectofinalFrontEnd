@@ -8,7 +8,7 @@ import "../../css/views.css";
 
 
 const Login = ({ setUsuarioLogeado }) => {
-  // const navegar = useNavigate();
+  const navegar = useNavigate();
 
   const {
     register,
