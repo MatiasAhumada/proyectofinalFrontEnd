@@ -23,6 +23,7 @@ const Login = ({ setUsuarioLogeado }) => {
       if (respuesta) {
         localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
         setUsuarioLogeado(respuesta);
+        navegar("/")
       } else {
         Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
       }
@@ -47,8 +48,8 @@ const Login = ({ setUsuarioLogeado }) => {
                     message: "Ingresar mínimo 2 dígitos",
                   },
                   maxLength: {
-                    value: 10,
-                    message: "Ingresar máximo 10 dígitos",
+                    value: 50,
+                    message: "Ingresar máximo 50 dígitos",
                   },
                   pattern: {
                     value: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
@@ -72,7 +73,7 @@ const Login = ({ setUsuarioLogeado }) => {
                     message: "Contraseña invalida",
                   },
                   maxLength: {
-                    value: 10,
+                    value: 50,
                     message: "contraseña invalida",
                   },
                 })}
