@@ -1,14 +1,4 @@
 {
-    "usuario": [
-        {
-            "nombre": "Alvaro",
-            "email": "email@mail.com",
-            "password": "12345",
-            "id": 1
-        }
-    ],
-
-
     "productos": [
         {
             "id":1,
@@ -19,5 +9,21 @@
             "descripcion":"hola 123"
         }
     
-    ]
+    ],
+
+  "usuario": [
+    {
+      "nombre": "Alvaro",
+      "email": "email@mail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "nombre": "Alvaro Ruiz",
+      "email": "Alvaro@hotmail.com",
+      "password": "Alvaro12345",
+      "id": 2
+    }
+  ]
+
 }

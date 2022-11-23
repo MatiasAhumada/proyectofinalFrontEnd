@@ -8,8 +8,12 @@ import Login from "./components/views/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./components/views/Register";
 import { useState } from "react";
+
+import PedidosUsuario from "./components/views/PedidosUsuario";
+
 import "./App.css";
 import ProductosMenu from "./components/views/producto/ProductosMenu";
+
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
@@ -43,6 +47,7 @@ function App() {
           path="/menu"
           element={<ProductosMenu></ProductosMenu>}
         ></Route>
+          <Route exact path="/pedidos" element={<PedidosUsuario></PedidosUsuario>} ></Route>
         </Routes>
         
       </BrowserRouter>

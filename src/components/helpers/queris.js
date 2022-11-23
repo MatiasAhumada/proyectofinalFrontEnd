@@ -1,5 +1,7 @@
 
 const urlUsuario = "http://localhost:3004/usuario"
+const URL = 'http://localhost:4001/apiEpik/productos'
+const URL = 'http://localhost:4001/productos'
 
 export const usuarioLogin = async (usuario) =>{
     try {
@@ -38,7 +40,6 @@ export const crearUsuario = async (usuario) =>{
 }
 
 
-const URL = 'http://localhost:4001/productos'
 
 export const borrarProductoAPI = async (id) => {
     try {
@@ -93,6 +94,7 @@ export const borrarProductoAPI = async (id) => {
       const listaProductos = await respuesta.json();
       console.log(respuesta);
       return listaProductos;
+
     } catch (error) {
       console.log(error);
     }
