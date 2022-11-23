@@ -8,6 +8,15 @@ import ProductosMenu from '../home/ProductosMenu';
 
 
 const Inicio = () => {
+//     const [producto, setProducto] = useState([]);
+ 
+//   useEffect(() => {
+//     consultarApi().then((respuesta) => {
+//       console.log(respuesta);
+//       setProducto(respuesta);
+//     });
+//   }, [])
+
     return (
         <section>
             <Portada></Portada>

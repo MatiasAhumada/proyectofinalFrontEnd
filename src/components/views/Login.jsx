@@ -8,7 +8,7 @@ import "../../css/views.css";
 
 
 const Login = ({ setUsuarioLogeado }) => {
-  const navegar = useNavigate();
+  // const navegar = useNavigate();
 
   const {
     register,
@@ -33,10 +33,10 @@ const Login = ({ setUsuarioLogeado }) => {
   };
 
   return (
-    <Container>
+    <Container >
       <Card className="mt-4">
         <Card.Header as="h4">Login</Card.Header>
-        <Card.Body>
+        <Card.Body >
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="email">
               <Form.Label>Email</Form.Label>
