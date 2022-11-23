@@ -25,25 +25,20 @@ const CrearProducto = () => {
           categoria: "",
         },
       });
-      //inicializar useNavigate
       const navegacion = useNavigate();
     
       const onSubmit = (datos) => {
         console.log(datos);
-        // enviar los datos de la api
         crearProductoAPI(datos).then((respuesta) => {
           if (respuesta.status === 201) {
-            //el producto se creo
             Swal.fire(
               "Producto creado",
               "El producto fue creado correctamente",
               "success"
             );
             reset();
-            //redireccionar
             navegacion("/administrador");
           } else {
-            //mostrar mensaje de error al usuario
             Swal.fire("Ocurrio un error ", "Intentelo mas tarde", "error");
           }
         });
@@ -53,7 +48,6 @@ const CrearProducto = () => {
         <section className="container mainSection">
           <h1 className="display-4 mt-5">Nuevo producto</h1>
           <hr />
-          {/* <Form onSubmit={handleSubmit}> */}
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="formNombreProdcuto">
               <Form.Label>Nombre producto*</Form.Label>
