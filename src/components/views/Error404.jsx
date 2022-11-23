@@ -1,3 +1,4 @@
+import "../../css/views.css";
 
 const Error404 = () => {
     return (

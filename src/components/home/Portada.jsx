@@ -4,13 +4,13 @@ import "../../css/inicio.css";
 
 const Portada = () => {
     return (
-        <section>
+        <article>
             <div className='videoContainer'>
             
             <video src="/videos/menu3.mp4" autoPlay loop muted></video>
              </div>
             
-            </section>
+            </article>
         
     );
 };

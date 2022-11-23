@@ -11,8 +11,11 @@ video {
 h1.titulo{
   color: rgb(241, 241, 228);
   font-size: 60px;
+
   
 }
+
+
 
 p{
   font-size: 20px;
@@ -24,15 +27,29 @@ p{
 span.importante{
   font-size: 25px;
   padding: 10px;
+  color: rgb(241, 241, 228);
 }
 
 
 img{
-  width: 30%;
+  width: 50%;
   float: left;
   margin-right: 20px;
   
 }
+
+img.right{
+  width: 50%;
+  float: right;
+  margin-left: 20px;
+  
+}
+
+section{
+  background-image: url(../../public/img/RojoGranulado-02.png);
+
+}
+
 
 
 .containerLeft{
@@ -40,9 +57,119 @@ img{
   padding: 3%;
   text-align: center;
   background-image: url(../../public/img/VerdeGranulado.png);
-  margin-bottom: 20px;
+}
+.containerLeft2{
+  width: 100%;
+  padding: 3%;
+  text-align: center;
+  background-image: url(../../public/img/LimaGranulado.png);
 }
 
+
+.containerRight{
+  width: 100%;
+  padding: 3%;
+  text-align: center;
+  background-image: url(../../public/img/NaranjaGranulado.png);
+}
+.containerRight2{
+  width: 100%;
+  padding: 3%;
+  text-align: center;
+  background-image: url(../../public/img/RojoGranulado-02.png);
+  margin-bottom: 100px;
+}
+div.card{
+  background-image: url(../../public/img/NaranjaGranulado.png);
+  
+}
+
+div.card.dos{
+  background-image: url(../../public/img/VerdeGranulado.png);
+}
+
+div.card.tres{
+  background-image: url(../../public/img/LimaGranulado.png);
+}
+
+div.card:hover{
+  transform: scale(1.04);
+}
+div.list-group-item{
+  background-image: url(../../public/img/NaranjaGranulado.png);
+  color:brown;
+}
+div.list-group-item.dos{
+  background-image: url(../../public/img/VerdeGranulado.png);
+  color:rgb(209, 207, 111);
+}
+div.list-group-item.tres{
+  background-image: url(../../public/img/LimaGranulado.png);
+  color:rgb(62, 99, 71);
+}
+div.card-title.h5{
+  font-size: 30px;
+  color:brown;
+}
+
+div.card-title.h5.dos{
+  font-size: 30px;
+  color:rgb(209, 207, 111);
+}
+
+div.card-title.h5.tres{
+  font-size: 30px;
+  color:rgb(62, 99, 71);
+}
+p.card-text{
+  font-size: 15px;
+}
+a.card-link{
+  background-color: brown;
+  padding: 2%;
+  color:rgb(241, 241, 228);
+  text-decoration: none;
+}
+
+a.card-link:hover{
+  background-color: rgb(241, 241, 228);
+  padding: 2%;
+  color:brown;
+  text-decoration: none;
+}
+
+a.card-link.dos{
+  background-color: rgb(209, 207, 111);
+  padding: 2%;
+  color:rgb(68, 95, 74);
+  text-decoration: none;
+}
+
+a.card-link.dos:hover{
+  background-color: rgb(68, 95, 74);
+  padding: 2%;
+  color:rgb(209, 207, 111);
+  text-decoration: none;
+}
+
+a.card-link.tres{
+  background-color: rgb(68, 95, 74);
+  padding: 2%;
+  color:rgb(209, 207, 111);
+  text-decoration: none;
+}
+
+a.card-link.tres:hover{
+  background-color: rgb(209, 207, 111);
+  padding: 2%;
+  color:rgb(68, 95, 74);
+  text-decoration: none;
+}
+
+div.container{
+  display: flex;
+  gap:150px;
+}
 
 @media screen and (max-width: 414px) {
   img {
