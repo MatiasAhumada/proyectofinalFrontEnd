@@ -16,17 +16,17 @@ function Nav() {
   };
   return (
     <nav className="nav">
-      <a  href="#" className="nav__brand">
+      <a  href={'/'} className="nav__brand">
         STACK-EPICA
       </a>
       <ul className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href={'/'} className="nav__link">
             Inicio
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href={'/menu'} className="nav__link">
             Menú
           </a>
         </li>
@@ -41,25 +41,16 @@ function Nav() {
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href={'/register'} className="nav__link">
             Registrarse
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
+          <a href={'/login'} className="nav__link">
             Iniciar Sesión
           </a>
         </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Registrarse
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Iniciar Sesion
-          </a>
-        </li>
+        
 
       </ul>
       <div onClick={navToggle} className={icon}>
