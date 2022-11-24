@@ -1,5 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DetalleProducto from "./components/views/DetalleProducto";
+import CrearProducto from "./components/views/producto/CrearProducto"
+import "./App.css";
+
+
 
 import Inicio from "./components/views/Inicio";
 import Nav from "./components/common/Nav";
@@ -8,6 +12,7 @@ import Login from "./components/views/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./components/views/Register";
 import { useState } from "react";
+import EditarProducto from "./components/views/producto/EditarProducto";
 
 import PedidosUsuario from "./components/views/PedidosUsuario";
 
@@ -31,6 +36,16 @@ function App() {
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
+          <Route
+            exact
+            path="/administrar/crear"
+            element={<CrearProducto></CrearProducto>}
+          ></Route>
+          <Route
+            exact
+            path="/administrar/editar"
+            element={<EditarProducto></EditarProducto>}
+          ></Route>
           <Route exact path="/registro" element={<Register></Register>} />
           <Route
             exact
@@ -52,7 +67,6 @@ function App() {
         
       </BrowserRouter>
       <Foot></Foot>
-    
     </section>
   );
 }
