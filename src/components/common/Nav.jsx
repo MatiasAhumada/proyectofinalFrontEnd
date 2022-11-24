@@ -41,7 +41,7 @@ function Nav() {
           </a>
         </li>
         <li className="nav__item">
-          <a href={'/register'} className="nav__link">
+          <a href={'/registro'} className="nav__link">
             Registrarse
           </a>
         </li>
