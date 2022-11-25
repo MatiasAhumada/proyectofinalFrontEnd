@@ -2,7 +2,7 @@ import { Badge, Card, Col, Row, Image } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { obtenerProductoApi } from "../helpers/queries";
+import { obtenerProductoApi } from "../helpers/queris";
 
 const DetalleProducto = () => {
   const [detalle, setDetalle] = useState([]);
@@ -32,6 +32,7 @@ const DetalleProducto = () => {
         <Col md={6} className="py-3">
           <Card.Title>{detalle.nombreProducto}</Card.Title>
           <hr />
+          <Card.Text>{detalle.descripcion}</Card.Text>
           <Badge bg="success">{detalle.categoria}</Badge>
           <Card.Text className="mt-3">
             <b>Precio: ${detalle.precio}</b>
@@ -43,14 +44,3 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
-// import React from 'react';
-
-// const DetalleProducto = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   );
-// };
-
-// export default DetalleProducto;
