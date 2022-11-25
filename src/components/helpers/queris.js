@@ -1,7 +1,7 @@
 
 const urlUsuario = "http://localhost:3004/usuario"
-const URL = 'http://localhost:4001/apiEpik/productos'
-
+// const URL = 'http://localhost:4001/apiEpik/productos'
+const URL = 'http://localhost:4001/productos'
 
 
 export const usuarioLogin = async (usuario) =>{
