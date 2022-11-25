@@ -22,11 +22,12 @@ function App() {
   const [usuarioLogeado, setUsuarioLogeado] = useState(usuario);
 
   return (
-    <section>
+  
+    <BrowserRouter>
+   <section>
       <Nav usuarioLogueado={usuarioLogeado}
         setUsuarioLogueado={setUsuarioLogeado}></Nav>
 
-      <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route
@@ -34,6 +35,11 @@ function App() {
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
+          <Route
+          exact
+          path="/administrador"
+          element={<Admin></Admin>}
+        />
           <Route
             exact
             path="/administrar/crear"
@@ -60,16 +66,18 @@ function App() {
             path="/menu"
             element={<ProductosMenu></ProductosMenu>}
           ></Route>
-          <Route exact path="/administrador" element={<Admin></Admin>}></Route>
+          <Route exact path="/administrar" element={<Admin></Admin>}></Route>
           <Route
             exact
             path="/pedidos"
             element={<PedidosUsuario></PedidosUsuario>}
           ></Route>
         </Routes>
+        <Foot></Foot>
+        </section>
       </BrowserRouter>
-      <Foot></Foot>
-    </section>
+      
+   
   );
 }
 
