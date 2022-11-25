@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Table } from "react-bootstrap/lib/InputGroup";
+import  Table  from "react-bootstrap/table";
 import { Link } from "react-router-dom";
-import { consultarApi } from "../helpers/queries";
-
+import { consultarProductoApi } from "../helpers/queris";
+import ItemProducto from './producto/ItemProducto'
 
 
 const Admin =()=>{
@@ -10,7 +10,7 @@ const Admin =()=>{
 
     useEffect(() => {
         
-        consultarApi().then((respuesta) => {
+        consultarProductoApi().then((respuesta) => {
           console.log(respuesta);
           setProductos(respuesta);
         });
@@ -23,6 +23,7 @@ const Admin =()=>{
             <Link className="btn btn-primary" to="/administrar/crear">Agregar</Link>
           </div>
           <hr />
+          
           <Table responsive striped bordered hover>
             <thead>
               <tr>
