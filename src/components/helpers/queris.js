@@ -43,7 +43,7 @@ export const crearUsuario = async (usuario) =>{
 
 
 
-export const crearProductoAPI = async (producto) => {
+export const crearProductoApi = async (producto) => {
   try{
       const respuesta = await fetch(URL,{
           method: "POST",

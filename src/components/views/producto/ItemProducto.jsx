@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { borrarProductoAPI, consultarAPI } from "../../helpers/queries";
+import { borrarProductoAPI, consultarProductoApi } from "../../helpers/queris";
 
 const ItemProducto = ({ producto, setProductos }) => {
   const borrarProducto = () => {
@@ -18,7 +19,7 @@ const ItemProducto = ({ producto, setProductos }) => {
         borrarProductoAPI(producto.id).then((respuesta) => {
           if (respuesta.status === 200) {
 
-            consultarAPI().then((respuesta)=>{
+            consultarProductoApi().then((respuesta)=>{
               setProductos(respuesta)
 
             })
@@ -50,7 +51,8 @@ const ItemProducto = ({ producto, setProductos }) => {
       <td>{producto.imagen}</td>
       <td>{producto.categoria}</td>
       <td>
-        <Link className="btn btn-warning"to={`/administrar/editar/${producto.id}`}> Editar</Link>
+        
+        <Link className="btn btn-warning" to={`/administrador/editar/${producto.id}`}> Editar</Link>
         <Button variant="danger" onClick={borrarProducto}>
           Borrar
         </Button>
