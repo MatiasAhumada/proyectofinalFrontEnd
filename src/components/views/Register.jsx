@@ -2,12 +2,14 @@ import { Button, Card, Container, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { crearUsuario } from "../helpers/queris";
+import "../../css/views.css";
 
 const Register = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm({
     defaultValues: {
       nombre: "",
@@ -20,7 +22,7 @@ const Register = () => {
     crearUsuario(datos).then((respuesta)=>{
         if(respuesta.status === 201){
             Swal.fire("usuario creado", " El usuario se creo correctamente", "success")
-            
+            reset();
         }else{
             Swal.fire("Hubo un error inesperado", "Intentelo de nuevo mas tarde", "error")
         }

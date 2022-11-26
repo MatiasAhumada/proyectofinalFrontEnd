@@ -1,17 +1,11 @@
-import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { Form, Button } from "react-bootstrap";
+import { crearProductoApi } from "../../helpers/queris";
 import Swal from "sweetalert2";
-import { crearProductoAPI } from "../../helpers/queris";
 import { useNavigate } from "react-router-dom";
-import "../../../App.css";
-
-
-import React from "react";
 
 const CrearProducto = () => {
-    // const {register, handleSubmit, formSate:{errors}} = useForm();
-
-
+  
     const {
         register,
         handleSubmit,

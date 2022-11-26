@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { usuarioLogin } from "../helpers/queris";
+import "../../css/views.css";
+
+
 
 const Login = ({ setUsuarioLogeado }) => {
   const navegar = useNavigate();
@@ -23,6 +26,7 @@ const Login = ({ setUsuarioLogeado }) => {
       if (respuesta) {
         localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
         setUsuarioLogeado(respuesta);
+        navegar("/")
       } else {
         Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
       }
@@ -30,10 +34,10 @@ const Login = ({ setUsuarioLogeado }) => {
   };
 
   return (
-    <Container>
+    <Container >
       <Card className="mt-4">
         <Card.Header as="h4">Login</Card.Header>
-        <Card.Body>
+        <Card.Body >
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="email">
               <Form.Label>Email</Form.Label>
@@ -47,8 +51,8 @@ const Login = ({ setUsuarioLogeado }) => {
                     message: "Ingresar mínimo 2 dígitos",
                   },
                   maxLength: {
-                    value: 10,
-                    message: "Ingresar máximo 10 dígitos",
+                    value: 50,
+                    message: "Ingresar máximo 50 dígitos",
                   },
                   pattern: {
                     value: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
@@ -72,7 +76,7 @@ const Login = ({ setUsuarioLogeado }) => {
                     message: "Contraseña invalida",
                   },
                   maxLength: {
-                    value: 10,
+                    value: 50,
                     message: "contraseña invalida",
                   },
                 })}

@@ -1,53 +1,30 @@
-import React, { useState } from "react";
+
 import "../../css/navbar.css";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link, NavLink } from "react-router-dom";
 
-function Nav() {
-  const [active, setActive] = useState("nav__menu");
-  const [icon, setIcon] = useState("nav__toggler");
-  const navToggle = () => {
-    if (active === "nav__menu") {
-      setActive("nav__menu nav__active");
-    } else setActive("nav__menu");
 
-    if (icon === "nav__toggler") {
-      setIcon("nav__toggler toggle");
-    } else setIcon("nav__toggler");
-  };
+function NavBar() {
   return (
-    <nav className="nav">
-      <a href="#" className="nav__brand">
-        STACK-EPICA
-      </a>
-      <ul className={active}>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Inicio
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Menú
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Nosotros
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Contact
-          </a>
-        </li>
-
-      </ul>
-      <div onClick={navToggle} className={icon}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div>
-    </nav>
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand as={Link}  to="/">STACK-ÉPICA</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <NavLink to='/' className={'nav-link'}>Inicio</NavLink>
+            <NavLink to='/menu'className={'nav-link'}>Menu</NavLink>
+            <NavLink to=''className={'nav-link'}>Nosotros</NavLink>
+            <NavLink to=''className={'nav-link'}>Contacto</NavLink>
+            <NavLink to=''className={'nav-link'}>Registro</NavLink>
+            <NavLink to=''className={'nav-link'}>Iniciar Sesión</NavLink>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default Nav;
+export default NavBar;
