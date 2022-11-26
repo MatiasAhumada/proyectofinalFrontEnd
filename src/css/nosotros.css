@@ -1,0 +1,71 @@
+.nosotros {
+  background-image: url("https://d320djwtwnl5uo.cloudfront.net/recetas/cover/curry_04zT2vlWMPy7jpqh9Nx6tgdnDARHYi.png");
+  background-size: cover;
+}
+
+.titulo {
+  font-family: "Courgette", cursive;
+  font-size: 30px;
+}
+
+.cajas {
+  height: auto;
+  padding: 20px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+  font-family: "Courgette", cursive;
+}
+
+.nombreCompañero {
+  color: #fec163;
+  font-family: "Courgette", cursive;
+}
+
+.loremCompañero {
+  color: white;
+  font-family: "Courgette", cursive;
+}
+
+@media (min-width: 820px) and (max-width: 1180px) {
+  .titulo {
+    font-size: 40px;
+  }
+  .nombreCompañero {
+    font-size: 38px;
+  }
+  .loremCompañero {
+    font-size: 35px;
+  }
+  .cajas {
+    height: auto;
+    object-fit: cover;
+  }
+  .titulo {
+    text-align: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 740px) {
+  .nosotros {
+    background-position: center;
+    background-size:100vh;
+
+  }
+  .titulo {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  .nombreCompañero {
+    font-size: 18px;
+  }
+  .loremCompañero {
+    font-size: 15px;
+  }
+  .cajas {
+    height: auto;
+    object-fit: cover;
+  }
+  .titulo {
+    text-align: center;
+  }
+}
