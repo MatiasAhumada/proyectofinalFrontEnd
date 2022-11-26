@@ -35,7 +35,7 @@ const Login = ({ setUsuarioLogeado }) => {
 
   return (
     <Container >
-      <Card className="mt-4">
+      <Card className="mt-4 w-100">
         <Card.Header as="h4">Login</Card.Header>
         <Card.Body >
           <Form onSubmit={handleSubmit(onSubmit)}>
@@ -60,7 +60,7 @@ const Login = ({ setUsuarioLogeado }) => {
                   },
                 })}
               ></Form.Control>
-              <Form.Text className="text-danger">
+              <Form.Text className="text-dark">
                 {errors.email?.message}
               </Form.Text>
             </Form.Group>
@@ -81,7 +81,7 @@ const Login = ({ setUsuarioLogeado }) => {
                   },
                 })}
               ></Form.Control>
-              <Form.Text className="text-danger">
+              <Form.Text className="text-dark">
                 {errors.password?.message}
               </Form.Text>
             </Form.Group>

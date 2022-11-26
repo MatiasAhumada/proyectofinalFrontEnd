@@ -1,5 +1,5 @@
 
-const urlUsuario = "http://localhost:3004/usuario"
+const urlUsuario = "http://localhost:4000/apiEpik/user/usuarios"
 const URL = 'http://localhost:4000/apiEpik/productos'
 
 
@@ -25,7 +25,7 @@ export const usuarioLogin = async (usuario) =>{
 }
 export const crearUsuario = async (usuario) =>{
   try {
-      const respuesta = await fetch(URL,{
+      const respuesta = await fetch(urlUsuario,{
           method: "POST",
           headers:{
               "Content-Type": "application/json"

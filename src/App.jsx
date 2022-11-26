@@ -23,10 +23,9 @@ function App() {
 
   return (
     <section>
+      <BrowserRouter>
       <Nav usuarioLogueado={usuarioLogeado}
         setUsuarioLogueado={setUsuarioLogeado}></Nav>
-
-      <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
           <Route
@@ -67,8 +66,8 @@ function App() {
             element={<PedidosUsuario></PedidosUsuario>}
           ></Route>
         </Routes>
-      </BrowserRouter>
       <Foot></Foot>
+      </BrowserRouter>
     </section>
   );
 }
