@@ -24,7 +24,7 @@ const CrearProducto = () => {
     
       const onSubmit = (datos) => {
         console.log(datos);
-        crearProductoAPI(datos).then((respuesta) => {
+        crearProductoApi(datos).then((respuesta) => {
           if (respuesta.status === 201) {
             Swal.fire(
               "Producto creado",
@@ -70,7 +70,7 @@ const CrearProducto = () => {
               <Form.Control
                 type="text"
                 placeholder=" Ej:  Este producto contiene los sigs ingredientes y detalles de la preparación"
-                {...register("detalleProducto", {
+                {...register("detalle", {
                   required: "Este dato es obligatorio",
                   minLength: {
                     value: 10,
