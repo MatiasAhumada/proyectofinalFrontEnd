@@ -1,6 +1,52 @@
-import { Form, Button } from "react-bootstrap";
+import { useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { Button, Container, Form } from "react-bootstrap";
+import { useParams, useNavigate } from "react-router-dom";
+import { editarProductoApi, obtenerProductoApi } from "../../helpers/queris";
+import Swal from "sweetalert2";
 
 const EditarProducto = () => {
+  const {id} = useParams();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setValue
+  } = useForm({
+    defaultValues: {
+      nombreProducto: "",
+      precio: 1,
+      imagen: "",
+      categoria: "",
+    },
+  });
+
+  const onSubmit = (datos) => {
+    editarProductoApi(id, datos).then((datos) =>{
+      if(datos.status === 200){
+        Swal.fire("Producto actualizado", "Good", "success")
+        // navegacion("/administrar/crear")
+      }else{
+        Swal.fire("Ocurrio un error", "Intente mas tarde", "error")
+      }
+    })
+  };
+
+  useEffect(() => {
+    obtenerProductoApi(id).then((respuesta) =>{
+      if(respuesta.status === 200){
+        setValue("nombreProducto", respuesta.dato.nombreProducto)
+        setValue("precio", respuesta.dato.precio)
+        setValue("imagen", respuesta.dato.imagen)
+        setValue("categoria", respuesta.dato.categoria)
+        console.log(respuesta)
+      }else{
+        Swal.fire("Ocurrio un error", "Intente mas tarde", "error")
+      }
+
+    })
+  },[]);
+
   return (
     <section className="container mainSection">
       <h1 className="display-4 mt-5">Editar producto</h1>

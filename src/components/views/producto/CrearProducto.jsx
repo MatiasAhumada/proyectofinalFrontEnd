@@ -22,6 +22,7 @@ const CrearProducto = () => {
           nombreProducto: "",
           precio: 1,
           imagen: "",
+          detalle: "",
           categoria: "",
         },
       });
