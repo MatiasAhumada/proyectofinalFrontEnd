@@ -71,6 +71,27 @@ const CrearProducto = () => {
                 {errors.nombreProducto?.message}
               </Form.Text>
             </Form.Group>
+            <Form.Group className="mb-3" controlId="formNombreProdcuto">
+              <Form.Label>Detalle del producto*</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder=" Ej:  Este producto contiene los sigs ingredientes y detalles de la preparación"
+                {...register("detalleProducto", {
+                  required: "Este dato es obligatorio",
+                  minLength: {
+                    value: 10,
+                    message: "Debe ingresar como minimo 10 caracteres",
+                  },
+                  maxLength: {
+                    value: 500,
+                    message: "Debe ingresar como maximo 500 caracteres",
+                  },
+                })}
+              />
+              <Form.Text className="text-danger">
+                {errors.detalleProducto?.message}
+              </Form.Text>
+            </Form.Group>
             <Form.Group className="mb-3" controlId="formPrecio">
               <Form.Label>Precio*</Form.Label>
               <Form.Control

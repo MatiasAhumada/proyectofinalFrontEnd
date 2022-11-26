@@ -17,6 +17,7 @@ const EditarProducto = () => {
       nombreProducto: "",
       precio: 1,
       imagen: "",
+      detalle: "",
       categoria: "",
     },
   });
@@ -38,6 +39,7 @@ const EditarProducto = () => {
         setValue("nombreProducto", respuesta.dato.nombreProducto)
         setValue("precio", respuesta.dato.precio)
         setValue("imagen", respuesta.dato.imagen)
+        setValue("detalle", respuesta.dato.detalle)
         setValue("categoria", respuesta.dato.categoria)
         console.log(respuesta)
       }else{
@@ -68,6 +70,11 @@ const EditarProducto = () => {
             type="text"
             placeholder="Ej: https://images.pexels.com/photos/8230019/pexels-photo-8230019.jpeg?auto=compress&cs=tinysrgb&w=300"
           />
+          <Form.Text className="text-danger">algun error</Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formDetalleProducto">
+          <Form.Label>Detalle*</Form.Label>
+          <Form.Control type="text" placeholder="Ej: Un producto delicioso con estos ingredientes" />
           <Form.Text className="text-danger">algun error</Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
