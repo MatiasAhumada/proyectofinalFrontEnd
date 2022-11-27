@@ -16,6 +16,7 @@ import PedidosUsuario from "./components/views/PedidosUsuario";
 
 import "./App.css";
 import ProductosMenu from "./components/views/producto/ProductosMenu";
+import Nosotros from "./components/views/Nosotros";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
@@ -34,6 +35,11 @@ function App() {
             exact
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
+          ></Route>
+          <Route
+            exact
+            path="/nosotros"
+            element={<Nosotros></Nosotros>}
           ></Route>
           <Route
           exact

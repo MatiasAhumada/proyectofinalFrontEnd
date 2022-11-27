@@ -3,9 +3,22 @@ import "../../../css/inicio.css";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
 
 const ProductosMenu = (props) => {
+  const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || []
+  const navegacion = useNavigate();
+
+  const onClick = ()=>{
+    if( !usuario === ""){
+      navegacion("/login") 
+    }else{
+      navegacion("/") 
+    }
+  }
+
   return (
     <article className="containerRight2">
       <h1 className="titulo">LOS MÁS ELEGIDOS</h1>
@@ -26,9 +39,9 @@ const ProductosMenu = (props) => {
             <ListGroup.Item className="dos">{props.categoria}</ListGroup.Item>
           </ListGroup>
           <Card.Body>
-            <Card.Link className="dos" href="#">
+            <Button className="dos" href="#" onClick={onClick}>
               Comprar
-            </Card.Link>
+            </Button>
             <Link className="dos" to={`detalle-producto/${props.id}`}>
               Ver más
             </Link>
