@@ -1,0 +1,83 @@
+.nosotros {
+  background-image: url("https://static.fanpage.it/wp-content/uploads/sites/22/2018/06/istock-857944198.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.titulo {
+  font-family: "Courgette", cursive;
+  font-size: 30px;
+}
+
+.cajas {
+  height: 100%;
+  width: 80%;
+  padding: 20px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+  font-family: "Courgette", cursive;
+}
+
+
+.nombreCompañero {
+  color: #fec163;
+  font-family: "Courgette", cursive;
+}
+
+.loremCompañero {
+  color: white;
+  font-family: "Courgette", cursive;
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .cajas {
+    width: 50%;
+  }
+
+  .ultimaCajaX {
+    margin-left: -500px;
+  }
+
+  .titulo {
+    font-size: 40px;
+    margin-right: -500px;
+  }
+  .nombreCompañero {
+    font-size: 38px;
+  }
+  .loremCompañero {
+    font-size: 35px;
+  }
+  .cajas {
+    height: auto;
+  }
+  .titulo {
+    text-align: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 740px) {
+  .titulo {
+    font-size: 30px;
+    margin-left: -300px;
+
+  }
+
+  .nosotros {
+    background-size: auto;
+
+  }
+  .titulo {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+  .nombreCompañero {
+    font-size: 18px;
+  }
+  .loremCompañero {
+    font-size: 15px;
+  }
+
+
+  
+}
