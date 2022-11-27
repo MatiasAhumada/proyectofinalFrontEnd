@@ -9,6 +9,12 @@ import "../../css/views.css";
 
 const Login = ({ setUsuarioLogeado }) => {
   const navegar = useNavigate();
+  
+  const isAdmin = {
+    email: "",
+    password: "",
+    isAdmin: true
+  }
 
   const {
     register,
@@ -18,24 +24,40 @@ const Login = ({ setUsuarioLogeado }) => {
     defaultValues: {
       email: "",
       password: "",
+      isAdmin: false
     },
   });
 
   const onSubmit = (dato) => {
-    usuarioLogin(dato).then((respuesta) => {
-      if (respuesta) {
-        localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
-        setUsuarioLogeado(respuesta);
-        navegar("/")
-      } else {
-        Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
-      }
-    });
+    if(isAdmin === true ){
+      usuarioLogin(dato).then((respuesta) => {
+        if (respuesta) {
+          localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
+          setUsuarioLogeado(respuesta);
+          navegar("/administrar")
+        } else {
+          Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
+        }
+      });
+    }else{
+      usuarioLogin(dato).then((respuesta) => {
+        if (respuesta) {
+          localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
+          setUsuarioLogeado(respuesta);
+          navegar("/")
+        } else {
+          Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
+        }
+      });
+      
+    }
   };
+  
+
 
   return (
     <Container >
-      <Card className="mt-4">
+      <Card className="mt-4 w-100">
         <Card.Header as="h4">Login</Card.Header>
         <Card.Body >
           <Form onSubmit={handleSubmit(onSubmit)}>
@@ -60,7 +82,7 @@ const Login = ({ setUsuarioLogeado }) => {
                   },
                 })}
               ></Form.Control>
-              <Form.Text className="text-danger">
+              <Form.Text className="text-dark">
                 {errors.email?.message}
               </Form.Text>
             </Form.Group>
@@ -81,7 +103,7 @@ const Login = ({ setUsuarioLogeado }) => {
                   },
                 })}
               ></Form.Control>
-              <Form.Text className="text-danger">
+              <Form.Text className="text-dark">
                 {errors.password?.message}
               </Form.Text>
             </Form.Group>

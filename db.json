@@ -20,6 +20,18 @@
       "email": "Alvaro@hotmail.com",
       "password": "Alvaro12345",
       "id": 2
+    },
+    {
+      "nombre": "Alvaro 2",
+      "email": "Alvaro@mail.com",
+      "password": "Alvaro12345",
+      "id": 3
+    },
+    {
+      "nombre": "Alvaro 3 ",
+      "email": "Admin3@mail.com",
+      "password": "Admin12345",
+      "id": 4
     }
   ]
 }

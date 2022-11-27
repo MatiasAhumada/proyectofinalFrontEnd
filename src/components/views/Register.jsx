@@ -3,8 +3,12 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { crearUsuario } from "../helpers/queris";
 import "../../css/views.css";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+
+    const navegar = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -21,8 +25,9 @@ const Register = () => {
   const onSubmit = (datos) =>{
     crearUsuario(datos).then((respuesta)=>{
         if(respuesta.status === 201){
-            Swal.fire("usuario creado", " El usuario se creo correctamente", "success")
+            Swal.fire("Te has registrado", " Ahora puedes ingresar con tu cuenta!", "success")
             reset();
+            navegar("/login")
         }else{
             Swal.fire("Hubo un error inesperado", "Intentelo de nuevo mas tarde", "error")
         }
@@ -31,7 +36,7 @@ const Register = () => {
 
   return (
     <Container className="mt-5">
-      <Card>
+      <Card className="w-100">
         <Card.Header as="h4">Registro</Card.Header>
         <Card.Body>
           <Form onSubmit={handleSubmit(onSubmit)}>
@@ -52,7 +57,7 @@ const Register = () => {
                   },
                 })}
               />
-              <Form.Text className="text-danger">
+              <Form.Text className="text-dark">
                 {errors.nombre?.message}
               </Form.Text>
             </Form.Group>
@@ -77,7 +82,7 @@ const Register = () => {
                   },
                 })}
               />
-              <Form.Text className="text-danger">
+              <Form.Text className="text-dark">
                 {errors.email?.message}
               </Form.Text>
             </Form.Group>
@@ -102,7 +107,7 @@ const Register = () => {
                   },
                 })}
               />
-              <Form.Text className="text-danger">
+              <Form.Text className="text-dark">
                 {errors.password?.message}
               </Form.Text>
             </Form.Group>

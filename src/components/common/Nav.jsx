@@ -1,4 +1,5 @@
-
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import "../../css/navbar.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,20 +7,45 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link, NavLink } from "react-router-dom";
 
 
-function NavBar() {
+
+function NavBar({usuarioLogueado, setUsuarioLogueado}) {
+  const navegar = useNavigate();
+  function logout (){
+    localStorage.removeItem("usuarioBar")
+    setUsuarioLogueado({});
+    navegar("/")
+  }
+  
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand as={Link}  to="/">STACK-ÉPICA</Navbar.Brand>
+
+        <Navbar.Brand as={Link} to="/">STACK-ÉPICA</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to='/' className={'nav-link'}>Inicio</NavLink>
-            <NavLink to='/menu'className={'nav-link'}>Menu</NavLink>
-            <NavLink to=''className={'nav-link'}>Nosotros</NavLink>
-            <NavLink to=''className={'nav-link'}>Contacto</NavLink>
-            <NavLink to=''className={'nav-link'}>Registro</NavLink>
-            <NavLink to=''className={'nav-link'}>Iniciar Sesión</NavLink>
+            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/">Nosotros</Nav.Link>
+            <Nav.Link href="/">Contacto</Nav.Link>
+            <Nav.Link href="/registro">Registro</Nav.Link>
+            
+            {usuarioLogueado.email ? (
+              <>  
+              <Nav.Link href="/menu">Menu</Nav.Link>
+              <Button variant="white" className="text-white" onClick={logout}>Salir</Button>
+              </>
+            ) : (
+              <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
+            )}
+
+            {usuarioLogueado.isAdmin ?(
+              <>
+              <Nav.Link href="/administrar">Administrador</Nav.Link>
+              </>
+            ) : (
+              <></>
+            )}
+
           </Nav>
         </Navbar.Collapse>
       </Container>
