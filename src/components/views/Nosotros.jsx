@@ -43,7 +43,7 @@ const Nosotros = () => {
                 <h3 className="my-3 nombreCompañero">Alvaro Ruiz Mejias</h3>
 
                 <img
-                  src="/img/alvaroAvatar.png"
+                  src="/img/alvarooAvatar.png"
                   style={{ width: 200, height: 200 }}
                   alt="team1"
                 />
@@ -196,7 +196,7 @@ const Nosotros = () => {
 
                 <img
                   style={{ width: 200, height: 200 }}
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BXvcD0YBRXdZP0UYwxyB0X6UoubLFMrOi_yctgVlb8riYlJN5smt1WhpACG6_YUpS7U&usqp=CAU"
+                  src="/img/alvarooAvatar.png"
                   alt="team1"
                 />
                 <p className="loremCompañero">
@@ -219,7 +219,7 @@ const Nosotros = () => {
 
                 <img
                   style={{ width: 200, height: 200 }}
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BXvcD0YBRXdZP0UYwxyB0X6UoubLFMrOi_yctgVlb8riYlJN5smt1WhpACG6_YUpS7U&usqp=CAU"
+                  src="/img/tomasAvatar.png"
                   alt="team1"
                 />
                 <p className="loremCompañero" style={{ color: 'red' }}>
@@ -243,7 +243,7 @@ const Nosotros = () => {
                 <h3 className="my-3 nombreCompañero">Lucía Soraire</h3>
                 <img
                   style={{ width: 200, height: 200 }}
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BXvcD0YBRXdZP0UYwxyB0X6UoubLFMrOi_yctgVlb8riYlJN5smt1WhpACG6_YUpS7U&usqp=CAU"
+                  src="/img/luciaAvatar.png"
                   alt="team1"
                 />
                 <p className="loremCompañero">
@@ -267,7 +267,7 @@ const Nosotros = () => {
                 <h3 className="my-3 nombreCompañero">Fernando E. Pérez</h3>
                 <img
                   style={{ width: 200, height: 200 }}
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BXvcD0YBRXdZP0UYwxyB0X6UoubLFMrOi_yctgVlb8riYlJN5smt1WhpACG6_YUpS7U&usqp=CAU"
+                  src="/img/fernandoAvatar.png"
                   alt="team1"
                 />
                 <p className="loremCompañero">
@@ -295,7 +295,7 @@ const Nosotros = () => {
 
                 <img
                   style={{ width: 200, height: 200 }}
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BXvcD0YBRXdZP0UYwxyB0X6UoubLFMrOi_yctgVlb8riYlJN5smt1WhpACG6_YUpS7U&usqp=CAU"
+                  src="matiasAvatar.png"
                   alt="team1"
                 />
                 <p className="loremCompañero" style={{ color: 'red' }}>
