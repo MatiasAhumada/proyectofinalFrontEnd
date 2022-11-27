@@ -18,18 +18,25 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/">Menu</Nav.Link>
             <Nav.Link href="/">Nosotros</Nav.Link>
             <Nav.Link href="/">Contacto</Nav.Link>
             <Nav.Link href="/registro">Registro</Nav.Link>
             
             {usuarioLogueado.email ? (
-              <>
-              <Nav.Link href="/administrador">Administrador</Nav.Link>
+              <>  
+              <Nav.Link href="/menu">Menu</Nav.Link>
               <Button variant="white" className="text-white" onClick={logout}>Salir</Button>
               </>
             ) : (
               <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
+            )}
+
+            {usuarioLogueado.isAdmin ?(
+              <>
+              <Nav.Link href="/administrar">Administrador</Nav.Link>
+              </>
+            ) : (
+              <></>
             )}
           </Nav>
         </Navbar.Collapse>
