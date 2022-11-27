@@ -28,10 +28,9 @@ const Nosotros = () => {
       <hr />
       <Container>
         <Row>
-          <Col>
+          <Col >
             <motion.div
               style={{
-                border: "3px outset grey",
                 padding: 10,
               }}
               whileHover={{ scale: 1.2 }}
@@ -54,10 +53,9 @@ const Nosotros = () => {
               </p>
             </motion.div>
           </Col>
-          <Col>
+          <Col sm={12} md={4} lg={6}>
             <motion.div
               style={{
-                border: "3px outset grey",
                 padding: 10,
               }}
               whileHover={{ scale: 1.2 }}
@@ -82,10 +80,9 @@ const Nosotros = () => {
               </p>
             </motion.div>
           </Col>
-          <Col>
+          <Col sm={12} md={4} lg={6}>
             <motion.div
               style={{
-                border: "3px outset grey",
                 padding: 10,
               }}
               whileHover={{ scale: 1.2 }}
@@ -109,10 +106,9 @@ const Nosotros = () => {
               </p>
             </motion.div>
           </Col>
-          <Col>
+          <Col sm={12} md={4} lg={6}>
             <motion.div
               style={{
-                border: "3px outset grey",
                 padding: 10,
               }}
               whileHover={{ scale: 1.2 }}
@@ -138,17 +134,15 @@ const Nosotros = () => {
               </p>
             </motion.div>
           </Col>
-          <Col>
+          <Col sm={12} md={4} lg={6}>
             <motion.div
               style={{
-                border: "3px outset grey",
                 padding: 10,
               }}
               whileHover={{ scale: 1.2 }}
-              animate={{ x: -5 }}
-              className="m-5 cajas"
+              className="m-5 cajas ultimaCajaX"
             >
-              <h3 className="my-3 nombreCompañero">Alvaro Ruiz Mejia</h3>
+              <h3 className="my-3 nombreCompañero">Matias Ahumada</h3>
 
               <img
                 style={{ width: 200, height: 200 }}
@@ -156,12 +150,11 @@ const Nosotros = () => {
                 alt="team1"
               />
               <p className="loremCompañero">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Blanditiis in odio, cupiditate sapiente dignissimos libero.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Blanditiis in odio, cupiditate sapiente dignissimos libero.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Blanditiis in odio, cupiditate sapiente dignissimos libero.
+                ¡Hola! Me llamo Matias, tengo 22 años, soy tecnico de celulares
+                y progranador Full Stack. Trabajo de forma independie arbitrando
+                con criptoactivos. La informática siempre fue mi mayor aficion.
+                Por ello decidí ingresar a RollingCode, para adquirir nuevas
+                habilidades y probarme a mí mismo en un nuevo desafío.
               </p>
             </motion.div>
           </Col>
