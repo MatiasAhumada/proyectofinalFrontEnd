@@ -21,7 +21,7 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/">Nosotros</Nav.Link>
+            <Nav.Link href="/nosotros">Nosotros</Nav.Link>
             <Nav.Link href="/">Contacto</Nav.Link>
             <Nav.Link href="/registro">Registro</Nav.Link>
             <Nav.Link href="/menu">Menu</Nav.Link>

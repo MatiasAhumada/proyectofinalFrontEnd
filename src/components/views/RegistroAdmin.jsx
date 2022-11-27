@@ -111,6 +111,9 @@ const Register = () => {
               <Form.Text className="text-dark">
                 {errors.password?.message}
               </Form.Text>
+              <Form.Label>Admin</Form.Label>
+              <Form.Control
+              type="text"></Form.Control>
             </Form.Group>
             <Button type="submit" className="mt-3">Crear Usuario</Button>
           </Form>
