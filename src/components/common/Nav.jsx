@@ -28,10 +28,10 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
             <Nav.Link href="/">Nosotros</Nav.Link>
             <Nav.Link href="/">Contacto</Nav.Link>
             <Nav.Link href="/registro">Registro</Nav.Link>
+            <Nav.Link href="/menu">Menu</Nav.Link>
             
             {usuarioLogueado.email ? (
               <>  
-              <Nav.Link href="/menu">Menu</Nav.Link>
               <Button variant="white" className="text-white" onClick={logout}>Salir</Button>
               </>
             ) : (
