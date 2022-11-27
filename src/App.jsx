@@ -63,7 +63,7 @@ function App() {
           <Route path="/administrar/*" element={<RutasProtegidas><RutasAdmin></RutasAdmin></RutasProtegidas>}></Route>
         </Routes>
 
-      <Foot></Foot>
+      {/* <Foot></Foot> */}
       </BrowserRouter>
     </section>
 
