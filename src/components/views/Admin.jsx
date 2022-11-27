@@ -24,10 +24,10 @@ const Admin =()=>{
           </div>
           <hr />
           
-          <Table responsive striped bordered hover>
+          <Table responsive striped bordered hover >
             <thead>
               <tr>
-                <th></th>
+                <th>Id del Producto</th>
                 <th>Producto</th>
                 <th>Precio</th>
                 <th>URL de Imagen</th>
@@ -37,7 +37,7 @@ const Admin =()=>{
             </thead>
             <tbody>
              {
-                productos.map((productos)=><ItemProducto key={productos.id} producto={productos} setProductos={setProductos}></ItemProducto>)
+                productos.map((productos)=><ItemProducto key={productos._id} producto={productos} setProductos={setProductos}></ItemProducto>)
              }
              
             </tbody>

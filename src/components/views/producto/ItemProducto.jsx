@@ -16,7 +16,7 @@ const ItemProducto = ({ producto, setProductos }) => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        borrarProductoAPI(producto.id).then((respuesta) => {
+        borrarProductoAPI(producto._id).then((respuesta) => {
           if (respuesta.status === 200) {
 
             consultarProductoApi().then((respuesta)=>{
@@ -45,16 +45,17 @@ const ItemProducto = ({ producto, setProductos }) => {
 
   return (
     <tr>
-      <td>{producto.id}</td>
+      <td>{producto._id}</td>
       <td>{producto.nombreProducto}</td>
       <td>${producto.precio}</td>
       <td>{producto.imagen}</td>
       <td>{producto.categoria}</td>
       <td>
         
-        <Link className="btn btn-warning" to={`/administrador/editar/${producto.id}`}> Editar</Link>
-        <Button variant="danger" onClick={borrarProducto}>
+        <Link className="btn btn-warning my-3"  to={`/administrar/editar/${producto._id}`}> Editar</Link>
+        <Button variant="danger"  onClick={borrarProducto}>
           Borrar
+          
         </Button>
       </td>
     </tr>
