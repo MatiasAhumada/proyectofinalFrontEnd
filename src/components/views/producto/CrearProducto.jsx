@@ -24,7 +24,7 @@ const CrearProducto = () => {
     
       const onSubmit = (datos) => {
         console.log(datos);
-        crearProductoAPI(datos).then((respuesta) => {
+        crearProductoApi(datos).then((respuesta) => {
           if (respuesta.status === 201) {
             Swal.fire(
               "Producto creado",

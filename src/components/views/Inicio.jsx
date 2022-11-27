@@ -5,19 +5,14 @@ import Info from "../home/Info"
 import Drinks from "../home/Drinks"
 import FastFood from '../home/FastFood';
 import ProductosMenu from './producto/ProductosMenu';
-import { consultarProductoApi } from "../helpers/queris";
+
 
 
 const Inicio = () => {
     const [producto, setProducto] = useState([]);
-  useEffect(() => {
-    consultarProductoApi().then((respuesta) => {
-      console.log(respuesta);
-      setProducto(respuesta);
-    });
-  }, [])
-
+  
     return (
+      
         <section>
             <Portada></Portada>
             <Info></Info>
