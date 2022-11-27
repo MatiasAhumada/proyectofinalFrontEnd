@@ -5,6 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 
 const ProductosMenu = (props) => {
@@ -12,10 +13,11 @@ const ProductosMenu = (props) => {
   const navegacion = useNavigate();
 
   const onClick = ()=>{
-    if( !usuario == ""){
+    if( !usuario === ""){
       navegacion("/pedidos") 
     }else{
       navegacion("/login") 
+      Swal.fire("Debe estar logeado para realizar esta accion")
     }
   }
 
