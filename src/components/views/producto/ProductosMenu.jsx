@@ -12,10 +12,10 @@ const ProductosMenu = (props) => {
   const navegacion = useNavigate();
 
   const onClick = ()=>{
-    if( usuario === ""){
-      navegacion("/login") 
+    if( !usuario == ""){
+      navegacion("/pedidos") 
     }else{
-      navegacion("/") 
+      navegacion("/login") 
     }
   }
 
@@ -39,7 +39,7 @@ const ProductosMenu = (props) => {
             <ListGroup.Item className="dos">{props.categoria}</ListGroup.Item>
           </ListGroup>
           <Card.Body>
-            <Button className="dos" href="#" onClick={onClick}>
+            <Button className="dos" onClick={onClick}>
               Comprar
             </Button>
             <Link className="dos" to={`detalle-producto/${props.id}`}>
