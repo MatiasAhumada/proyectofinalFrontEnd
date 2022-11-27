@@ -12,7 +12,7 @@ const ProductosMenu = (props) => {
   const navegacion = useNavigate();
 
   const onClick = ()=>{
-    if( !usuario === ""){
+    if( usuario === ""){
       navegacion("/login") 
     }else{
       navegacion("/") 
