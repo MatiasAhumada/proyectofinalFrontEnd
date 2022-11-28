@@ -10,11 +10,7 @@ import "../../css/views.css";
 const Login = ({ setUsuarioLogeado }) => {
   const navegar = useNavigate();
   
-  const isAdmin = {
-    email: "",
-    password: "",
-    isAdmin: true
-  }
+ 
 
   const {
     register,
@@ -29,7 +25,8 @@ const Login = ({ setUsuarioLogeado }) => {
   });
 
   const onSubmit = (dato) => {
-    if(isAdmin === true ){
+    console.log(dato)
+    if(dato.isAdmin === true ){
       usuarioLogin(dato).then((respuesta) => {
         if (respuesta) {
           localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
