@@ -63,7 +63,7 @@ const ListaPedido = ({ setMostrarCarrito }) => {
       <h3 className="cardMenu__nombre text-center mt-4">Mis pedidos</h3>
       <div className="listaCarrito__items">
         {listaCarrito.map((menu) => (
-          <ItemCarrito
+          <ItemPedido
             key={menu.id}
             id={menu.id}
             nombre={menu.nombreMenu}
@@ -72,7 +72,7 @@ const ListaPedido = ({ setMostrarCarrito }) => {
             precioTotal={precioTotal}
             setPrecioTotal={setPrecioTotal}
             listaCarrito={listaCarrito}
-          ></ItemCarrito>
+          ></ItemPedido>
         ))}
       </div>
       <div className="text-end mb-4">

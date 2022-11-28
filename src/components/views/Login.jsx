@@ -10,11 +10,7 @@ import "../../css/views.css";
 const Login = ({ setUsuarioLogeado }) => {
   const navegar = useNavigate();
   
-  const isAdmin = {
-    email: "",
-    password: "",
-    isAdmin: true
-  }
+ 
 
   const {
     register,
@@ -29,17 +25,6 @@ const Login = ({ setUsuarioLogeado }) => {
   });
 
   const onSubmit = (dato) => {
-    if(isAdmin === true ){
-      usuarioLogin(dato).then((respuesta) => {
-        if (respuesta) {
-          localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
-          setUsuarioLogeado(respuesta);
-          navegar("/administrar")
-        } else {
-          Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
-        }
-      });
-    }else{
       usuarioLogin(dato).then((respuesta) => {
         if (respuesta) {
           localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
@@ -49,8 +34,6 @@ const Login = ({ setUsuarioLogeado }) => {
           Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
         }
       });
-      
-    }
   };
   
 

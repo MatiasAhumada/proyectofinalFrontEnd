@@ -11,6 +11,7 @@ const DetalleProducto = () => {
 
   useEffect(() => {
     obtenerProductoApi(id).then((respuesta) => {
+      console.log(respuesta.dato)
       if (respuesta.status === 200) {
         setDetalle(respuesta.dato);
       } else {
@@ -32,7 +33,7 @@ const DetalleProducto = () => {
         <Col md={6} className="py-3">
           <Card.Title>{detalle.nombreProducto}</Card.Title>
           <hr />
-          <Card.Text>{detalle.descripcion}</Card.Text>
+          <Card.Text>{detalle.detalle}</Card.Text>
           <Badge bg="success">{detalle.categoria}</Badge>
           <Card.Text className="mt-3">
             <b>Precio: ${detalle.precio}</b>

@@ -19,6 +19,7 @@ const Register = () => {
       nombre: "",
       email: "",
       password: "",
+      isAdmin: false
     },
   });
 

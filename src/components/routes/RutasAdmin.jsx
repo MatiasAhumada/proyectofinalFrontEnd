@@ -1,7 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import Admin from "../views/Admin";
+import AdminPedidos from "../views/AdminPedidos";
+import AdminUsuarios from "../views/AdminUsuarios";
+import EditarPedido from "../views/pedido/EditarPedido";
 import CrearProducto from "../views/producto/CrearProducto";
 import EditarProducto from "../views/producto/EditarProducto";
+import CrearUsuario from "../views/usuario/CrearUsuario";
+import EditarUsuario from "../views/usuario/EditarUsuario";
 
 
 const RutasAdmin = () => {
@@ -20,9 +25,26 @@ const RutasAdmin = () => {
         ></Route>
         <Route
           exact
+          path="/crearUsuario"
+          element={<CrearUsuario></CrearUsuario>}
+        ></Route>
+        <Route
+          exact
           path="/editar/:id"
           element={<EditarProducto></EditarProducto>}
         ></Route>
+        <Route
+          exact
+          path="/editarPedido/:id"
+          element={<EditarPedido></EditarPedido>}
+        ></Route>
+        <Route
+          exact
+          path="/editarUsuario/:id"
+          element={<EditarUsuario></EditarUsuario>}
+        ></Route>
+        
+       
       </Routes>
     </>
   );
