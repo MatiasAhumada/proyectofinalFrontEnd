@@ -39,7 +39,6 @@ div.row{
 
   .titulo {
     font-size: 40px;
-    margin-right: -500px;
   }
   .nombreCompañero {
     font-size: 38px;
@@ -57,15 +56,16 @@ div.row{
 @media (min-width: 320px) and (max-width: 740px) {
   .titulo {
     font-size: 30px;
-
   }
 
   .nosotros {
-    background-size: auto;
+    background-size: cover;
 
   }
   .titulo {
     font-size: 18px;
+    margin-right: 10px;
+
   }
   .nombreCompañero {
     font-size: 18px;
