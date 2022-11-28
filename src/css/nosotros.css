@@ -18,14 +18,16 @@ h3.text-center.my-2.titulo{
   font-family: "Courgette", cursive;
 }
 
-
+div.row{
+  margin-bottom: 100px;
+}
 .nombreCompañero {
   color: #fec163;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .loremCompañero {
-  color: #F1F1E4 ;
+  color: #F1F1E4;
   font-family: 'Times New Roman', Times, serif;
 }
 

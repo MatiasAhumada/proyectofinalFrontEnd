@@ -171,6 +171,10 @@ div.container{
   gap:150px;
 }
 
+article.containerRight2{
+  margin-bottom: 600px;
+}
+
 @media screen and (max-width: 414px) {
   img {
     width: 100%;
