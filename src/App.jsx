@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DetalleProducto from "./components/views/DetalleProducto";
 import "./App.css";
-
+import Menu from './components/views/producto/Menu'
 import Inicio from "./components/views/Inicio";
 import Nav from "./components/common/Nav";
 import Foot from "./components/common/Foot";
@@ -54,7 +54,7 @@ function App() {
           <Route
             exact
             path="/menu"
-            element={<ProductosMenu></ProductosMenu>}
+            element={<Menu></Menu>}
           ></Route>
           <Route
             exact

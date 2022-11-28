@@ -32,7 +32,7 @@ const CrearProducto = () => {
               "success"
             );
             reset();
-            navegacion("/administrador");
+            navegacion("/administrar");
           } else {
             Swal.fire("Ocurrio un error ", "Intentelo mas tarde", "error");
           }
