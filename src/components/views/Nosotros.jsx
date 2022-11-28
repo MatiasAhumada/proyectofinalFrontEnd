@@ -11,20 +11,20 @@ const Nosotros = () => {
     <>
     <BrowserView>
       <div className="nosotros m-4 my-5">
-        <motion.div style={{ height: "10vh" }}>
+        <motion.div>
           <motion.h2
-            animate={{ scale: 1.3, color: "#FEC163", x: 120 }}
+            
             transition={{ delay: 0.1 }}
             className="text-center my-3 titulo"
           >
             Sobre Nosotros
           </motion.h2>
           <motion.h3
-            animate={{ scale: 1.3, color: "#DE4313", x: 180 }}
+          
             transition={{ delay: 0.1 }}
             className="text-center my-2 titulo"
           >
-            Quienes Somos?
+            ¿Quiénes Somos?
           </motion.h3>
         </motion.div>
 
@@ -36,7 +36,7 @@ const Nosotros = () => {
                 style={{
                   padding: 10,
                 }}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.03 }}
                 animate={{ x: -5 }}
                 className="m-5 cajas"
               >
@@ -44,7 +44,7 @@ const Nosotros = () => {
 
                 <img
                   src="/img/alvarooAvatar.png"
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   alt="team1"
                 />
                 <p className="loremCompañero">
@@ -61,14 +61,14 @@ const Nosotros = () => {
                 style={{
                   padding: 10,
                 }}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.03 }}
                 animate={{ x: 5 }}
                 className="m-5 cajas"
               >
                 <h3 className="my-3 nombreCompañero">Thomás Jerez</h3>
 
                 <img
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   src="/img/tomasAvatar.png"
 
                   alt="team1"
@@ -89,13 +89,40 @@ const Nosotros = () => {
                 style={{
                   padding: 10,
                 }}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.03 }}
+                animate={{ x: 5 }}
+                className="m-5 cajas"
+              >
+                <h3 className="my-3 nombreCompañero">Matías Ahumada</h3>
+
+                <img
+                  style={{ width: 100, height: 100 }}
+                  src="/img/matiasAvatarSinFondo.png"
+
+                  alt="team1"
+                />
+                <p className="loremCompañero">
+                ¡Hola! Me llamo Matias, tengo 22 años, soy tecnico de
+                  celulares y progranador Full Stack. Trabajo de forma
+                  independiente arbitrando con criptoactivos. La informática
+                  siempre fue mi mayor aficion. Por ello decidí ingresar a
+                  RollingCode, para adquirir nuevas habilidades y probarme a mí
+                  mismo en un nuevo desafío.
+                </p>
+              </motion.div>
+            </Col>
+            <Col sm={12} md={4} lg={6}>
+              <motion.div
+                style={{
+                  padding: 10,
+                }}
+                whileHover={{ scale: 1.03}}
                 animate={{ x: -5 }}
                 className="m-5 cajas"
               >
                 <h3 className="my-3 nombreCompañero">Lucía Soraire</h3>
                 <img
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   src="/img/luciaAvatar.png"
                   alt="team1"
                 />
@@ -115,13 +142,13 @@ const Nosotros = () => {
                 style={{
                   padding: 10,
                 }}
-                whileHover={{ scale: 1.2 }}
+                whileHover={{ scale: 1.03 }}
                 animate={{ x: 5 }}
                 className="m-5 cajas"
               >
                 <h3 className="my-3 nombreCompañero">Fernando E. Pérez</h3>
                 <img
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   src="/img/fernandoAvatar.png"
                   alt="team1"
                 />
@@ -139,33 +166,7 @@ const Nosotros = () => {
                 </p>
               </motion.div>
             </Col>
-            <Col sm={12} md={4} lg={6}>
-              <motion.div
-                style={{
-                  padding: 10,
-                }}
-                whileHover={{ scale: 1.2 }}
-                className="m-5 cajas ultimaCajaX"
-                animate={{ x: 300 }}
-
-              >
-                <h3 className="my-3 nombreCompañero">Matias Ahumada</h3>
-
-                <img
-                  style={{ width: 200, height: 200 }}
-                  src="/img/matiasAvatar.png"
-                  alt="team1"
-                />
-                <p className="loremCompañero">
-                  ¡Hola! Me llamo Matias, tengo 22 años, soy tecnico de
-                  celulares y progranador Full Stack. Trabajo de forma
-                  independie arbitrando con criptoactivos. La informática
-                  siempre fue mi mayor aficion. Por ello decidí ingresar a
-                  RollingCode, para adquirir nuevas habilidades y probarme a mí
-                  mismo en un nuevo desafío.
-                </p>
-              </motion.div>
-            </Col>
+           
           </Row>
         </Container>
       </div>
@@ -195,7 +196,7 @@ const Nosotros = () => {
                 <h3 className="my-3 nombreCompañero">Alvaro Ruiz Mejias</h3>
 
                 <img
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   src="/img/alvarooAvatar.png"
                   alt="team1"
                 />
@@ -218,7 +219,7 @@ const Nosotros = () => {
                 <h3 className="my-3 nombreCompañero">Thomás Jerez</h3>
 
                 <img
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   src="/img/tomasAvatar.png"
                   alt="team1"
                 />
@@ -242,7 +243,7 @@ const Nosotros = () => {
               >
                 <h3 className="my-3 nombreCompañero">Lucía Soraire</h3>
                 <img
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   src="/img/luciaAvatar.png"
                   alt="team1"
                 />
@@ -266,7 +267,7 @@ const Nosotros = () => {
               >
                 <h3 className="my-3 nombreCompañero">Fernando E. Pérez</h3>
                 <img
-                  style={{ width: 200, height: 200 }}
+                  style={{ width: 100, height: 100 }}
                   src="/img/fernandoAvatar.png"
                   alt="team1"
                 />
@@ -284,30 +285,7 @@ const Nosotros = () => {
                 </p>
               </div>
             </Col>
-            <Col sm={12} md={4} lg={6}>
-              <div
-                style={{
-                  padding: 10,
-                }}
-                className="m-5 cajas"
-              >
-                <h3 className="my-3 nombreCompañero">Matias Ahumada</h3>
-
-                <img
-                  style={{ width: 200, height: 200 }}
-                  src="matiasAvatar.png"
-                  alt="team1"
-                />
-                <p className="loremCompañero" style={{ color: 'red' }}>
-                  ¡Hola! Me llamo Matias, tengo 22 años, soy tecnico de
-                  celulares y progranador Full Stack. Trabajo de forma
-                  independie arbitrando con criptoactivos. La informática
-                  siempre fue mi mayor aficion. Por ello decidí ingresar a
-                  RollingCode, para adquirir nuevas habilidades y probarme a mí
-                  mismo en un nuevo desafío.
-                </p>
-              </div>
-            </Col>
+            
           </Row>
         </Container>
       </div>
