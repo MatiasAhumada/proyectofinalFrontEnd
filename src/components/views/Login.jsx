@@ -25,18 +25,6 @@ const Login = ({ setUsuarioLogeado }) => {
   });
 
   const onSubmit = (dato) => {
-    console.log(dato)
-    if(dato.isAdmin === true ){
-      usuarioLogin(dato).then((respuesta) => {
-        if (respuesta) {
-          localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
-          setUsuarioLogeado(respuesta);
-          navegar("/administrar")
-        } else {
-          Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
-        }
-      });
-    }else{
       usuarioLogin(dato).then((respuesta) => {
         if (respuesta) {
           localStorage.setItem("usuarioBar", JSON.stringify(respuesta));
@@ -46,8 +34,6 @@ const Login = ({ setUsuarioLogeado }) => {
           Swal.fire("Error", "Nombre de usuario o password incorrecto", "error");
         }
       });
-      
-    }
   };
   
 
