@@ -31,7 +31,7 @@ const EditarProducto = () => {
       } else {
         Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
       }
-      navegacion("/administrador");
+      navegacion("/administrar");
     });
   };
 

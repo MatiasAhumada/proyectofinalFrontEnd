@@ -41,6 +41,7 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
         <NavDropdown.Item eventKey="4.1" as={Link} to={'/administrar'}>Productos</NavDropdown.Item>
         <NavDropdown.Item eventKey="4.2"as={Link} to={'/pedidos'}>Pedidos</NavDropdown.Item>
         <NavDropdown.Item eventKey="4.3"as={Link} to={'/usuarios'}>Usuarios</NavDropdown.Item>
+    
         
       </NavDropdown>
             

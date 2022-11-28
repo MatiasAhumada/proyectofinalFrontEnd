@@ -24,25 +24,26 @@ const EditarUsuario = () => {
   const navegacion = useNavigate();
 
   const onSubmit = (datos) => {
+    console.log(datos)
     editarUsuarioApi(id, datos).then((datos) => {
       if (datos.status === 200) {
-        Swal.fire("Usuario actualizado", "Good", "success");
-        // navegacion("/administrar/crear")
+        Swal.fire("Usuario actualizado", "Bien!", "success");
+        navegacion("/usuarios")
       } else {
         Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
       }
-      navegacion("/administrador");
+      
     });
   };
 
   useEffect(() => {
     obtenerUsuarioApi(id).then((respuesta) => {
       if (respuesta.status === 200) {
-        setValue("nombreUsuario", respuesta.dato.nombreUsuario);
-        setValue("precio", respuesta.dato.precio);
-        setValue("imagen", respuesta.dato.imagen);
-        setValue("detalle", respuesta.dato.detalle);
-        setValue("categoria", respuesta.dato.categoria);
+        console.log(respuesta.dato)
+        setValue('id', respuesta.dato._id)
+        setValue("nombre", respuesta.dato.nombre);
+        setValue("email", respuesta.dato.email);
+        setValue("password", respuesta.dato.password);
         console.log(respuesta);
       } else {
         Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
@@ -58,20 +59,33 @@ const EditarUsuario = () => {
       <h1 className="display-4 mt-5">Editar usuario</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group className="mb-3" controlId="formNombreProdcuto">
+      <Form.Group className="mb-3" controlId="formid">
+          <Form.Label>ID Usuario*</Form.Label>
+          <Form.Control
+            type="text"
+            disabled
+            {...register("id")}
+           
+          />
+        
+          <Form.Text className="text-danger">
+            {errors.id?.message}
+          </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formNombreUsuario">
           <Form.Label>Nombre del usuario*</Form.Label>
           <Form.Control
             type="text"
-            placeholder=" Ej:  Taco Epiko"
-            {...register("nombreUsuario", {
+            placeholder=" Ej:  Pedro Perez"
+            {...register("nombre", {
               required: "Este dato es obligatorio",
               minLength: {
                 value: 2,
                 message: "Debe ingresar como minimo 2 caracteres",
               },
               maxLength: {
-                value: 50,
-                message: "Debe ingresar como maximo 20 caracteres",
+                value: 60,
+                message: "Debe ingresar como maximo 50 caracteres",
               },
             })}
           />
@@ -79,12 +93,13 @@ const EditarUsuario = () => {
             {errors.nombreUsuario?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label>Detalle del usuario*</Form.Label>
+        
+        <Form.Group className="mb-3" controlId="formEmail">
+          <Form.Label>Email del usuario*</Form.Label>
           <Form.Control
             type="text"
-            placeholder=" Ej:  Este usuario contiene los sigs ingredientes y detalles de la preparación"
-            {...register("detalle", {
+            placeholder=" Ej: pepito@gmail.com"
+            {...register("email", {
               required: "Este dato es obligatorio",
               minLength: {
                 value: 10,
@@ -100,12 +115,12 @@ const EditarUsuario = () => {
             {errors.detalleUsuario?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label>Precio*</Form.Label>
+        <Form.Group className="mb-3" controlId="formPassword">
+          <Form.Label>Contraseña*</Form.Label>
           <Form.Control
-            type="number"
-            placeholder=" Ej: 10"
-            {...register("precio", {
+            type="text"
+            placeholder=" Ej: Pepito123"
+            {...register("password", {
               required: "El precio es un valor requerido",
               min: {
                 value: 1,
@@ -121,41 +136,7 @@ const EditarUsuario = () => {
             {errors.precio?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formImagen">
-          <Form.Label>Imagen URL*</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Ej: https://www.pexels.com/es-es/foto/alimentos-cocidos-en-placa-azul-2092507/"
-            {...register("imagen", {
-              required: "La url de la imagen es obligatoria",
-              pattern: {
-                value: /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/,
-                message: "Debe ingresar una URL válida",
-              },
-            })}
-          />
-        
-          <Form.Text className="text-danger">
-            {errors.imagen?.message}
-          </Form.Text>
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label>Categoria*</Form.Label>
-          <Form.Select
-            {...register("categoria", {
-              required: "Debe seleccionar una categoría",
-            })}
-          >
-            <option value="">Seleccione una opcion</option>
-            <option value="picante epiko">Picante epiko</option>
-            <option value="medio picante">Medio picante</option>
-            <option value="comida caliente">Comida Caliente</option>
-            <option value="comida fria">Comida fria</option>
-          </Form.Select>
-          <Form.Text className="text-danger">
-            {errors.categoria?.message}
-          </Form.Text>
-        </Form.Group>
+       
         <Button variant="primary" type="submit">
           Guardar
         </Button>
