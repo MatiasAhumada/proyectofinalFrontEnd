@@ -24,10 +24,8 @@ const ProductosMenu = (props) => {
  
 
   return (
-    <article className="containerRight2">
-      <h1 className="titulo">LOS MÁS ELEGIDOS</h1>
-      <hr />
-      <br />
+
+     
       
       <Container>
         <Card className="dos" style={{ width: "20rem" }}>
@@ -52,11 +50,8 @@ const ProductosMenu = (props) => {
             </Link>
           </Card.Body>
         </Card>
-      </Container>
+        </Container>
 
-      <br />
-      <br />
-    </article>
   );
 };
 
