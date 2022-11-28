@@ -20,7 +20,6 @@ a.nav__brand:hover{
 
 
 div .navbar {
-  height: 8vh;
   background: url(../../public/img/RojoGranulado-02.png);
 
 }
@@ -28,7 +27,6 @@ div .navbar {
 
 a.navbar-brand{
   color: rgb(241, 241, 228);
-  font-size: 40px;
 }
 
 a.navbar-brand:hover{
