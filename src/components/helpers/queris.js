@@ -172,3 +172,45 @@ export const consultarPedidoApi = async () => {
     console.log(error);
   }
 };
+
+
+export const borrarPedidoAPI = async (id) => {
+  try {
+    const respuesta = await fetch(urlPedido + "/" + id, {
+      method: "DELETE",
+    });
+
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const obtenerPedidoApi = async (id) => {
+  try {
+    const respuesta = await fetch(urlPedido + "/" + id);
+    const productoBuscado = {
+      dato: await respuesta.json(),
+      status: respuesta.status,
+    };
+
+    // console.log(respuesta)
+    return productoBuscado;
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const editarPedidoApi = async (id, datosActualizados) => {
+  try {
+    const respuesta = await fetch(urlPedido + "/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosActualizados),
+    });
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
