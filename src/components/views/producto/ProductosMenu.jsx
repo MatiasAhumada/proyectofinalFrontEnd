@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../../css/inicio.css";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
+
 
 
 const ProductosMenu = (props) => {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || []
   const navegacion = useNavigate();
-
   const onClick = ()=>{
-    if( !usuario === ""){
+    if( usuario !== ""){
       navegacion("/pedidos") 
     }else{
       navegacion("/login") 
@@ -21,11 +21,12 @@ const ProductosMenu = (props) => {
     }
   }
 
+ 
+
   return (
-    <article className="containerRight2">
-      <h1 className="titulo">LOS MÁS ELEGIDOS</h1>
-      <hr />
-      <br />
+
+     
+      
       <Container>
         <Card className="dos" style={{ width: "20rem" }}>
           <Card.Img variant="top" src={props.imagen} />
@@ -44,17 +45,13 @@ const ProductosMenu = (props) => {
             <Button className="dos" onClick={onClick}>
               Comprar
             </Button>
-            <Link className="dos" to={`detalle-producto/${props.id}`}>
+            <Button className="dos " as={Link} to={`/detalle-producto/${props.id}`}>
               Ver más
-            </Link>
+            </Button>
           </Card.Body>
         </Card>
-       
-      </Container>
+        </Container>
 
-      <br />
-      <br />
-    </article>
   );
 };
 
