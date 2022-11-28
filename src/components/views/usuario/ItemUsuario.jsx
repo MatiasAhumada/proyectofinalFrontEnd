@@ -47,12 +47,12 @@ const ItemUsuario = ({ usuario, setUsuarios }) => {
     <tr>
       <td>{usuario._id}</td>
       <td>{usuario.nombre}</td>
-      <td>${usuario.email}</td>
+      <td>{usuario.email}</td>
       
     
       <td>
         
-        <Link className="btn btn-warning my-3"  to={`/administrar/editar/${usuario._id}`}> Editar</Link>
+        <Link className="btn btn-warning my-3"  to={`/administrar/editarUsuario/${usuario._id}`}> Editar</Link>
         <Button variant="danger"  onClick={borrarUsuario}>
           Borrar
           

@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Button, Container, Form } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
-import { editarUsuarioApi, obtenerUsuarioApi } from "../../helpers/queris";
+import { editarPedidoApi, obtenerPedidoApi } from "../../helpers/queris";
 import Swal from "sweetalert2";
 
-const EditarUsuario = () => {
+const EditarPedido = () => {
   const { id } = useParams();
   const {
     register,
@@ -14,7 +14,7 @@ const EditarUsuario = () => {
     setValue,
   } = useForm({
     defaultValues: {
-      nombreUsuario: "",
+      nombrePedido: "",
       precio: 1,
       imagen: "",
       detalle: "",
@@ -25,10 +25,10 @@ const EditarUsuario = () => {
 
   const onSubmit = (datos) => {
     console.log(datos)
-    editarUsuarioApi(id, datos).then((datos) => {
+    editarPedidoApi(id, datos).then((datos) => {
       if (datos.status === 200) {
-        Swal.fire("Usuario actualizado", "Bien!", "success");
-        navegacion("/usuarios")
+        Swal.fire("Pedido actualizado", "Bien!", "success");
+        navegacion("/pedidos")
       } else {
         Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
       }
@@ -37,7 +37,7 @@ const EditarUsuario = () => {
   };
 
   useEffect(() => {
-    obtenerUsuarioApi(id).then((respuesta) => {
+    obtenerPedidoApi(id).then((respuesta) => {
       if (respuesta.status === 200) {
         console.log(respuesta.dato)
         setValue('id', respuesta.dato._id)
@@ -56,11 +56,11 @@ const EditarUsuario = () => {
       backgroundColor: ''
     }}>
       <section className="container mainSection" >
-      <h1 className="display-4 mt-5">Editar usuario</h1>
+      <h1 className="display-4 mt-5">Editar pedido</h1>
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
       <Form.Group className="mb-3" controlId="formid">
-          <Form.Label>ID Usuario*</Form.Label>
+          <Form.Label>ID Pedido*</Form.Label>
           <Form.Control
             type="text"
             disabled
@@ -72,8 +72,8 @@ const EditarUsuario = () => {
             {errors.id?.message}
           </Form.Text>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formNombreUsuario">
-          <Form.Label>Nombre del usuario*</Form.Label>
+        <Form.Group className="mb-3" controlId="formNombrePedido">
+          <Form.Label>Nombre del pedido*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej:  Pedro Perez"
@@ -90,12 +90,12 @@ const EditarUsuario = () => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.nombreUsuario?.message}
+            {errors.nombrePedido?.message}
           </Form.Text>
         </Form.Group>
         
         <Form.Group className="mb-3" controlId="formEmail">
-          <Form.Label>Email del usuario*</Form.Label>
+          <Form.Label>Email del pedido*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej: pepito@gmail.com"
@@ -112,7 +112,7 @@ const EditarUsuario = () => {
             })}
           />
           <Form.Text className="text-danger">
-            {errors.detalleUsuario?.message}
+            {errors.detallePedido?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPassword">
@@ -128,7 +128,7 @@ const EditarUsuario = () => {
               },
               max: {
                 value: 1000,
-                message: "El precio de usuario como maximo debe ser de 10000",
+                message: "El precio de pedido como maximo debe ser de 10000",
               },
             })}
           />
@@ -147,4 +147,4 @@ const EditarUsuario = () => {
   );
 };
 
-export default EditarUsuario;
+export default EditarPedido;

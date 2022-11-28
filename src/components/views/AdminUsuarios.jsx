@@ -19,7 +19,7 @@ console.log(usuarios)
         <section className="container mainSection">
           <div className="d-flex justify-content-between align-items-center mt-5">
             <h1 className="display-4">Usuarios disponibles</h1>
-            <Link className="btn btn-primary" to="/administrar/crear">Agregar</Link>
+            <Link className="btn btn-primary" to="/administrar/crearUsuario">Agregar</Link>
           </div>
           <hr />
           
@@ -28,8 +28,8 @@ console.log(usuarios)
               <tr>
                 <th>Id del Usuario</th>
                 <th>Nombre</th>
-                <th>Emain</th>                
-                <th>Categoria</th>              
+                <th>Email</th>                
+                <th>Funciones</th>              
               </tr>
             </thead>
             <tbody>

@@ -32,7 +32,7 @@ export const obtenerUsuarioApi = async (id) => {
       status: respuesta.status,
     };
 
-    // console.log(respuesta)
+    console.log(respuesta)
     return usuarioBuscado;
   } catch (error) {
     console.log(error);
@@ -66,14 +66,16 @@ export const borrarUsuarioAPI = async (id) => {
 };
 export const editarUsuarioApi = async (id, datosActualizados) => {
   try {
-    const respuesta = await fetch(urlUsuario + "/" + id, {
+    console.log(id)
+    const respuestaUsuario = await fetch(urlUsuario + "/" + id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(datosActualizados),
     });
-    return respuesta;
+    console.log(respuestaUsuario)
+    return respuestaUsuario;
   } catch (error) {
     console.log(error);
   }
@@ -166,6 +168,48 @@ export const consultarPedidoApi = async () => {
     const listaPedidos = await respuesta.json();
     console.log(respuesta);
     return listaPedidos;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+export const borrarPedidoAPI = async (id) => {
+  try {
+    const respuesta = await fetch(urlPedido + "/" + id, {
+      method: "DELETE",
+    });
+
+    return respuesta;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const obtenerPedidoApi = async (id) => {
+  try {
+    const respuesta = await fetch(urlPedido + "/" + id);
+    const productoBuscado = {
+      dato: await respuesta.json(),
+      status: respuesta.status,
+    };
+
+    // console.log(respuesta)
+    return productoBuscado;
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const editarPedidoApi = async (id, datosActualizados) => {
+  try {
+    const respuesta = await fetch(urlPedido + "/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datosActualizados),
+    });
+    return respuesta;
   } catch (error) {
     console.log(error);
   }
