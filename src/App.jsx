@@ -17,6 +17,7 @@ import RutasAdmin from "./components/routes/RutasAdmin";
 import Nosotros from "./components/views/Nosotros";
 
 
+
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
   const [usuarioLogeado, setUsuarioLogeado] = useState(usuario);

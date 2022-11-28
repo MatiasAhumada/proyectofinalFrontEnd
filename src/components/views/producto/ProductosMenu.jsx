@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import { Link, useNavigate} from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { consultarProductoApi } from "../../helpers/queris";
 
 
 
@@ -20,7 +21,13 @@ const ProductosMenu = (props) => {
       Swal.fire("Debe estar logeado para realizar esta accion")
     }
   }
-
+  const [producto, setProducto] = useState([]);
+ useEffect(() => {
+    consultarProductoApi().then((respuesta) => {
+      console.log(respuesta);
+      setProducto(respuesta);
+    });
+  }, [])
  
 
   return (
