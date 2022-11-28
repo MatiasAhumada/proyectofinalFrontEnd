@@ -41,7 +41,6 @@
 
   .titulo {
     font-size: 40px;
-    margin-right: -500px;
   }
   .nombreCompañero {
     font-size: 38px;
@@ -59,17 +58,15 @@
 @media (min-width: 320px) and (max-width: 740px) {
   .titulo {
     font-size: 30px;
-    margin-left: -300px;
-
   }
 
   .nosotros {
-    background-size: auto;
+    background-size: cover;
 
   }
   .titulo {
     font-size: 18px;
-    margin-right: 15px;
+    margin-right: 10px;
   }
   .nombreCompañero {
     font-size: 18px;
