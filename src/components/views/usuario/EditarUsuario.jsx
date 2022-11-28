@@ -28,7 +28,7 @@ const EditarUsuario = () => {
     editarUsuarioApi(id, datos).then((datos) => {
       if (datos.status === 200) {
         Swal.fire("Usuario actualizado", "Bien!", "success");
-        navegacion("/usuarios")
+        navegacion("/adminUsuarios")
       } else {
         Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
       }

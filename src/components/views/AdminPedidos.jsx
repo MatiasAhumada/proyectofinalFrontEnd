@@ -18,8 +18,8 @@ const AdminPedidos = () => {
       return (
         <section className="container mainSection">
           <div className="d-flex justify-content-between align-items-center mt-5">
-            <h1 className="display-4">pedidos disponibles</h1>
-            <Link className="btn btn-primary" to="/administrar/crear">Agregar</Link>
+            <h1 className="display-4">Pedidos disponibles</h1>
+       
           </div>
           <hr />
           
@@ -35,9 +35,9 @@ const AdminPedidos = () => {
               </tr>
             </thead>
             <tbody>
-             {
+             {/* {
                 pedidos.map((pedidos)=><ItemPedido key={pedidos._id} producto={pedidos} setPedidos={setPedidos}></ItemPedido>)
-             }
+             } */}
              
             </tbody>
           </Table>

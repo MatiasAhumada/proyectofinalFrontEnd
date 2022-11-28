@@ -37,17 +37,17 @@ function App() {
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
+          
           <Route
             exact
-            path="/usuarios"
+            path="/adminUsuarios"
             element={<AdminUsuarios></AdminUsuarios>}
           ></Route>
           <Route
             exact
-            path="/pedidos"
+            path="/adminPedidos"
             element={<AdminPedidos></AdminPedidos>}
           ></Route>
-
 
           <Route
             exact
