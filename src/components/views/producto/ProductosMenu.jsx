@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container";
 import { Link, useNavigate} from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { consultarProductoApi } from "../../helpers/queris";
 
 
 
@@ -14,20 +13,14 @@ const ProductosMenu = (props) => {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || []
   const navegacion = useNavigate();
   const onClick = ()=>{
-    if( !usuario === ""){
+    if( usuario !== ""){
       navegacion("/pedidos") 
     }else{
       navegacion("/login") 
       Swal.fire("Debe estar logeado para realizar esta accion")
     }
   }
-  const [producto, setProducto] = useState([]);
- useEffect(() => {
-    consultarProductoApi().then((respuesta) => {
-      console.log(respuesta);
-      setProducto(respuesta);
-    });
-  }, [])
+
  
 
   return (
@@ -52,9 +45,9 @@ const ProductosMenu = (props) => {
             <Button className="dos" onClick={onClick}>
               Comprar
             </Button>
-            <Link className="dos" to={`detalle-producto/${props.id}`}>
+            <Button className="dos " as={Link} to={`/detalle-producto/${props.id}`}>
               Ver más
-            </Link>
+            </Button>
           </Card.Body>
         </Card>
         </Container>

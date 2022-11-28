@@ -1,9 +1,6 @@
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "../../css/navbar.css";
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
 
 
 
@@ -40,7 +37,13 @@ function NavBar({usuarioLogueado, setUsuarioLogueado}) {
 
             {usuarioLogueado.isAdmin ?(
               <>
-              <Nav.Link href="/administrar">Administrador</Nav.Link>
+               <NavDropdown title="Administrador" id="nav-dropdown">
+        <NavDropdown.Item eventKey="4.1" as={Link} to={'/administrar'}>Productos</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.2"as={Link} to={'/pedidos'}>Pedidos</NavDropdown.Item>
+        <NavDropdown.Item eventKey="4.3"as={Link} to={'/usuarios'}>Usuarios</NavDropdown.Item>
+        
+      </NavDropdown>
+            
               </>
             ) : (
               <Nav.Link href="/registro">Registro</Nav.Link>

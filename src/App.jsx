@@ -11,10 +11,11 @@ import Register from "./components/views/Register";
 import { useState } from "react";
 import PedidosUsuario from "./components/views/PedidosUsuario";
 import "./App.css";
-import ProductosMenu from "./components/views/producto/ProductosMenu";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdmin from "./components/routes/RutasAdmin";
 import Nosotros from "./components/views/Nosotros";
+import AdminPedidos from "./components/views/AdminPedidos";
+import AdminUsuarios from "./components/views/AdminUsuarios";
 
 
 
@@ -35,6 +36,16 @@ function App() {
             exact
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
+          ></Route>
+          <Route
+            exact
+            path="/usuarios"
+            element={<AdminUsuarios></AdminUsuarios>}
+          ></Route>
+          <Route
+            exact
+            path="/pedidos"
+            element={<AdminPedidos></AdminPedidos>}
           ></Route>
 
 
@@ -64,7 +75,7 @@ function App() {
           <Route path="/administrar/*" element={<RutasProtegidas><RutasAdmin></RutasAdmin></RutasProtegidas>}></Route>
         </Routes>
 
-      <Foot></Foot>
+      {/* <Foot></Foot> */}
       </BrowserRouter>
     </section>
 

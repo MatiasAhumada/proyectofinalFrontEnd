@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container";
 import { Link, useNavigate} from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { consultarProductoApi } from "../../helpers/queris";
 
 const CardProducto = (props) => {
     const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || []
