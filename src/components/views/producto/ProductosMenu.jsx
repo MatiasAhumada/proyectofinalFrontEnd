@@ -13,7 +13,7 @@ const ProductosMenu = (props) => {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || []
   const navegacion = useNavigate();
   const onClick = ()=>{
-    if( !usuario === ""){
+    if( usuario !== ""){
       navegacion("/pedidos") 
     }else{
       navegacion("/login") 
@@ -24,10 +24,8 @@ const ProductosMenu = (props) => {
  
 
   return (
-    <article className="containerRight2">
-      <h1 className="titulo">LOS MÁS ELEGIDOS</h1>
-      <hr />
-      <br />
+
+     
       
       <Container>
         <Card className="dos" style={{ width: "20rem" }}>
@@ -47,16 +45,13 @@ const ProductosMenu = (props) => {
             <Button className="dos" onClick={onClick}>
               Comprar
             </Button>
-            <Link className="dos" to={`detalle-producto/${props.id}`}>
+            <Button className="dos " as={Link} to={`/detalle-producto/${props.id}`}>
               Ver más
-            </Link>
+            </Button>
           </Card.Body>
         </Card>
-      </Container>
+        </Container>
 
-      <br />
-      <br />
-    </article>
   );
 };
 

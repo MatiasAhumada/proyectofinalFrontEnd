@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DetalleProducto from "./components/views/DetalleProducto";
 import "./App.css";
-
+import Menu from './components/views/producto/Menu'
 import Inicio from "./components/views/Inicio";
 import Nav from "./components/common/Nav";
 import Foot from "./components/common/Foot";
@@ -11,10 +11,12 @@ import Register from "./components/views/Register";
 import { useState } from "react";
 import PedidosUsuario from "./components/views/PedidosUsuario";
 import "./App.css";
-import ProductosMenu from "./components/views/producto/ProductosMenu";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdmin from "./components/routes/RutasAdmin";
 import Nosotros from "./components/views/Nosotros";
+import AdminPedidos from "./components/views/AdminPedidos";
+import AdminUsuarios from "./components/views/AdminUsuarios";
+
 
 
 function App() {
@@ -35,6 +37,16 @@ function App() {
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
+          <Route
+            exact
+            path="/usuarios"
+            element={<AdminUsuarios></AdminUsuarios>}
+          ></Route>
+          <Route
+            exact
+            path="/pedidos"
+            element={<AdminPedidos></AdminPedidos>}
+          ></Route>
 
 
           <Route
@@ -53,7 +65,7 @@ function App() {
           <Route
             exact
             path="/menu"
-            element={<ProductosMenu></ProductosMenu>}
+            element={<Menu></Menu>}
           ></Route>
           <Route
             exact
