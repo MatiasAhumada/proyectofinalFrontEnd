@@ -122,3 +122,6 @@ button.mt-3.btn.btn-success:hover{
     transform: scale(1.1);
 }
 
+.container .my-5 .mainSection{
+    margin-bottom: 200px;
+}
