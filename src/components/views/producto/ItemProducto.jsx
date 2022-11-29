@@ -44,13 +44,13 @@ const ItemProducto = ({ producto, setProductos }) => {
   return (
     <tr>
       <td>{producto._id}</td>
-      <td>{producto.nombreProducto}</td>
-      <td>${producto.precio}</td>
-      <td>{producto.imagen}</td>
-      <td>{producto.categoria}</td>
-      <td>
+      <td  className="text-center">{producto.nombreProducto}</td>
+      <td  className="text-center">${producto.precio}</td>
+      <td  className="text-center">{producto.imagen}</td>
+      <td className="text-center">{producto.categoria}</td>
+      <td className="text-center">
         <Link
-          className="btn btn-warning my-3"
+          className="btn btn-warning my-2"
           to={`/administrar/editar/${producto._id}`}
         >
           Editar
