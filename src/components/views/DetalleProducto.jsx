@@ -26,10 +26,10 @@ const DetalleProducto = () => {
   }, []);
 
   return (
-    <Card className="container my-5 mainSection">
-      <Row className="w-75">
-        <Col md={6}>
-          <Image src={detalle.imagen} alt="brownie" className="w-100" />
+    <Card className="container  my-5  mainSection">
+      <Row className="w-75 ms-5 mt-5 ">
+        <Col md={6} >
+          <Image src={detalle.imagen} alt="brownie" className="mt-4 w-100" />
         </Col>
         <Col md={6} className="py-3">
           <Card.Title>{detalle.nombreProducto}</Card.Title>

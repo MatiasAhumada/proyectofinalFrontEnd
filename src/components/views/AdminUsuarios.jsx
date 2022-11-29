@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import Table from "react-bootstrap/table";
+import {Table} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { consultarUsuarioApi } from "../helpers/queris";
 import ItemUsuario from "./usuario/ItemUsuario";
+import "../../css/views.css";
 
 const AdminUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -14,8 +15,8 @@ const AdminUsuarios = () => {
   }, []);
 
   return (
-    <section className="container mainSection">
-      <div className="d-flex justify-content-between align-items-center mt-5">
+    <section className="container mainSection mx-5">
+      <div className="d-flex justify-content-between align-items-center ">
         <h1 className="display-4">Usuarios disponibles</h1>
         <Link className="btn btn-primary" to="/administrar/crearUsuario">
           Agregar
@@ -23,7 +24,7 @@ const AdminUsuarios = () => {
       </div>
       <hr />
 
-      <Table responsive striped bordered hover>
+      <Table responsive  bordered hover>
         <thead>
           <tr>
             <th>Id del Usuario</th>

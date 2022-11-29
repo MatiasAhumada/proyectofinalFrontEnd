@@ -177,7 +177,10 @@ article.containerRight2{
 
 @media screen and (max-width: 414px) {
   img {
-    width: 100%;
+    width:100%;
+  }
+  img.right {
+    width: 90%;
   }
 
 }

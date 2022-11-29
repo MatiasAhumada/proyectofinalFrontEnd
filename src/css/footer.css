@@ -10,8 +10,6 @@ footer{
     background: rgb(236, 122, 59);
     flex-direction: column;
     margin-top: auto;
-    
-
 }
 
 footer .social__icon, footer .menu{
