@@ -1,6 +1,6 @@
-const urlUsuario = "http://localhost:4000/apiEpik/user/usuarios";
-const urlPedido = "http://localhost:4000/apiEpik/pedido/pedidos";
-const URL = "http://localhost:4000/apiEpik/productos";
+const urlUsuario =process.env.REACT_APP_API_STACK_EPIK_USUARIOS
+const urlPedido = process.env.REACT_APP_API_STACK_EPIK_PEDIDOS
+const URL = process.env.REACT_APP_API_STACK_EPIK_PRODUCTOS
 // USUARIOS
 export const usuarioLogin = async (usuario) => {
   try {
