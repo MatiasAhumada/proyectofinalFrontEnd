@@ -3,6 +3,7 @@ import  Table  from "react-bootstrap/table";
 import { Link } from "react-router-dom";
 import { consultarPedidoApi } from "../helpers/queris";
 import ItemPedido from './pedido/ItemPedido'
+import "../../css/views.css";
 
 const AdminPedidos = () => {
     const [pedidos, setPedidos] = useState([]);

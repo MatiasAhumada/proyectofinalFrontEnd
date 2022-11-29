@@ -17,6 +17,11 @@ table{
     color: #F1F1E4;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+section.container.mainSection{
+    margin-bottom: 120px;
+}
+
 a.btn.btn-primary{
     background-color: #F1F1E4;
     color: brown;
@@ -122,6 +127,5 @@ button.mt-3.btn.btn-success:hover{
     transform: scale(1.1);
 }
 
-.container .my-5 .mainSection{
-    margin-bottom: 200px;
-}
+
+

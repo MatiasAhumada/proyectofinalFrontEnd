@@ -3,7 +3,7 @@ import  Table  from "react-bootstrap/table";
 import { Link } from "react-router-dom";
 import { consultarProductoApi } from "../helpers/queris";
 import ItemProducto from './producto/ItemProducto'
-
+import "../../css/views.css";
 
 const Admin =()=>{
     const [productos, setProductos] = useState([]);
