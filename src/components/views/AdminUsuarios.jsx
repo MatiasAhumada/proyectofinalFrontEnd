@@ -3,6 +3,7 @@ import Table from "react-bootstrap/table";
 import { Link } from "react-router-dom";
 import { consultarUsuarioApi } from "../helpers/queris";
 import ItemUsuario from "./usuario/ItemUsuario";
+import "../../css/views.css";
 
 const AdminUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
