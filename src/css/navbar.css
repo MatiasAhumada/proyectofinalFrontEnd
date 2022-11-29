@@ -18,6 +18,9 @@ a.nav__brand:hover{
   color: rgb(241, 241, 228);
 }
 
+div#basic-navbar-nav.navbar-collapse.collapse{
+  flex-grow: initial;
+}
 
 div .navbar {
   background: url(../../public/img/RojoGranulado-02.png);

@@ -4,7 +4,37 @@ section{
     flex-direction: column;
     
 }
+div.container{
+    text-align: center;
+    justify-content: center;
+}
 
+div.d-flex.justify-content-between.align-items-center.mt-5{
+    color: #F1F1E4;
+    text-align: center;
+}
+table{
+    color: #F1F1E4;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a.btn.btn-primary{
+    background-color: #F1F1E4;
+    color: brown;
+    border: 0px;
+}
+a.btn.btn-primary:hover{
+    background-color: brown;
+    color: #F1F1E4;
+    border: 0px;
+}
+
+th{
+    color: #F1F1E4;
+}
+tbody{
+    color: #F1F1E4;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 h4.card-header{
     color: #F1F1E4;
     text-align: center;
