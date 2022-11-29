@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DetalleProducto from "./components/views/DetalleProducto";
-import "./App.css";
-import Menu from './components/views/producto/Menu'
+import Menu from "./components/views/producto/Menu";
 import Inicio from "./components/views/Inicio";
 import Nav from "./components/common/Nav";
 import Foot from "./components/common/Foot";
@@ -19,18 +18,17 @@ import AdminUsuarios from "./components/views/AdminUsuarios";
 
 import Error404 from "./components/views/Error404";
 
-
-
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
   const [usuarioLogeado, setUsuarioLogeado] = useState(usuario);
 
   return (
-
     <section>
       <BrowserRouter>
-      <Nav usuarioLogueado={usuarioLogeado}
-        setUsuarioLogueado={setUsuarioLogeado}></Nav>
+        <Nav
+          usuarioLogueado={usuarioLogeado}
+          setUsuarioLogueado={setUsuarioLogeado}
+        ></Nav>
 
         <Routes>
           <Route exact path="/" element={<Inicio></Inicio>}></Route>
@@ -39,7 +37,7 @@ function App() {
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
-          
+
           <Route
             exact
             path="/adminUsuarios"
@@ -51,12 +49,7 @@ function App() {
             element={<AdminPedidos></AdminPedidos>}
           ></Route>
 
-          <Route
-            exact
-            path="/nosotros"
-            element={<Nosotros></Nosotros>}
-          ></Route>
-                   
+          <Route exact path="/nosotros" element={<Nosotros></Nosotros>}></Route>
 
           <Route exact path="/registro" element={<Register></Register>} />
           <Route
@@ -64,33 +57,27 @@ function App() {
             path="/login"
             element={<Login setUsuarioLogeado={setUsuarioLogeado}></Login>}
           />
-          <Route
-            exact
-            path="/menu"
-            element={<Menu></Menu>}
-          ></Route>
-          <Route
-            exact
-            path="/error404"
-            element={<Error404></Error404>}
-          ></Route>
+          <Route exact path="/menu" element={<Menu></Menu>}></Route>
+          <Route exact path="/error404" element={<Error404></Error404>}></Route>
           <Route
             exact
             path="/pedidos"
             element={<PedidosUsuario></PedidosUsuario>}
           ></Route>
-          <Route path="/administrar/*" element={<RutasProtegidas><RutasAdmin></RutasAdmin></RutasProtegidas>}></Route>
           <Route
-            exact
-            path="/error404"
-            element={<Error404></Error404>}
+            path="/administrar/*"
+            element={
+              <RutasProtegidas>
+                <RutasAdmin></RutasAdmin>
+              </RutasProtegidas>
+            }
           ></Route>
+          <Route exact path="/error404" element={<Error404></Error404>}></Route>
         </Routes>
 
-      <Foot></Foot>
+        <Foot></Foot>
       </BrowserRouter>
     </section>
-
   );
 }
 

@@ -12,10 +12,9 @@ const Inicio = () => {
   const [producto, setProducto] = useState([]);
   useEffect(() => {
     consultarProductoApi().then((respuesta) => {
-      console.log(respuesta);
       setProducto(respuesta);
     });
-  }, [])
+  }, []);
   return (
     <section>
       <Portada></Portada>
@@ -23,23 +22,23 @@ const Inicio = () => {
       <Drinks></Drinks>
       <FastFood></FastFood>
       <article className="containerRight2">
-      <h1 className="titulo">LOS MÁS ELEGIDOS</h1>
-      <hr />
-      <br />
-      
-      <Row xs={1} md={4} className="g-4">
-      {producto.map((objeto, _id) => (
-        <ProductosMenu
-          key={_id}
-          nombreProducto={objeto.nombreProducto}
-          precio={objeto.precio}
-          imagen={objeto.imagen}
-          categoria={objeto.categoria}
-          descripcion={objeto.detalle}
-          id={objeto._id}
-        ></ProductosMenu>
-      ))}
-      </Row>
+        <h1 className="titulo">LOS MÁS ELEGIDOS</h1>
+        <hr />
+        <br />
+
+        <Row xs={1} md={4} className="g-4">
+          {producto.map((objeto, _id) => (
+            <ProductosMenu
+              key={_id}
+              nombreProducto={objeto.nombreProducto}
+              precio={objeto.precio}
+              imagen={objeto.imagen}
+              categoria={objeto.categoria}
+              descripcion={objeto.detalle}
+              id={objeto._id}
+            ></ProductosMenu>
+          ))}
+        </Row>
       </article>
     </section>
   );

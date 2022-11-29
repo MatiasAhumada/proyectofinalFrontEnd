@@ -32,7 +32,7 @@ export const obtenerUsuarioApi = async (id) => {
       status: respuesta.status,
     };
 
-    console.log(respuesta)
+    console.log(respuesta);
     return usuarioBuscado;
   } catch (error) {
     console.log(error);
@@ -66,7 +66,7 @@ export const borrarUsuarioAPI = async (id) => {
 };
 export const editarUsuarioApi = async (id, datosActualizados) => {
   try {
-    console.log(id)
+    console.log(id);
     const respuestaUsuario = await fetch(urlUsuario + "/" + id, {
       method: "PUT",
       headers: {
@@ -74,7 +74,7 @@ export const editarUsuarioApi = async (id, datosActualizados) => {
       },
       body: JSON.stringify(datosActualizados),
     });
-    console.log(respuestaUsuario)
+    console.log(respuestaUsuario);
     return respuestaUsuario;
   } catch (error) {
     console.log(error);
@@ -154,7 +154,7 @@ export const consultarProductoApi = async () => {
     const respuesta = await fetch(URL);
 
     const listaProductos = await respuesta.json();
-    console.log(respuesta);
+
     return listaProductos;
   } catch (error) {
     console.log(error);
@@ -166,13 +166,12 @@ export const consultarPedidoApi = async () => {
     const respuesta = await fetch(urlPedido);
 
     const listaPedidos = await respuesta.json();
-    console.log(respuesta);
+
     return listaPedidos;
   } catch (error) {
     console.log(error);
   }
 };
-
 
 export const borrarPedidoAPI = async (id) => {
   try {

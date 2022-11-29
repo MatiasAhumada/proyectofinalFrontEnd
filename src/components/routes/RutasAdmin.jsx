@@ -1,23 +1,16 @@
 import { Routes, Route } from "react-router-dom";
 import Admin from "../views/Admin";
-import AdminPedidos from "../views/AdminPedidos";
-import AdminUsuarios from "../views/AdminUsuarios";
 import EditarPedido from "../views/pedido/EditarPedido";
 import CrearProducto from "../views/producto/CrearProducto";
 import EditarProducto from "../views/producto/EditarProducto";
 import CrearUsuario from "../views/usuario/CrearUsuario";
 import EditarUsuario from "../views/usuario/EditarUsuario";
 
-
 const RutasAdmin = () => {
   return (
     <>
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={<Admin></Admin>}
-        />
+        <Route exact path="/" element={<Admin></Admin>} />
         <Route
           exact
           path="/crear"
@@ -43,8 +36,6 @@ const RutasAdmin = () => {
           path="/editarUsuario/:id"
           element={<EditarUsuario></EditarUsuario>}
         ></Route>
-        
-       
       </Routes>
     </>
   );

@@ -5,46 +5,43 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const CrearUsuario = () => {
-  
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset
-      } = useForm({
-        defaultValues: {
-          nombreUsuario: "",
-          precio: 1,
-          imagen: "",
-          detalle: "",
-          categoria: "",
-        },
-      });
-      const navegacion = useNavigate();
-    
-      const onSubmit = (datos) => {
-        console.log(datos);
-        crearUsuario(datos).then((respuesta) => {
-          if (respuesta.status === 201) {
-            Swal.fire(
-              "Usuario creado",
-              "El usuario fue creado correctamente",
-              "success"
-            );
-            reset();
-            navegacion("/usuarios");
-          } else {
-            Swal.fire("Ocurrio un error ", "Intentelo mas tarde", "error");
-          }
-        });
-      };
-    
-      return (
-        <section className="container mainSection">
-          <h1 className="display-4 mt-5">Nuevo usuario</h1>
-          <hr />
-          <Form onSubmit={handleSubmit(onSubmit)}>
-      
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    defaultValues: {
+      nombreUsuario: "",
+      precio: 1,
+      imagen: "",
+      detalle: "",
+      categoria: "",
+    },
+  });
+  const navegacion = useNavigate();
+
+  const onSubmit = (datos) => {
+    crearUsuario(datos).then((respuesta) => {
+      if (respuesta.status === 201) {
+        Swal.fire(
+          "Usuario creado",
+          "El usuario fue creado correctamente",
+          "success"
+        );
+        reset();
+        navegacion("/usuarios");
+      } else {
+        Swal.fire("Ocurrio un error ", "Intentelo mas tarde", "error");
+      }
+    });
+  };
+
+  return (
+    <section className="container mainSection">
+      <h1 className="display-4 mt-5">Nuevo usuario</h1>
+      <hr />
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreUsuario">
           <Form.Label>Nombre del usuario*</Form.Label>
           <Form.Control
@@ -66,7 +63,7 @@ const CrearUsuario = () => {
             {errors.nombreUsuario?.message}
           </Form.Text>
         </Form.Group>
-        
+
         <Form.Group className="mb-3" controlId="formEmail">
           <Form.Label>Email del usuario*</Form.Label>
           <Form.Control
@@ -109,14 +106,13 @@ const CrearUsuario = () => {
             {errors.precio?.message}
           </Form.Text>
         </Form.Group>
-       
+
         <Button variant="primary" type="submit">
           Guardar
         </Button>
       </Form>
-        </section>
-      );
-    };
-    
-    export default CrearUsuario;
-    
+    </section>
+  );
+};
+
+export default CrearUsuario;

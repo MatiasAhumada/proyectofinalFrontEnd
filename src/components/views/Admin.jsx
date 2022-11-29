@@ -11,7 +11,7 @@ const Admin =()=>{
     useEffect(() => {
         
         consultarProductoApi().then((respuesta) => {
-          console.log(respuesta);
+       
           setProductos(respuesta);
         });
       }, []);

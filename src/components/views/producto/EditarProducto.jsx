@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Button, Container, Form } from "react-bootstrap";
+import { Button,  Form } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import { editarProductoApi, obtenerProductoApi } from "../../helpers/queris";
 import Swal from "sweetalert2";
@@ -27,7 +27,7 @@ const EditarProducto = () => {
     editarProductoApi(id, datos).then((datos) => {
       if (datos.status === 200) {
         Swal.fire("Producto actualizado", "Good", "success");
-        // navegacion("/administrar/crear")
+      
       } else {
         Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
       }
@@ -43,7 +43,7 @@ const EditarProducto = () => {
         setValue("imagen", respuesta.dato.imagen);
         setValue("detalle", respuesta.dato.detalle);
         setValue("categoria", respuesta.dato.categoria);
-        console.log(respuesta);
+       
       } else {
         Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
       }

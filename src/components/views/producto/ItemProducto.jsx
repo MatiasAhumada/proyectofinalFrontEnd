@@ -18,11 +18,9 @@ const ItemProducto = ({ producto, setProductos }) => {
       if (result.isConfirmed) {
         borrarProductoAPI(producto._id).then((respuesta) => {
           if (respuesta.status === 200) {
-
-            consultarProductoApi().then((respuesta)=>{
-              setProductos(respuesta)
-
-            })
+            consultarProductoApi().then((respuesta) => {
+              setProductos(respuesta);
+            });
 
             Swal.fire(
               "Producto eliminado",
@@ -51,11 +49,14 @@ const ItemProducto = ({ producto, setProductos }) => {
       <td>{producto.imagen}</td>
       <td>{producto.categoria}</td>
       <td>
-        
-        <Link className="btn btn-warning my-3"  to={`/administrar/editar/${producto._id}`}> Editar</Link>
-        <Button variant="danger"  onClick={borrarProducto}>
+        <Link
+          className="btn btn-warning my-3"
+          to={`/administrar/editar/${producto._id}`}
+        >
+          Editar
+        </Link>
+        <Button variant="danger" onClick={borrarProducto}>
           Borrar
-          
         </Button>
       </td>
     </tr>

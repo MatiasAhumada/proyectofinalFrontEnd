@@ -12,16 +12,18 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
 
   return (
     <Navbar bg="light" expand="lg">
-      <Container>
+      <Container >
+        
+     
         <Navbar.Brand as={Link} to="/">
           STACK-ÉPICA
         </Navbar.Brand>
+       
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/nosotros">Nosotros</Nav.Link>
-            
+            <Nav.Link href="/nosotros">Nosotros</Nav.Link>           
             <Nav.Link href="/menu">Menu</Nav.Link>
             <Nav.Link href="/registro">Registro</Nav.Link>
 
@@ -66,6 +68,9 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
             )}
           </Nav>
         </Navbar.Collapse>
+      
+       
+        
       </Container>
     </Navbar>
   );

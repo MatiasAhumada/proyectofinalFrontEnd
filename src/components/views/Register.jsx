@@ -6,34 +6,41 @@ import "../../css/views.css";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-
-    const navegar = useNavigate();
+  const navegar = useNavigate();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm({
     defaultValues: {
       nombre: "",
       email: "",
       password: "",
-      isAdmin: false
+      isAdmin: false,
     },
   });
 
-  const onSubmit = (datos) =>{
-    crearUsuario(datos).then((respuesta)=>{
-        if(respuesta.status === 201){
-            Swal.fire("Te has registrado", " Ahora puedes ingresar con tu cuenta!", "success")
-            reset();
-            navegar("/login")
-        }else{
-            Swal.fire("Hubo un error inesperado", "Intentelo de nuevo mas tarde", "error")
-        }
-    })
-  }
+  const onSubmit = (datos) => {
+    crearUsuario(datos).then((respuesta) => {
+      if (respuesta.status === 201) {
+        Swal.fire(
+          "Te has registrado",
+          " Ahora puedes ingresar con tu cuenta!",
+          "success"
+        );
+        reset();
+        navegar("/login");
+      } else {
+        Swal.fire(
+          "Hubo un error inesperado",
+          "Intentelo de nuevo mas tarde",
+          "error"
+        );
+      }
+    });
+  };
 
   return (
     <Container className="mt-5">
@@ -112,7 +119,9 @@ const Register = () => {
                 {errors.password?.message}
               </Form.Text>
             </Form.Group>
-            <Button type="submit" className="mt-3">Crear Usuario</Button>
+            <Button type="submit" className="mt-3">
+              Crear Usuario
+            </Button>
           </Form>
         </Card.Body>
       </Card>
