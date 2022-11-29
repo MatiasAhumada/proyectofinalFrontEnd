@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { obtenerProductoApi } from "../helpers/queris";
+import "../../css/views.css";
 
 const DetalleProducto = () => {
   const [detalle, setDetalle] = useState([]);
