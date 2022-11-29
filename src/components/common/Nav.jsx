@@ -50,7 +50,7 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
                   <NavDropdown.Item
                     eventKey="4.2"
                     as={Link}
-                    to={"/adminPedidos"}
+                    to={"/error404"}
                   >
                     Pedidos
                   </NavDropdown.Item>

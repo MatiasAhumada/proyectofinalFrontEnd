@@ -15,7 +15,7 @@ const CardProducto = (props) => {
       navegacion("/login");
       Swal.fire("Debe estar logeado para realizar esta accion");
     } else {
-      navegacion("/pedidos");
+      navegacion("/error404");
     }
   };
 
