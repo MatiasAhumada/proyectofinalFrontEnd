@@ -16,7 +16,7 @@ import RutasAdmin from "./components/routes/RutasAdmin";
 import Nosotros from "./components/views/Nosotros";
 import AdminPedidos from "./components/views/AdminPedidos";
 import AdminUsuarios from "./components/views/AdminUsuarios";
-
+import Error from './components/views/Error404'
 
 
 function App() {
@@ -66,6 +66,11 @@ function App() {
             exact
             path="/menu"
             element={<Menu></Menu>}
+          ></Route>
+          <Route
+            exact
+            path="/error"
+            element={<Error></Error>}
           ></Route>
           <Route
             exact

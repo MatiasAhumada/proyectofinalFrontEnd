@@ -13,11 +13,12 @@ const ProductosMenu = (props) => {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || []
   const navegacion = useNavigate();
   const onClick = ()=>{
-    if( usuario !== ""){
-      navegacion("/pedidos") 
-    }else{
+    if( usuario == ""){
       navegacion("/login") 
       Swal.fire("Debe estar logeado para realizar esta accion")
+    }else{
+      navegacion("/pedidos") 
+      
     }
   }
 
