@@ -1,9 +1,8 @@
-import "../../css/views.css";
+import "../../css/error404.css";
 
 const Error404 = () => {
     return (
-        <section className="mainSection">
-            <h1>pagina de error</h1>
+        <section className="error404">           
         </section>
     );
 };
