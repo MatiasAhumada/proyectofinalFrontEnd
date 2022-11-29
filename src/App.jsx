@@ -16,7 +16,9 @@ import RutasAdmin from "./components/routes/RutasAdmin";
 import Nosotros from "./components/views/Nosotros";
 import AdminPedidos from "./components/views/AdminPedidos";
 import AdminUsuarios from "./components/views/AdminUsuarios";
+
 import Error404 from "./components/views/Error404";
+
 
 
 function App() {
@@ -78,6 +80,11 @@ function App() {
             element={<PedidosUsuario></PedidosUsuario>}
           ></Route>
           <Route path="/administrar/*" element={<RutasProtegidas><RutasAdmin></RutasAdmin></RutasProtegidas>}></Route>
+          <Route
+            exact
+            path="/error404"
+            element={<Error404></Error404>}
+          ></Route>
         </Routes>
 
       <Foot></Foot>
