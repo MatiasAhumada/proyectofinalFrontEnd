@@ -33,11 +33,11 @@ const ProductosMenu = (props) => {
           <ListGroup.Item className="dos">{props.categoria}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Button className="dos" onClick={onClick}>
+          <Button className="dos mt-2" onClick={onClick}>
             Comprar
           </Button>
           <Button
-            className="dos ms-1 "
+            className="dos ms-1 mt-2 "
             as={Link}
             to={`/detalle-producto/${props.id}`}
           >
