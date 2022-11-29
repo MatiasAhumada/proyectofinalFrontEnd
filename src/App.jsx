@@ -17,7 +17,7 @@ import Nosotros from "./components/views/Nosotros";
 import AdminPedidos from "./components/views/AdminPedidos";
 import AdminUsuarios from "./components/views/AdminUsuarios";
 
-import Error404 from "./components/views/Error404"
+import Error404 from "./components/views/Error404";
 
 
 
@@ -71,8 +71,8 @@ function App() {
           ></Route>
           <Route
             exact
-            path="/error"
-            element={<Error></Error>}
+            path="/error404"
+            element={<Error404></Error404>}
           ></Route>
           <Route
             exact
