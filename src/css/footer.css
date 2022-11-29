@@ -6,9 +6,12 @@ footer{
     min-height: 100px;
     position: relative;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px;
     background: rgb(236, 122, 59);
     flex-direction: column;
+    margin-top: auto;
+    
+
 }
 
 footer .social__icon, footer .menu{
@@ -93,7 +96,11 @@ footer .fire#fire4{
     animation: animateFire_02 5s linear infinite;
 }
 
-
+@media screen and (max-width: 380px) {
+    div.w-100.card{
+        margin-bottom: 200px;
+    }
+  }
 @keyframes animateFire {
     0%
     {

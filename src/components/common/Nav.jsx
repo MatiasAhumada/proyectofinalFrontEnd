@@ -1,53 +1,79 @@
-import React, { useState } from "react";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
 import "../../css/navbar.css";
 
-function Nav() {
-  const [active, setActive] = useState("nav__menu");
-  const [icon, setIcon] = useState("nav__toggler");
-  const navToggle = () => {
-    if (active === "nav__menu") {
-      setActive("nav__menu nav__active");
-    } else setActive("nav__menu");
+function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
+  const navegar = useNavigate();
+  function logout() {
+    localStorage.removeItem("usuarioBar");
+    setUsuarioLogueado({});
+    navegar("/");
+  }
 
-    if (icon === "nav__toggler") {
-      setIcon("nav__toggler toggle");
-    } else setIcon("nav__toggler");
-  };
   return (
-    <nav className="nav">
-      <a href="#" className="nav__brand">
-        STACK-EPICA
-      </a>
-      <ul className={active}>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Inicio
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Menú
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Nosotros
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            Contact
-          </a>
-        </li>
+    <Navbar bg="light" expand="lg">
+      <Container >
+        
+     
+        <Navbar.Brand as={Link} to="/">
+          STACK-ÉPICA
+        </Navbar.Brand>
+       
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/">Inicio</Nav.Link>
+            <Nav.Link href="/nosotros">Nosotros</Nav.Link>           
+            <Nav.Link href="/menu">Menu</Nav.Link>
+            <Nav.Link href="/registro">Registro</Nav.Link>
 
-      </ul>
-      <div onClick={navToggle} className={icon}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div>
-    </nav>
+            {usuarioLogueado.email ? (
+              <>
+                <Button variant="white" className="text-white" onClick={logout}>
+                  Salir
+                </Button>
+              </>
+            ) : (
+              <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
+            )}
+
+            {usuarioLogueado.isAdmin ? (
+              <>
+                <NavDropdown title="Administrador" id="nav-dropdown">
+                  <NavDropdown.Item
+                    eventKey="4.1"
+                    as={Link}
+                    to={"/administrar"}
+                  >
+                    Productos
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    eventKey="4.2"
+                    as={Link}
+                    to={"/adminPedidos"}
+                  >
+                    Pedidos
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    eventKey="4.3"
+                    as={Link}
+                    to={"/adminUsuarios"}
+                  >
+                    Usuarios
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
+            ) : (
+              <></>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      
+       
+        
+      </Container>
+    </Navbar>
   );
 }
 
-export default Nav;
+export default NavBar;

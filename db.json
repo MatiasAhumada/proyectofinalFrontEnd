@@ -1,0 +1,37 @@
+{
+  "productos": [
+    {
+      "nombreProducto": "cafe",
+      "precio": "100",
+      "imagen": "https://www.leagueofgraphs.com/",
+      "categoria": "Comida rapida",
+      "id": 1
+    }
+  ],
+  "usuario": [
+    {
+      "nombre": "Alvaro",
+      "email": "email@mail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "nombre": "Alvaro Ruiz",
+      "email": "Alvaro@hotmail.com",
+      "password": "Alvaro12345",
+      "id": 2
+    },
+    {
+      "nombre": "Alvaro 2",
+      "email": "Alvaro@mail.com",
+      "password": "Alvaro12345",
+      "id": 3
+    },
+    {
+      "nombre": "Alvaro 3 ",
+      "email": "Admin3@mail.com",
+      "password": "Admin12345",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+.titulo {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 40px;
+  color: #FEC163;
+}
+
+h3.text-center.my-2.titulo{
+  color: #F1F1E4;
+}
+
+.cajas {
+  height: 90%;
+  width: 80%;
+  padding: 20px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+  font-family: "Courgette", cursive;
+}
+
+div.row{
+  margin-bottom: 100px;
+}
+.nombreCompañero {
+  color: #fec163;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.loremCompañero {
+  color: #F1F1E4;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .cajas {
+    width: 50%;
+  }
+
+
+  .titulo {
+    font-size: 40px;
+  }
+  .nombreCompañero {
+    font-size: 38px;
+  }
+  .loremCompañero {
+    font-size: 35px;
+  }
+  .cajas {
+    height: auto;
+  }
+  .titulo {
+    text-align: center;
+  }
+}
+@media (min-width: 320px) and (max-width: 740px) {
+  .titulo {
+    font-size: 30px;
+  }
+
+  .nosotros {
+    background-size: cover;
+
+  }
+  .titulo {
+    font-size: 18px;
+    margin-right: 10px;
+
+  }
+  .nombreCompañero {
+    font-size: 18px;
+  }
+  .loremCompañero {
+    font-size: 15px;
+  }
+
+
+  
+}

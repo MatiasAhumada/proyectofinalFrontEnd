@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { obtenerProductoApi } from "../helpers/queris";
+import "../../css/views.css";
 
 const DetalleProducto = () => {
   const [detalle, setDetalle] = useState([]);
@@ -11,6 +12,7 @@ const DetalleProducto = () => {
 
   useEffect(() => {
     obtenerProductoApi(id).then((respuesta) => {
+  
       if (respuesta.status === 200) {
         setDetalle(respuesta.dato);
       } else {
@@ -32,7 +34,8 @@ const DetalleProducto = () => {
         <Col md={6} className="py-3">
           <Card.Title>{detalle.nombreProducto}</Card.Title>
           <hr />
-          <Badge bg="success">{detalle.categoria}</Badge>
+          <Card.Text>{detalle.detalle}</Card.Text>
+          <Badge bg="dark" >{detalle.categoria}</Badge>
           <Card.Text className="mt-3">
             <b>Precio: ${detalle.precio}</b>
           </Card.Text>
@@ -43,14 +46,3 @@ const DetalleProducto = () => {
 };
 
 export default DetalleProducto;
-// import React from 'react';
-
-// const DetalleProducto = () => {
-//   return (
-//     <div>
-      
-//     </div>
-//   );
-// };
-
-// export default DetalleProducto;
