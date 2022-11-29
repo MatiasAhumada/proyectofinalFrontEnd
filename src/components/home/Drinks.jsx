@@ -4,7 +4,7 @@ import "../../css/inicio.css";
 const Drinks = () => {
   return (
     <article className="containerRight">
-      <img className="right" src="/img/tequila.jpg" alt="" />
+      <img className="right "  src="/img/tequila.jpg" alt="tekila" />
       <h1 className="titulo">MEXICAN DRINKS</h1>
       <hr />
       <p>
