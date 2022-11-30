@@ -2,7 +2,7 @@ import { Button, Container, Nav, Navbar, NavDropdown, NavLink } from "react-boot
 import { Link, useNavigate } from "react-router-dom";
 import "../../css/navbar.css";
 
-function Nav({ usuarioLogueado, setUsuarioLogueado }) {
+function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
   const navegar = useNavigate();
   function logout() {
     localStorage.removeItem("usuarioBar");
@@ -76,4 +76,4 @@ function Nav({ usuarioLogueado, setUsuarioLogueado }) {
   );
 }
 
-export default Nav;
+export default Navbar;
