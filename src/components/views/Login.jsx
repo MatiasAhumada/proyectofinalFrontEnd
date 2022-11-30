@@ -71,12 +71,16 @@ const Login = ({ setUsuarioLogeado }) => {
                 {...register("password", {
                   required: "Campo obligatorio",
                   minLength: {
-                    value: 2,
-                    message: "Contraseña invalida",
+                    value: 5,
+                    message: "Ingrsar mínimo 5 caracteres",
                   },
                   maxLength: {
-                    value: 50,
-                    message: "contraseña invalida",
+                    value: 30,
+                    message: "Ingresar máximo 30 caracteres",
+                  },
+                  pattern: {
+                    value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
+                    message: "La contraseña debe contener 6 caracteres minimo, compuestos por 1 letra mayuscula, 1 minuscula, 1 numero y un caracter (!?@$#/&)",
                   },
                 })}
               ></Form.Control>

@@ -72,8 +72,9 @@ const Register = () => {
             <Form.Group controlId="formEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control
+             
                 type="email"
-                placeholder="Ej: JuanPeres@mail.com"
+                placeholder ="Ej: JuanPeres@mail.com"
                 {...register("email", {
                   required: "Campo obligatorio",
                   minLength: {
@@ -111,7 +112,7 @@ const Register = () => {
                   },
                   pattern: {
                     value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
-                    message: "Contraseña invalida",
+                    message: "La contraseña debe contener 6 caracteres minimo, compuestos por 1 letra mayuscula, 1 minuscula, 1 numero y un caracter (!?@$#/&)",
                   },
                 })}
               />

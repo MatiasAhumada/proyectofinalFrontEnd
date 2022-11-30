@@ -1,8 +1,8 @@
-import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Container, Nav, Navbar, NavDropdown, NavLink } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "../../css/navbar.css";
 
-function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
+function Nav({ usuarioLogueado, setUsuarioLogueado }) {
   const navegar = useNavigate();
   function logout() {
     localStorage.removeItem("usuarioBar");
@@ -22,10 +22,10 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
-            <Nav.Link href="/nosotros">Nosotros</Nav.Link>           
-            <Nav.Link href="/menu">Menu</Nav.Link>
-            <Nav.Link href="/registro">Registro</Nav.Link>
+            <NavLink href="/">Inicio</NavLink>
+            <NavLink href="/nosotros">Nosotros</NavLink>           
+            <NavLink href="/menu">Menu</NavLink>
+            <NavLink href="/registro">Registro</NavLink>
 
             {usuarioLogueado.email ? (
               <>
@@ -34,7 +34,7 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
                 </Button>
               </>
             ) : (
-              <Nav.Link href="/login">Iniciar Sesión</Nav.Link>
+              <NavLink href="/login">Iniciar Sesión</NavLink>
             )}
 
             {usuarioLogueado.isAdmin ? (
@@ -76,4 +76,4 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
   );
 }
 
-export default NavBar;
+export default Nav;

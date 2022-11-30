@@ -9,13 +9,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Register from "./components/views/Register";
 import { useState } from "react";
 import PedidosUsuario from "./components/views/PedidosUsuario";
-
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdmin from "./components/routes/RutasAdmin";
 import Nosotros from "./components/views/Nosotros";
 import AdminPedidos from "./components/views/AdminPedidos";
 import AdminUsuarios from "./components/views/AdminUsuarios";
-
 import Error404 from "./components/views/Error404";
 
 function App() {

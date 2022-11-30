@@ -59,7 +59,7 @@ const EditarProducto = () => {
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label>Nombre del producto*</Form.Label>
+          <Form.Label className="text-dark">Nombre del producto*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej:  Taco Epiko"
@@ -75,12 +75,12 @@ const EditarProducto = () => {
               },
             })}
           />
-          <Form.Text className="text-danger">
+          <Form.Text className="text-white">
             {errors.nombreProducto?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label>Detalle del producto*</Form.Label>
+          <Form.Label className="text-dark">Detalle del producto*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej:  Este producto contiene los sigs ingredientes y detalles de la preparación"
@@ -96,12 +96,12 @@ const EditarProducto = () => {
               },
             })}
           />
-          <Form.Text className="text-danger">
-            {errors.detalleProducto?.message}
+          <Form.Text className="text-white">
+            {errors.detalle?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label>Precio*</Form.Label>
+          <Form.Label className="text-dark">Precio*</Form.Label>
           <Form.Control
             type="number"
             placeholder=" Ej: 10"
@@ -117,12 +117,12 @@ const EditarProducto = () => {
               },
             })}
           />
-          <Form.Text className="text-danger">
+          <Form.Text className="text-white">
             {errors.precio?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
-          <Form.Label>Imagen URL*</Form.Label>
+          <Form.Label className="text-dark">Imagen URL*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: https://www.pexels.com/es-es/foto/alimentos-cocidos-en-placa-azul-2092507/"
@@ -135,12 +135,12 @@ const EditarProducto = () => {
             })}
           />
         
-          <Form.Text className="text-danger">
+          <Form.Text className="text-white">
             {errors.imagen?.message}
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label>Categoria*</Form.Label>
+          <Form.Label className="text-dark">Categoria*</Form.Label>
           <Form.Select
             {...register("categoria", {
               required: "Debe seleccionar una categoría",
@@ -152,11 +152,11 @@ const EditarProducto = () => {
             <option value="comida caliente">Comida Caliente</option>
             <option value="comida fria">Comida fria</option>
           </Form.Select>
-          <Form.Text className="text-danger">
+          <Form.Text className="text-white">
             {errors.categoria?.message}
           </Form.Text>
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="danger" type="submit">
           Guardar
         </Button>
       </Form>
