@@ -24,7 +24,7 @@ const Nosotros = () => {
               ¿Quiénes Somos?
             </motion.h3>
           </motion.div>
-
+          
           <hr />
           <Container>
             <Row>

@@ -34,7 +34,7 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
                 </Button>
               </>
             ) : (
-              <NavLink href="/login">Iniciar Sesión</NavLink>
+              <NavLink to="/login">Iniciar Sesión</NavLink>
             )}
 
             {usuarioLogueado.isAdmin ? (

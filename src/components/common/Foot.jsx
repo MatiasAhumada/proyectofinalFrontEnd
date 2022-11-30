@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../../css/footer.css";
 
 const Foot = () => {
@@ -13,12 +14,13 @@ const Foot = () => {
           <li><a href="https://github.com/MatiasAhumada/proyectofinalFrontEnd"><ion-icon name="logo-github"></ion-icon></a></li>
           <li><a href={'/error404'}><ion-icon name="logo-instagram"></ion-icon>
 </a></li>
-          <li><a href={'/error404'}><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+          <NavLink to='/error404'><ion-icon name="logo-whatsapp"></ion-icon></NavLink>
+          
         </ul>
         <ul className="menu">
-          <li><a href={'/'}>Inicio</a></li>
-          <li><a href={'/nosotros'}>Nosotros</a></li>
-          <li><a href={"/menu"}>Menu</a></li>
+        <NavLink to="/">Inicio</NavLink>
+<NavLink to="/nosotros">Nosotros</NavLink>  
+<NavLink to="/menu">Menu</NavLink>
         </ul>
         <p>&copy; Todos los derechos reservados</p>
       
