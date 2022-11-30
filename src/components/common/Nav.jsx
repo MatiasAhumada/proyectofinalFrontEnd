@@ -1,5 +1,5 @@
-import { Button, Container, Nav, Navbar, NavDropdown, NavLink } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import "../../css/navbar.css";
 
 function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
@@ -22,10 +22,10 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink href="/">Inicio</NavLink>
-            <NavLink href="/nosotros">Nosotros</NavLink>           
-            <NavLink href="/menu">Menu</NavLink>
-            <NavLink href="/registro">Registro</NavLink>
+            <NavLink to="/">Inicio</NavLink>
+            <NavLink to="/nosotros">Nosotros</NavLink>           
+            <NavLink to="/menu">Menu</NavLink>
+            <NavLink to="/registro">Registro</NavLink>
 
             {usuarioLogueado.email ? (
               <>
@@ -76,4 +76,4 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
   );
 }
 
-export default Navbar;
+export default NavBar;
