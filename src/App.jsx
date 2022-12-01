@@ -35,6 +35,7 @@ function App() {
             path="/detalle-producto/:id"
             element={<DetalleProducto></DetalleProducto>}
           ></Route>
+          
 
           <Route
             exact

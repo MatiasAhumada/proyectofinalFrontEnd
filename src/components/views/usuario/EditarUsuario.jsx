@@ -106,7 +106,7 @@ const EditarUsuario = () => {
               {errors.detalleUsuario?.message}
             </Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formPassword">
+          <Form.Group className="mb-3" controlId="password">
             <Form.Label>Contraseña*</Form.Label>
             <Form.Control
               type="text"
@@ -120,6 +120,10 @@ const EditarUsuario = () => {
                 max: {
                   value: 1000,
                   message: "El precio de usuario como maximo debe ser de 10000",
+                },
+                pattern: {
+                  value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
+                  message: "La contraseña debe contener 6 caracteres minimo, compuestos por 1 letra mayuscula, 1 minuscula, 1 numero y un caracter (!?@$#/&)",
                 },
               })}
             />
