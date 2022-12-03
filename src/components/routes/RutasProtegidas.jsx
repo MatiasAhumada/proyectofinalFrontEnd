@@ -8,7 +8,7 @@ const RutasProtegidas = ({ children }) => {
     if (token.isAdmin === true) {
       return children;
     } else {
-      return <Navigate to={"/menu"}></Navigate>;
+      return <Navigate to={"/"}></Navigate>;
     }
   }
 };
