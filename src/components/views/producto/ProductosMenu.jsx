@@ -17,6 +17,7 @@ const ProductosMenu = (props) => {
     } else {
       navegacion("/error404");
     }
+    
   };
 
   return (
