@@ -15,6 +15,8 @@ import Nosotros from "./components/views/Nosotros";
 import AdminPedidos from "./components/views/AdminPedidos";
 import AdminUsuarios from "./components/views/AdminUsuarios";
 import Error404 from "./components/views/Error404";
+import CrearPedido from "./components/views/pedido/CrearPedido";
+import DetallePedido from "./components/views/DetallePedido";
 
 function App() {
   const usuario = JSON.parse(localStorage.getItem("usuarioBar")) || [];
@@ -49,7 +51,18 @@ function App() {
           ></Route>
 
           <Route exact path="/nosotros" element={<Nosotros></Nosotros>}></Route>
-
+          <Route
+          exact
+          path="/detalle-pedido/:id"
+          element={<DetallePedido></DetallePedido>}
+        ></Route>
+          <Route
+          exact
+          path="/crear-pedido"
+          element={
+            <CrearPedido usuarioLogueado={usuarioLogeado}></CrearPedido>
+          }
+        ></Route>
           <Route exact path="/registro" element={<Register></Register>} />
           <Route
             exact
@@ -74,7 +87,7 @@ function App() {
           <Route exact path="/error404" element={<Error404></Error404>}></Route>
         </Routes>
 
-        <Foot></Foot>
+        {/* <Foot></Foot> */}
       </BrowserRouter>
     </section>
   );
