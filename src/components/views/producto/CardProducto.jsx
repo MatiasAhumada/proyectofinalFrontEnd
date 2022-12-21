@@ -15,7 +15,7 @@ const CardProducto = (props) => {
       navegacion("/login");
       Swal.fire("Debe estar logeado para realizar esta accion");
     } else {
-      navegacion("/error404");
+      navegacion("/crear-pedido");
     }
   };
 
@@ -33,7 +33,7 @@ const CardProducto = (props) => {
           <ListGroup.Item className="dos">{props.categoria}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Button className="dos mt-2" as={Link} to={'/crear-pedido'} onClick={onClick}>
+          <Button className="dos mt-2"  onClick={onClick}>
             Comprar
           </Button>
           <Button
