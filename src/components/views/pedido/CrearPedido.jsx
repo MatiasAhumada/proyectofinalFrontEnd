@@ -78,7 +78,7 @@ import {
             "success"
           );
           reset();
-        
+        navegacion('/menu')
         } else {
           Swal.fire("Ocurrio un error", "Vuelva a intentarlo mas tarde", "error");
         }
@@ -164,8 +164,8 @@ import {
                     {...register("nombreUsuario", {
                       required: "Este dato es obligatorio",
                       minLength: {
-                        value: 8,
-                        message: "Debe ingresar como minimo 8 caracteres",
+                        value: 5,
+                        message: "Debe ingresar como minimo 5 caracteres",
                       },
                       maxLength: {
                         value: 50,

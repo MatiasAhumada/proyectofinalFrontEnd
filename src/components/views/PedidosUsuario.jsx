@@ -2,13 +2,13 @@ import "../../css/views.css";
 
 import React, { useEffect, useState } from 'react'
 import { Card, Container } from "react-bootstrap";
-import { consultarPedidoApi } from "../helpers/queris";
+import { consultarPedidosAPI } from "../helpers/queris";
 
 
 const Pedidos = () => {
   const [pedido, setPedido] = useState([])
   useEffect(() => {
-    consultarPedidoApi().then((respuesta)=>{
+    consultarPedidosAPI().then((respuesta)=>{
       setPedido(respuesta)
     })
   }, [])
