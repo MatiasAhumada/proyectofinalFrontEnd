@@ -87,7 +87,7 @@ function App() {
           <Route exact path="/error404" element={<Error404></Error404>}></Route>
         </Routes>
 
-        {/* <Foot></Foot> */}
+        <Foot></Foot>
       </BrowserRouter>
     </section>
   );
