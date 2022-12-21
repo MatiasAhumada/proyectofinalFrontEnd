@@ -34,7 +34,7 @@ const ProductosMenu = (props) => {
           <ListGroup.Item className="dos">{props.categoria}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Button className="dos mt-2" onClick={onClick}>
+          <Button className="dos mt-2" as={Link} to={'/crear-pedido'} onClick={onClick}>
             Comprar
           </Button>
           <Button

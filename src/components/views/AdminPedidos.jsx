@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Table}  from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { consultarPedidoApi } from "../helpers/queris";
+import {consultarPedidosAPI } from "../helpers/queris";
 import ItemPedido from './pedido/ItemPedido'
 import "../../css/views.css";
 
@@ -10,7 +10,7 @@ const AdminPedidos = () => {
 
     useEffect(() => {
         
-        consultarPedidoApi().then((respuesta) => {
+        consultarPedidosAPI().then((respuesta) => {
           console.log(respuesta);
           setPedidos(respuesta);
         });
@@ -27,18 +27,22 @@ const AdminPedidos = () => {
           <Table responsive striped bordered hover >
             <thead>
               <tr>
-                <th>Id del Pedido</th>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>URL de Imagen</th>
-                <th>Categoria</th>
+                
+                <th>Usuario</th>
+                <th>Pedido</th>
+               
+                <th>Estado</th>
                 <th>Opciones</th>
               </tr>
             </thead>
             <tbody>
-             {/* {
-                pedidos.map((pedidos)=><ItemPedido key={pedidos._id} producto={pedidos} setPedidos={setPedidos}></ItemPedido>)
-             } */}
+             {pedidos.map((pedido) => (
+                <ItemPedido
+                  key={pedido._id}
+                  pedido={pedido}
+                  setPedidos={setPedidos}
+                ></ItemPedido>
+              ))}
              
             </tbody>
           </Table>
