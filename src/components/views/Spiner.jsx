@@ -3,7 +3,7 @@ import '../../css/Spiner.css'
 
 const Spiner = () => {
     return (
-        // <section className='d-flex justify-content-center'></section>
+
         <div className="sk-cube-grid">
         <div className="sk-cube sk-cube1"></div>
         <div className="sk-cube sk-cube2"></div>
@@ -15,7 +15,7 @@ const Spiner = () => {
         <div className="sk-cube sk-cube8"></div>
         <div className="sk-cube sk-cube9"></div>
       </div>
-    //    </section>
+
     );
 };
 
