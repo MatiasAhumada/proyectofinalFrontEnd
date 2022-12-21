@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { usuarioLogin } from "../helpers/queris";
-import "../../css/views.css";
+import "../../css/login.css";
 
 const Login = ({ setUsuarioLogeado }) => {
   const navegar = useNavigate();

@@ -50,7 +50,10 @@ section{
 
 }
 
-
+div.final{
+  background-image: url(../../public/img/LimaGranulado.png); 
+  height: 100px;
+}
 
 .containerLeft{
   width: 100%;
@@ -90,11 +93,10 @@ div.card.dos{
 
 div.card.tres{
   background-image: url(../../public/img/LimaGranulado.png);
+  
 }
 
-div.card:hover{
-  transform: scale(1.04);
-}
+
 div.list-group-item{
   background-image: url(../../public/img/NaranjaGranulado.png);
   color:brown;

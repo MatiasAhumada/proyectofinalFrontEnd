@@ -1,0 +1,13 @@
+footer{
+    margin-top: auto;
+}
+input#email.form-control::placeholder{
+    color: #F1F1E4;
+    text-align: center;
+    opacity: 0.8;
+}
+input#password.form-control::placeholder{
+    color: #F1F1E4;
+    text-align: center;
+    opacity: 0.8;
+}

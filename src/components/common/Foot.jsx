@@ -13,22 +13,27 @@ const Foot = () => {
       </div>
       <ul className="social__icon">
         <Button href="https://github.com/MatiasAhumada/proyectofinalFrontEnd">
-          <ion-icon name="logo-github"></ion-icon>
+          <ion-icon name="logo-github" classname="github"></ion-icon>
         </Button>
-        <Link to="/error404">
+        <Button>
+        <Link to="/error404" className="ig">
           <ion-icon name="logo-instagram"></ion-icon>
         </Link>
+        
+        </Button>
 
-        <Link to="/error404">
+        <Button>
+          <Link to="/error404" className="wpp">
           <ion-icon name="logo-whatsapp"></ion-icon>
         </Link>
+        </Button>
       </ul>
       <ul className="menu">
         <Link to="/">Inicio</Link>
         <Link to="/nosotros">Nosotros</Link>
         <Link to="/menu">Menu</Link>
       </ul>
-      <p>&copy; Todos los derechos reservados</p>
+      <p>   &copy;  Todos los derechos reservados</p>
     </footer>
   );
 };

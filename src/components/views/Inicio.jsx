@@ -30,6 +30,7 @@ const Inicio = () => {
       <Info></Info>
       <Drinks></Drinks>
       <FastFood></FastFood>
+      <div className="final"></div>
    
     </section>
   );
