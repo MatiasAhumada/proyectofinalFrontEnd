@@ -101,6 +101,7 @@ div.list-group-item{
   background-image: url(../../public/img/NaranjaGranulado.png);
   color:brown;
 }
+
 div.list-group-item.dos{
   background-image: url(../../public/img/VerdeGranulado.png);
   color:rgb(209, 207, 111);
@@ -176,6 +177,18 @@ div.container{
 article.containerRight2{
   margin-bottom: 400px;
 }
+
+a.dos.ms-1.mt-2.btn.btn-primary:hover{
+  transform: scale(1.1);
+  
+}
+
+img.card-img-top{
+  object-fit: cover;
+  height: 200px;
+}
+
+
 
 @media screen and (max-width: 414px) {
   img {

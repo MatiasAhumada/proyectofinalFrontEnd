@@ -1,9 +1,12 @@
 section{
-    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     
 }
+
+
+
 div.container{
     text-align: center;
     justify-content: center;
@@ -17,9 +20,15 @@ table{
     color: #F1F1E4;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+div.mt-5.registro.container{
+    margin-bottom: 100px;
+}
 section.container.mainSection{
     margin-bottom: 120px;
+}
+div.w-100.card{
+    background:url(/public/img/NaranjaGranulado.png);
+   
 }
 
 a.btn.btn-primary{
@@ -32,6 +41,8 @@ a.btn.btn-primary:hover{
     color: #F1F1E4;
     border: 0px;
 }
+
+
 
 th{
     color: #F1F1E4;

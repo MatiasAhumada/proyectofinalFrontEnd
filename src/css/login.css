@@ -1,6 +1,7 @@
-footer{
-    margin-top: auto;
+div.login.container{
+    margin-bottom: 160px;
 }
+
 input#email.form-control::placeholder{
     color: #F1F1E4;
     text-align: center;

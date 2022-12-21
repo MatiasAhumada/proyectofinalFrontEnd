@@ -1,0 +1,7 @@
+div.g-4.row-cols-md-4.row-cols-1{
+    margin-bottom: -300px;
+}
+
+p.card-text{
+    max-height: 800px;
+}

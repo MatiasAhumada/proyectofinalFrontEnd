@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { consultarUsuarioApi } from "../helpers/queris";
 import ItemUsuario from "./usuario/ItemUsuario";
 import "../../css/views.css";
+import "../../css/adminPedidos.css";
 
 const AdminUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);
@@ -16,7 +17,7 @@ const AdminUsuarios = () => {
 
   return (
     <section className="container mainSection ">
-      <div className="d-flex justify-content-between align-items-center ">
+      <div className="align-items-center ">
         <h1 className="display-4">Usuarios disponibles</h1>
         <Link className="btn btn-primary" to="/administrar/crearUsuario">
           Agregar

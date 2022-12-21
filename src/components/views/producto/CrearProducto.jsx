@@ -131,10 +131,10 @@ const CrearProducto = () => {
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="picante epiko">Picante epiko</option>
-            <option value="medio picante">Medio picante</option>
+            <option value="picante epiko">Picante Épico</option>
+            <option value="medio picante">Medio Picante</option>
             <option value="comida caliente">Comida Caliente</option>
-            <option value="comida fria">Comida fria</option>
+            <option value="comida fria">Comida Fría</option>
           </Form.Select>
           <Form.Text className="text-white">
             {errors.categoria?.message}

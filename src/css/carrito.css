@@ -1,0 +1,71 @@
+h3.display-4.text-center.mb-3{
+    color: beige;
+}
+div.mb-4.card{
+    height: 400px;
+    background-image: url(/public/img/VerdeGranulado.png);
+}
+
+div.text-center.card-subtitle.h6{
+    color: rgb(209, 207, 111);
+    font-weight: 0;
+}
+span.badge.bg-primary{
+    color: brown;
+    
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+div.text-center.card-title.h5{
+    color: rgb(209, 207, 111);
+}
+
+button.btn.btn-success{
+    background-color: rgb(209, 207, 111);
+    color: rgba(57, 82, 57, 0.837);
+    border: solid 1px rgba(57, 82, 57, 0.837);
+}
+button.btn.btn-success:hover{
+    transform: scale(1.2);
+}
+div.d-flex.justify-content-between.rounded.mb-2.list-group-item{
+    color: beige;
+    background: url(/public/img/VerdeGranulado.png);
+    font-size: 25px;
+}
+
+button.btn.btn-danger{
+    background-color: rgb(209, 207, 111);
+    color: rgba(57, 82, 57, 0.837);
+}
+
+
+i.bi.bi-arrow-down.fs-2{
+    color: beige;
+}
+
+h3{
+    color: rgba(57, 82, 57, 0.837);
+}
+
+div#confirmar.card{
+    width: 100%;
+    margin-bottom: 120px;
+}
+h2.display-4{
+    color:rgba(57, 82, 57, 0.837);
+
+}
+
+label.form-label{
+    color: rgba(57, 82, 57, 0.837);;
+}
+
+button.btn.btn-warning{
+    background-color: rgba(57, 82, 57, 0.837);
+    color: rgb(209, 207, 111);
+    border: none;
+}
+button.btn.btn-warning:hover{
+    transform: scale(1.2);
+}

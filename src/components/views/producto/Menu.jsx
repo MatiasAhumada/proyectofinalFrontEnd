@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../../css/inicio.css";
+import "../../../css/menu.css";
 import { consultarProductoApi } from "../../helpers/queris";
 import CardProducto from "./CardProducto";
 import { Row } from "react-bootstrap";

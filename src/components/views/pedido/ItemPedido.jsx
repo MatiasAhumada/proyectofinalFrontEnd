@@ -48,7 +48,7 @@ const ItemPedido = ({ pedido, setPedidos }) => {
       <td>{pedido.estado}</td>
       <td>
         <Link
-          className="btn btn-dark text-warning me-2 mb-1"
+          className="btn btn-dark me-2 mb-1"
           to={`/administrar/editar-pedido/${pedido._id}`}
         >
           Editar

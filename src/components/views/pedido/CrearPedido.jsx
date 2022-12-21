@@ -13,6 +13,8 @@ import {
   import { consultarProductoApi, crearPedidoAPI } from "../../helpers/queris";
   import { useEffect, useState } from "react";
   import ListaPedido from "./ListaPedido";
+  import "../../../css/carrito.css";
+
   
   const CrearPedido = ({ usuarioLogueado }) => {
     const [productos, setProductos] = useState([]);
@@ -103,7 +105,7 @@ import {
                         Precio: ${producto.precio}
                       </Card.Subtitle>
                       <aside className="text-center">
-                        <Badge bg="warning" className="text-dark">
+                        <Badge className="bg-light">
                           {" "}
                           {producto.categoria}
                         </Badge>
@@ -149,7 +151,10 @@ import {
             )}
             <hr />
           </div>
-          <Card >
+          
+        </Container>
+        <Container>
+        <Card id="confirmar">
             <Card.Header>
               <h2 className="display-4">Realizar pedido</h2>
             </Card.Header>
@@ -247,7 +252,7 @@ import {
               </Form>
             </Card.Body>
           </Card>
-        </Container>
+          </Container>
       </div>
     );
   };

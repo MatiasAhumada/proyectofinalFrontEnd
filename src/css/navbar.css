@@ -42,7 +42,7 @@ div#basic-navbar-nav.navbar.navbar-collapse.collapse.show{
 
 a.navbar-brand{
   color: rgb(241, 241, 228);
-  font-size: 25px;
+  font-size: 20px;
 }
 
 a.navbar-brand:hover{
@@ -51,6 +51,9 @@ a.navbar-brand:hover{
   border-radius: 5%;
 }
 
+div.nav-item.dropdown{
+  align-self: center;
+}
 a.nav-link{
   color: rgb(241, 241, 228);
 }

@@ -43,7 +43,7 @@ const Register = () => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 registro">
       <Card className="w-100">
         <Card.Header as="h4">Registro</Card.Header>
         <Card.Body>

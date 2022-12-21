@@ -1,0 +1,12 @@
+div.container.mt-5.mainSection.card{
+    margin-bottom: 200px;
+}
+
+span.badge.bg-light.fs-5{
+color: brown;
+}
+
+b{
+    color: brown;
+    font-weight: 0;
+}
