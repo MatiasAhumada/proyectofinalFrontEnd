@@ -22,7 +22,6 @@ import {
    
   
     const agregarMenu = (producto) => {
-        console.log(producto)
       const prodNuevo = {
         nombreProducto: producto.nombreProducto,
         precio: producto.precio,
@@ -31,7 +30,6 @@ import {
    
       
     };
-    console.log(menuPedido)
   
     const navegacion = useNavigate();
   

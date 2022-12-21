@@ -11,7 +11,6 @@ const AdminPedidos = () => {
     useEffect(() => {
         
         consultarPedidosAPI().then((respuesta) => {
-          console.log(respuesta);
           setPedidos(respuesta);
         });
       }, []);
