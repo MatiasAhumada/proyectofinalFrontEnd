@@ -1,7 +1,6 @@
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { motion } from "framer-motion";
 import { BrowserView, MobileView } from "react-device-detect";
 import "../../css/nosotros.css";
 
@@ -10,32 +9,32 @@ const Nosotros = () => {
     <>
       <BrowserView>
         <div className="nosotros m-4 my-5">
-          <motion.div>
-            <motion.h2
+          <div>
+            <h2
               transition={{ delay: 0.1 }}
               className="text-center my-3 titulo"
             >
               Sobre Nosotros
-            </motion.h2>
-            <motion.h3
+            </h2>
+            <h3
               transition={{ delay: 0.1 }}
               className="text-center my-2 titulo"
             >
               ¿Quiénes Somos?
-            </motion.h3>
-          </motion.div>
+            </h3>
+          </div>
           
           <hr />
           <Container>
             <Row>
               <Col>
-                <motion.div
+                <div
                   style={{
                     padding: 10,
                   }}
                   whileHover={{ scale: 1.03 }}
                   animate={{ x: -5 }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Alvaro Ruiz Mejias</h3>
 
@@ -51,16 +50,16 @@ const Nosotros = () => {
                     cosas que voy aprendiendo hasta el día de hoy, en un futuro
                     espero ser un programador profesional.
                   </p>
-                </motion.div>
+                </div>
               </Col>
               <Col sm={12} md={4} lg={6}>
-                <motion.div
+                <div
                   style={{
                     padding: 10,
                   }}
                   whileHover={{ scale: 1.03 }}
                   animate={{ x: 5 }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Thomás Jerez</h3>
 
@@ -78,16 +77,16 @@ const Nosotros = () => {
                     que mas me gusta asi que espero poder dedicarme a esto en un
                     fututo al 100%.
                   </p>
-                </motion.div>
+                </div>
               </Col>
               <Col sm={12} md={4} lg={6}>
-                <motion.div
+                <div
                   style={{
                     padding: 10,
                   }}
                   whileHover={{ scale: 1.03 }}
                   animate={{ x: 5 }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Matías Ahumada</h3>
 
@@ -98,22 +97,22 @@ const Nosotros = () => {
                   />
                   <p className="loremCompañero">
                     ¡Hola! Me llamo Matias, tengo 22 años, soy tecnico de
-                    celulares y progranador Full Stack. Trabajo de forma
+                    celulares y programador Full Stack. Trabajo de forma
                     independiente arbitrando con criptoactivos. La informática
                     siempre fue mi mayor aficion. Por ello decidí ingresar a
                     RollingCode, para adquirir nuevas habilidades y probarme a
                     mí mismo en un nuevo desafío.
                   </p>
-                </motion.div>
+                </div>
               </Col>
               <Col sm={12} md={4} lg={6}>
-                <motion.div
+                <div
                   style={{
                     padding: 10,
                   }}
                   whileHover={{ scale: 1.03 }}
                   animate={{ x: -5 }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Lucía Soraire</h3>
                   <img
@@ -131,16 +130,16 @@ const Nosotros = () => {
                     formalizar el aprendizaje ampliando mis conocimientos de
                     desarrollo web.
                   </p>
-                </motion.div>
+                </div>
               </Col>
               <Col sm={12} md={4} lg={6}>
-                <motion.div
+                <div
                   style={{
                     padding: 10,
                   }}
                   whileHover={{ scale: 1.03 }}
                   animate={{ x: 5 }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Fernando E. Pérez</h3>
                   <img
@@ -160,7 +159,7 @@ const Nosotros = () => {
                     Estoy emocionado de comenzar un nuevo viaje de aprendizaje y
                     poder expandir mis limites.
                   </p>
-                </motion.div>
+                </div>
               </Col>
             </Row>
           </Container>
@@ -178,7 +177,7 @@ const Nosotros = () => {
                   style={{
                     padding: 10,
                   }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Alvaro Ruiz Mejias</h3>
 
@@ -188,7 +187,7 @@ const Nosotros = () => {
                     alt="team1"
                   />
                   <p className="loremCompañero">
-                    Hola, soy Alvaro tengo 27 años, actualmente trabajo como
+                    Hola, soy Alvaro tengo 27 años. Actualmente trabajo como
                     encargado en un drugstore, un amigo me recomendó RollingCode
                     para empezar a estudiar programación y es increíble las
                     cosas que voy aprendiendo hasta el día de hoy, en un futuro
@@ -201,7 +200,7 @@ const Nosotros = () => {
                   style={{
                     padding: 10,
                   }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Thomás Jerez</h3>
 
@@ -226,7 +225,7 @@ const Nosotros = () => {
                   style={{
                     padding: 10,
                   }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Lucía Soraire</h3>
                   <img
@@ -251,7 +250,7 @@ const Nosotros = () => {
                   style={{
                     padding: 10,
                   }}
-                  className="m-5 cajas"
+                  className="cajas"
                 >
                   <h3 className="my-3 nombreCompañero">Fernando E. Pérez</h3>
                   <img

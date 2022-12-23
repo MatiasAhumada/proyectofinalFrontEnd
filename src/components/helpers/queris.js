@@ -11,16 +11,15 @@ export const usuarioLogin = async (usuario) => {
       (itemUsuario) => itemUsuario.email === usuario.email
     );
     if (usuarioBuscado) {
-      console.log("Email encontrado");
+      
       if (usuarioBuscado.password === usuario.password) {
         return usuarioBuscado;
       } else {
-        console.log("El email no existe");
         return;
       }
     }
   } catch (error) {
-    console.log("errores en el login");
+    console.log(error);
     return;
   }
 };
