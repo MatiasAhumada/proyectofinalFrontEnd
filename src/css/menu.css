@@ -5,3 +5,30 @@ div.g-4.row-cols-md-4.row-cols-1{
 p.card-text{
     max-height: 800px;
 }
+
+@media screen and (max-width: 820px) {
+   div.dos.card{
+    width: auto;
+    min-height: 800px;
+   }
+   div.text-center.card-title.h5{
+    font-size: 20px;
+   }
+  
+  }
+  
+@media screen and (min-width: 821px) {
+    div.dos.card{
+     width: 22rem;
+     min-height: 600px;
+    }
+   
+   }
+   @media only screen and (max-width: 500px) and (min-width: 100px)
+   {
+    div.dos.card{
+        width: auto;
+        min-height: 500px;
+       }
+   }
+  

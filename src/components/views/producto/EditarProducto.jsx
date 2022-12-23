@@ -4,6 +4,7 @@ import { Button,  Form } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import { editarProductoApi, obtenerProductoApi } from "../../helpers/queris";
 import Swal from "sweetalert2";
+import "../../../css/editarPedido.css";
 
 const EditarProducto = () => {
   const { id } = useParams();
@@ -59,7 +60,7 @@ const EditarProducto = () => {
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label className="text-dark">Nombre del producto*</Form.Label>
+          <Form.Label className="editar">Nombre del producto*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej:  Taco Epiko"
@@ -80,7 +81,7 @@ const EditarProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label className="text-dark">Detalle del producto*</Form.Label>
+          <Form.Label className="editar">Detalle del producto*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej:  Este producto contiene los sigs ingredientes y detalles de la preparación"
@@ -101,7 +102,7 @@ const EditarProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label className="text-dark">Precio*</Form.Label>
+          <Form.Label className="editar">Precio*</Form.Label>
           <Form.Control
             type="number"
             placeholder=" Ej: 10"
@@ -122,7 +123,7 @@ const EditarProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
-          <Form.Label className="text-dark">Imagen URL*</Form.Label>
+          <Form.Label className="editar">Imagen URL*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: https://www.pexels.com/es-es/foto/alimentos-cocidos-en-placa-azul-2092507/"
@@ -140,7 +141,7 @@ const EditarProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label className="text-dark">Categoria*</Form.Label>
+          <Form.Label className="editar">Categoria*</Form.Label>
           <Form.Select
             {...register("categoria", {
               required: "Debe seleccionar una categoría",

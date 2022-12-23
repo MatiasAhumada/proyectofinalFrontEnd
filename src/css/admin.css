@@ -5,6 +5,7 @@ footer{
 section.container.mainSection{
     background: none;
     text-align: center;
+    height: auto;
 }
 
 h1.display-4{

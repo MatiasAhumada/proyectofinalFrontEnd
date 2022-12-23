@@ -1,0 +1,29 @@
+h2.editar{
+    text-align: center;
+    font-size: 40px;
+
+}
+div.my-4.container{
+    color: beige;
+    text-align: center;
+
+}
+footer{
+    margin-top: 200px;
+}
+label.editar.form-label{
+    color: beige;
+    text-align: left;
+}
+div.mb-3{
+    text-align: left;
+}
+section{
+    min-height: 100vh;
+}
+label.text-dark.editar.form-label{
+    color: beige;
+}
+label.editarUsuario.form-label{
+    color: beige;
+}

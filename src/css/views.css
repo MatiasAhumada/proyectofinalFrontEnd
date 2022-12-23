@@ -2,6 +2,7 @@ section{
     height: auto;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     
 }
 
@@ -23,9 +24,7 @@ table{
 div.mt-5.registro.container{
     margin-bottom: 100px;
 }
-section.container.mainSection{
-    margin-bottom: 120px;
-}
+
 div.w-100.card{
     background:url(/public/img/NaranjaGranulado.png);
    

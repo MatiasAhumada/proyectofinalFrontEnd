@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { editarPedidoAPI, obtenerPedidoAPI } from "../../helpers/queris";
+import "../../../css/editarPedido.css";
 
 const EditarPedido = () => {
   const { id } = useParams();
@@ -62,11 +63,13 @@ const EditarPedido = () => {
   return (
     <div className="backgroundGral mainSection">
       <Container className="my-4">
-        <h2 className="display-4">Editar pedido</h2>
+        <h2 className="editar">Editar pedido</h2>
         <hr />
-        <Form onSubmit={handleSubmit(onSubmit)}>
+      </Container>
+      <Container>
+      <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formNombreUsuario">
-            <Form.Label>Nombre de usuario</Form.Label>
+            <Form.Label className="editar">Nombre de usuario</Form.Label>
             <Form.Control
               type="text"
               placeholder="Ej: RollingUser"
@@ -87,7 +90,7 @@ const EditarPedido = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPedido">
-            <Form.Label>Pedido*</Form.Label>
+            <Form.Label className="editar">Pedido*</Form.Label>
             <Form.Control
               type="text"
               placeholder="Ej: 1 Pizza especial"
@@ -106,7 +109,7 @@ const EditarPedido = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formTotal">
-            <Form.Label>Monto total</Form.Label>
+            <Form.Label className="editar">Monto total</Form.Label>
             <Form.Control
               type="number"
               placeholder="El total se cargara a medida que usted ingrese productos"
@@ -127,7 +130,7 @@ const EditarPedido = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formEstado">
-            <Form.Label>Estado</Form.Label>
+            <Form.Label className="editar">Estado</Form.Label>
             <Form.Select
               {...register("estado", {
                 required: "Debe seleccionar el estado del pedido",

@@ -4,6 +4,8 @@ import { Button, Form } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
 import { editarUsuarioApi, obtenerUsuarioApi } from "../../helpers/queris";
 import Swal from "sweetalert2";
+import "../../../css/editarPedido.css";
+
 
 const EditarUsuario = () => {
   const { id } = useParams();
@@ -58,13 +60,13 @@ const EditarUsuario = () => {
         <hr />
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formid">
-            <Form.Label>ID Usuario*</Form.Label>
+            <Form.Label className="editarUsuario">ID Usuario*</Form.Label>
             <Form.Control type="text" disabled {...register("id")} />
 
             <Form.Text className="text-danger">{errors.id?.message}</Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formNombreUsuario">
-            <Form.Label>Nombre del usuario*</Form.Label>
+            <Form.Label className="editarUsuario">Nombre del usuario*</Form.Label>
             <Form.Control
               type="text"
               placeholder=" Ej:  Pedro Perez"
@@ -86,7 +88,7 @@ const EditarUsuario = () => {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formEmail">
-            <Form.Label>Email del usuario*</Form.Label>
+            <Form.Label className="editarUsuario">Email del usuario*</Form.Label>
             <Form.Control
               type="text"
               placeholder=" Ej: pepito@gmail.com"
@@ -107,7 +109,7 @@ const EditarUsuario = () => {
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="password">
-            <Form.Label>Contraseña*</Form.Label>
+            <Form.Label className="editarUsuario">Contraseña*</Form.Label>
             <Form.Control
               type="text"
               placeholder=" Ej: Pepito123"

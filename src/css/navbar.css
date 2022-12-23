@@ -36,9 +36,6 @@ div .navbar {
 
 }
 
-div#basic-navbar-nav.navbar.navbar-collapse.collapse.show{
-  margin-top: -150px;
-}
 
 a.navbar-brand{
   color: rgb(241, 241, 228);

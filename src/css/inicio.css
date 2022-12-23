@@ -169,10 +169,6 @@ a.card-link.tres:hover{
   text-decoration: none;
 }
 
-div.container{
-  display: flex;
-  gap:150px;
-}
 
 article.containerRight2{
   margin-bottom: 400px;

@@ -21,7 +21,7 @@ const CardProducto = (props) => {
 
   return (
     <Container className="mt-4">
-      <Card className="dos" style={{ width: "20rem" }}>
+      <Card className="dos">
         <Card.Img variant="top" src={props.imagen} />
         <Card.Body>
           <Card.Title className="dos">{props.nombreProducto}</Card.Title>
