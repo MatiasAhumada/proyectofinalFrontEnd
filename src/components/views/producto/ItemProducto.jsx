@@ -31,12 +31,12 @@ const ItemProducto = ({ producto, setProductos }) => {
             Swal.fire(
               "Se produjo un error",
               "Intente realizar esta operacion mas tarde",
-              "success"
+              "error"
             );
           }
         });
 
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        Swal.fire("Borrado!", "Su Producto a sido borrado.", "success");
       }
     });
   };

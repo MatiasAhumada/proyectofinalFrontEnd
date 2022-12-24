@@ -1,0 +1,25 @@
+footer{
+    margin-top: 100px;
+}
+
+section.container.mainSection{
+    background: none;
+    text-align: center;
+    height: auto;
+}
+
+h1.display-4{
+    text-align: center;
+    color: beige;
+}
+a.btn.btn-warning.my-2{
+    background-color: beige;
+    border: none;
+    color: brown;
+}
+
+button.btn.btn-danger{
+    background-color: brown;
+    border: solid 1px beige;
+    color: beige;
+}

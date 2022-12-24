@@ -15,13 +15,13 @@ const CardProducto = (props) => {
       navegacion("/login");
       Swal.fire("Debe estar logeado para realizar esta accion");
     } else {
-      navegacion("/error404");
+      navegacion("/crear-pedido");
     }
   };
 
   return (
     <Container className="mt-4">
-      <Card className="dos" style={{ width: "20rem" }}>
+      <Card className="dos">
         <Card.Img variant="top" src={props.imagen} />
         <Card.Body>
           <Card.Title className="dos">{props.nombreProducto}</Card.Title>
@@ -33,7 +33,7 @@ const CardProducto = (props) => {
           <ListGroup.Item className="dos">{props.categoria}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
-          <Button className="dos mt-2" onClick={onClick}>
+          <Button className="dos mt-2"  onClick={onClick}>
             Comprar
           </Button>
           <Button

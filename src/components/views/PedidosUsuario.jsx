@@ -1,10 +1,18 @@
 import "../../css/views.css";
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, Container } from "react-bootstrap";
+import { consultarPedidosAPI } from "../helpers/queris";
 
 
 const Pedidos = () => {
+  const [pedido, setPedido] = useState([])
+  useEffect(() => {
+    consultarPedidosAPI().then((respuesta)=>{
+      setPedido(respuesta)
+    })
+  }, [])
+  
     return (
         <Container>
         <Card className="gridLogin">

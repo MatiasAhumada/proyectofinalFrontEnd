@@ -1,0 +1,15 @@
+section{
+   min-height: 100vh;
+}
+
+a.btn.btn-dark.me-2.mb-1{
+    background-color: beige;
+    color: brown;
+    border: solid 1px brown;
+}
+a.btn.btn-warning{
+    background-color: beige;
+    color: brown;
+    border: solid 1px brown;
+    text-align: center;
+}

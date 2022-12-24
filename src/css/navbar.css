@@ -13,6 +13,15 @@ li {
   list-style: none;
 }
 
+a.nav{
+  color: white;
+  text-decoration: none;
+  margin:30px;
+}
+a.nav:hover{
+  opacity: 0.55;
+  color: white;
+}
 
 a.nav__brand:hover{
   color: rgb(241, 241, 228);
@@ -30,6 +39,7 @@ div .navbar {
 
 a.navbar-brand{
   color: rgb(241, 241, 228);
+  font-size: 20px;
 }
 
 a.navbar-brand:hover{
@@ -38,12 +48,16 @@ a.navbar-brand:hover{
   border-radius: 5%;
 }
 
+div.nav-item.dropdown{
+  align-self: center;
+}
 a.nav-link{
   color: rgb(241, 241, 228);
-
-
 }
 
+div#basic-navbar-nav.navbar.navbar-collapse.collapse{
+  background:none;
+}
 a.nav-link:hover{
   background-color: rgb(241, 241, 228);
   color: brown;

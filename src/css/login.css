@@ -1,0 +1,30 @@
+div.login.container{
+    margin-bottom: 160px;
+}
+
+input#email.form-control::placeholder{
+    color: #F1F1E4;
+    text-align: center;
+    opacity: 0.8;
+}
+input#password.form-control::placeholder{
+    color: #F1F1E4;
+    text-align: center;
+    opacity: 0.8;
+}
+
+section{
+    min-height: 100vh;
+}
+@media only screen and (max-width: 822px) and (min-width: 769px){
+    div.login.container{
+        margin-bottom: 400px;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 765px)
+{
+    div.login.container{
+        margin-top: 50px
+        ;
+    }
+}

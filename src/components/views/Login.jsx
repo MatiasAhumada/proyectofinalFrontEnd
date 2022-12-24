@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { usuarioLogin } from "../helpers/queris";
-import "../../css/views.css";
+import "../../css/login.css";
 
 const Login = ({ setUsuarioLogeado }) => {
   const navegar = useNavigate();
@@ -33,7 +33,7 @@ const Login = ({ setUsuarioLogeado }) => {
   };
 
   return (
-    <Container>
+    <Container className="login">
       <Card className="mt-4 w-100">
         <Card.Header as="h4">Login</Card.Header>
         <Card.Body>

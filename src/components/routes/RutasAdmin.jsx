@@ -28,7 +28,7 @@ const RutasAdmin = () => {
         ></Route>
         <Route
           exact
-          path="/editarPedido/:id"
+          path="/editar-Pedido/:id"
           element={<EditarPedido></EditarPedido>}
         ></Route>
         <Route

@@ -1,12 +1,32 @@
+import { Button, Form, Container } from "react-bootstrap";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Button,  Form } from "react-bootstrap";
 import { useParams, useNavigate } from "react-router-dom";
-import { editarPedidoApi, obtenerPedidoApi } from "../../helpers/queris";
 import Swal from "sweetalert2";
+import { editarPedidoAPI, obtenerPedidoAPI } from "../../helpers/queris";
+import "../../../css/editarPedido.css";
 
 const EditarPedido = () => {
   const { id } = useParams();
+  const navegacion = useNavigate();
+
+  useEffect(() => {
+    obtenerPedidoAPI(id).then((respuesta) => {
+      if (respuesta.status === 200) {
+        setValue("nombreUsuario", respuesta.dato.nombreUsuario);
+        setValue("pedido", respuesta.dato.pedido);
+        setValue("total", respuesta.dato.total);
+        setValue("estado", respuesta.dato.estado);
+      } else {
+        Swal.fire(
+          "Ocurrio un error",
+          "Intente este paso en unos minutos",
+          "error"
+        );
+      }
+    });
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -14,126 +34,123 @@ const EditarPedido = () => {
     setValue,
   } = useForm({
     defaultValues: {
-      nombrePedido: "",
-      precio: 1,
-      imagen: "",
-      detalle: "",
-      categoria: "",
+      nombreUsuario: "",
+      pedido: "",
+      total: "",
+      estado: "",
     },
   });
-  const navegacion = useNavigate();
 
-  const onSubmit = (datos) => {
-    editarPedidoApi(id, datos).then((datos) => {
-      if (datos.status === 200) {
-        Swal.fire("Pedido actualizado", "Bien!", "success");
-        navegacion("/pedidos");
+  const onSubmit = (pedido) => {
+    editarPedidoAPI(id, pedido).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire(
+          "Pedido actualizado",
+          "El pedido fue actualizado correctamente",
+          "success"
+        );
+        navegacion("/adminPedidos");
       } else {
-        Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
+        Swal.fire(
+          "Ocurrio un error",
+          "Intente este paso en unos minutos",
+          "error"
+        );
       }
     });
   };
 
-  useEffect(() => {
-    obtenerPedidoApi(id).then((respuesta) => {
-      if (respuesta.status === 200) {
-        console.log(respuesta.dato);
-        setValue("id", respuesta.dato._id);
-        setValue("nombre", respuesta.dato.nombre);
-        setValue("email", respuesta.dato.email);
-        setValue("password", respuesta.dato.password);
-      } else {
-        Swal.fire("Ocurrio un error", "Intente mas tarde", "error");
-      }
-    });
-  }, []);
-
   return (
-    <div
-      style={{
-        backgroundColor: "",
-      }}
-    >
-      <section className="container mainSection">
-        <h1 className="display-4 mt-5">Editar pedido</h1>
+    <div className="backgroundGral mainSection">
+      <Container className="my-4">
+        <h2 className="editar">Editar pedido</h2>
         <hr />
-        <Form onSubmit={handleSubmit(onSubmit)}>
-          <Form.Group className="mb-3" controlId="formid">
-            <Form.Label>ID Pedido*</Form.Label>
-            <Form.Control type="text" disabled {...register("id")} />
-
-            <Form.Text className="text-danger">{errors.id?.message}</Form.Text>
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formNombrePedido">
-            <Form.Label>Nombre del pedido*</Form.Label>
+      </Container>
+      <Container>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+          <Form.Group className="mb-3" controlId="formNombreUsuario">
+            <Form.Label className="editar">Nombre de usuario</Form.Label>
             <Form.Control
               type="text"
-              placeholder=" Ej:  Pedro Perez"
-              {...register("nombre", {
+              placeholder="Ej: RollingUser"
+              {...register("nombreUsuario", {
                 required: "Este dato es obligatorio",
                 minLength: {
-                  value: 2,
-                  message: "Debe ingresar como minimo 2 caracteres",
+                  value: 6,
+                  message: "Debe ingresar como minimo 6 caracteres",
                 },
                 maxLength: {
-                  value: 60,
-                  message: "Debe ingresar como maximo 50 caracteres",
+                  value: 20,
+                  message: "Debe ingresar como maximo 20 caracteres",
                 },
               })}
             />
             <Form.Text className="text-danger">
-              {errors.nombrePedido?.message}
+              {errors.nombreUsuario?.message}
             </Form.Text>
           </Form.Group>
-
-          <Form.Group className="mb-3" controlId="formEmail">
-            <Form.Label>Email del pedido*</Form.Label>
+          <Form.Group className="mb-3" controlId="formPedido">
+            <Form.Label className="editar">Pedido*</Form.Label>
             <Form.Control
               type="text"
-              placeholder=" Ej: pepito@gmail.com"
-              {...register("email", {
+              placeholder="Ej: 1 Pizza especial"
+              as="textarea"
+              style={{ height: "100px" }}
+              {...register("pedido", {
                 required: "Este dato es obligatorio",
                 minLength: {
-                  value: 10,
-                  message: "Debe ingresar como minimo 10 caracteres",
-                },
-                maxLength: {
-                  value: 500,
-                  message: "Debe ingresar como maximo 500 caracteres",
+                  value: 3,
+                  message: "Debe ingresar como minimo 3 caracteres",
                 },
               })}
             />
             <Form.Text className="text-danger">
-              {errors.detallePedido?.message}
+              {errors.pedido?.message}
             </Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formPassword">
-            <Form.Label>Contraseña*</Form.Label>
+          <Form.Group className="mb-3" controlId="formTotal">
+            <Form.Label className="editar">Monto total</Form.Label>
             <Form.Control
-              type="text"
-              placeholder=" Ej: Pepito123"
-              {...register("password", {
-                required: "El precio es un valor requerido",
+              type="number"
+              placeholder="El total se cargara a medida que usted ingrese productos"
+              {...register("total", {
+                required: "Este dato es obligatorio",
                 min: {
                   value: 1,
-                  message: "El precio debe ser como minimo de $10",
+                  message: "El total debe ser como minimo $1",
                 },
                 max: {
-                  value: 1000,
-                  message: "El precio de pedido como maximo debe ser de 10000",
+                  value: 1000000,
+                  message: "El total debe ser como minimo $1000000",
                 },
               })}
             />
             <Form.Text className="text-danger">
-              {errors.precio?.message}
+              {errors.total?.message}
             </Form.Text>
           </Form.Group>
-
-          <Button variant="primary" type="submit">
-            Guardar
+          <Form.Group className="mb-3" controlId="formEstado">
+            <Form.Label className="editar">Estado</Form.Label>
+            <Form.Select
+              {...register("estado", {
+                required: "Debe seleccionar el estado del pedido",
+              })}
+            >
+              <option value="">Seleccione el estado del pedido</option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="En elaboracion">En elaboracion</option>
+              <option value="Listo para retirar">Listo para retirar</option>
+              <option value="Cancelado">Cancelado</option>
+            </Form.Select>
+            <Form.Text className="text-danger">
+              {errors.estado?.message}
+            </Form.Text>
+          </Form.Group>
+          <Button variant="warning" type="submit">
+            Modificar pedido
           </Button>
         </Form>
-      </section>
+      </Container>
     </div>
   );
 };

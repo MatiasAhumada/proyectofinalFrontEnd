@@ -20,12 +20,12 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
         </Navbar.Brand>
        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" className="navbar">
           <Nav className="me-auto">
-            <NavLink to="/">Inicio</NavLink>
-            <NavLink to="/nosotros">Nosotros</NavLink>           
-            <NavLink to="/menu">Menu</NavLink>
-            <NavLink to="/registro">Registro</NavLink>
+            <NavLink to="/" className="nav">Inicio</NavLink>
+            <NavLink to="/nosotros" className="nav">Nosotros</NavLink>           
+            <NavLink to="/menu" className="nav">Menu</NavLink>
+            <NavLink to="/registro" className="nav">Registro</NavLink>
 
             {usuarioLogueado.email ? (
               <>
@@ -34,7 +34,7 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
                 </Button>
               </>
             ) : (
-              <NavLink to="/login">Iniciar Sesión</NavLink>
+              <NavLink to="/login" className="nav">Iniciar Sesión</NavLink>
             )}
 
             {usuarioLogueado.isAdmin ? (
@@ -50,7 +50,7 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
                   <NavDropdown.Item
                     eventKey="4.2"
                     as={Link}
-                    to={"/error404"}
+                    to={"/adminPedidos"}
                   >
                     Pedidos
                   </NavDropdown.Item>

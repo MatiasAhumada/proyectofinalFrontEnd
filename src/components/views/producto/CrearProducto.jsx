@@ -3,6 +3,8 @@ import { Form, Button } from "react-bootstrap";
 import { crearProductoApi } from "../../helpers/queris";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import "../../../css/editarProducto.css"
+
 
 const CrearProducto = () => {
   const {
@@ -43,7 +45,7 @@ const CrearProducto = () => {
       <hr />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group className="mb-3 " controlId="formNombreProdcuto">
-          <Form.Label className="text-dark">Nombre producto*</Form.Label>
+          <Form.Label className="crearProducto">Nombre producto*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej:  Taco Epiko"
@@ -65,7 +67,7 @@ const CrearProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formNombreProdcuto">
-          <Form.Label  className="text-dark">Detalle del producto*</Form.Label>
+          <Form.Label  className="crearProducto">Detalle del producto*</Form.Label>
           <Form.Control
             type="text"
             placeholder=" Ej:  Este producto contiene los sigs ingredientes y detalles de la preparación"
@@ -86,7 +88,7 @@ const CrearProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label  className="text-dark">Precio*</Form.Label>
+          <Form.Label  className="crearProducto">Precio*</Form.Label>
           <Form.Control
             type="number"
             placeholder=" Ej: 10"
@@ -107,7 +109,7 @@ const CrearProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formImagen">
-          <Form.Label  className="text-dark">Imagen URL*</Form.Label>
+          <Form.Label className="crearProducto">Imagen URL*</Form.Label>
           <Form.Control
             type="text"
             placeholder="Ej: https://www.pexels.com/es-es/foto/alimentos-cocidos-en-placa-azul-2092507/"
@@ -124,17 +126,17 @@ const CrearProducto = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formPrecio">
-          <Form.Label  className="text-dark">Categoria*</Form.Label>
+          <Form.Label  className="crearProducto">Categoria*</Form.Label>
           <Form.Select
             {...register("categoria", {
               required: "Debe seleccionar una categoría",
             })}
           >
             <option value="">Seleccione una opcion</option>
-            <option value="picante epiko">Picante epiko</option>
-            <option value="medio picante">Medio picante</option>
+            <option value="picante epiko">Picante Épico</option>
+            <option value="medio picante">Medio Picante</option>
             <option value="comida caliente">Comida Caliente</option>
-            <option value="comida fria">Comida fria</option>
+            <option value="comida fria">Comida Fría</option>
           </Form.Select>
           <Form.Text className="text-white">
             {errors.categoria?.message}

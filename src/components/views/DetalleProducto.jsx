@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { obtenerProductoApi } from "../helpers/queris";
 import "../../css/views.css";
+import "../../css/detalle.css";
 
 const DetalleProducto = () => {
   const [detalle, setDetalle] = useState([]);
@@ -26,17 +27,17 @@ const DetalleProducto = () => {
   }, []);
 
   return (
-    <Card className="container  my-5  mainSection">
-      <Row className="w-75 ms-5 mt-5 ">
-        <Col md={6} >
-          <Image src={detalle.imagen} alt="brownie" className="mt-4 w-100" />
+    <Card className="container mt-5  mainSection detalle">
+      <Row className="mt-5 ">
+        <Col md={12} lg={8} sm={12}>
+          <Image src={detalle.imagen} alt="Comida" className="w-100" />
         </Col>
-        <Col md={6} className="py-3">
-          <Card.Title>{detalle.nombreProducto}</Card.Title>
+        <Col md={12} lg={4} sm={12} className="mt-4">
+          <Card.Title className="fs-1">{detalle.nombreProducto}</Card.Title>
           <hr />
-          <Card.Text>{detalle.detalle}</Card.Text>
-          <Badge bg="dark" >{detalle.categoria}</Badge>
-          <Card.Text className="mt-3">
+          <Card.Text className="fs-5">{detalle.detalle}</Card.Text>
+          <Badge bg="light fs-5" >{detalle.categoria}</Badge>
+          <Card.Text className="mt-3 fs-5">
             <b>Precio: ${detalle.precio}</b>
           </Card.Text>
         </Col>
