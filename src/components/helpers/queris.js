@@ -1,6 +1,7 @@
 const urlUsuario =process.env.REACT_APP_API_STACK_EPIK_USUARIOS
-const URLpedidos = process.env.REACT_APP_API_LOCAL_PEDIDOS
-// REACT_APP_API_STACK_EPIK_PEDIDOS
+const URLpedidos = process.env.REACT_APP_API_STACK_EPIK_PEDIDOS
+
+
 const URL = process.env.REACT_APP_API_STACK_EPIK_PRODUCTOS
 // USUARIOS
 export const usuarioLogin = async (usuario) => {
