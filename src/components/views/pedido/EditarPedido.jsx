@@ -13,7 +13,7 @@ const EditarPedido = () => {
   useEffect(() => {
     obtenerPedidoAPI(id).then((respuesta) => {
       if (respuesta.status === 200) {
-        setValue("nombreUsuario", respuesta.dato.nombreUsuario);
+        setValue("nombrePedido", respuesta.dato.nombrePedido);
         setValue("pedido", respuesta.dato.pedido);
         setValue("total", respuesta.dato.total);
         setValue("estado", respuesta.dato.estado);
@@ -34,7 +34,7 @@ const EditarPedido = () => {
     setValue,
   } = useForm({
     defaultValues: {
-      nombreUsuario: "",
+      nombrePedido: "",
       pedido: "",
       total: "",
       estado: "",
@@ -68,12 +68,12 @@ const EditarPedido = () => {
       </Container>
       <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
-          <Form.Group className="mb-3" controlId="formNombreUsuario">
+          <Form.Group className="mb-3" controlId="formNombrePedido">
             <Form.Label className="editar">Nombre de usuario</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Ej: RollingUser"
-              {...register("nombreUsuario", {
+             disabled
+              {...register("nombrePedido", {
                 required: "Este dato es obligatorio",
                 minLength: {
                   value: 6,
@@ -86,7 +86,7 @@ const EditarPedido = () => {
               })}
             />
             <Form.Text className="text-danger">
-              {errors.nombreUsuario?.message}
+              {errors.nombrePedido?.message}
             </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formPedido">
@@ -112,7 +112,7 @@ const EditarPedido = () => {
             <Form.Label className="editar">Monto total</Form.Label>
             <Form.Control
               type="number"
-              placeholder="El total se cargara a medida que usted ingrese productos"
+              disabled
               {...register("total", {
                 required: "Este dato es obligatorio",
                 min: {

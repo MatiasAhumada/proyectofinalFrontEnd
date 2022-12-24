@@ -6,7 +6,7 @@ const CardPedido = ({ pedido}) => {
     <Col sm={12} md={4} lg={3}>
       <Card className="mb-4">
         <Card.Header>
-          <Card.Title>Pedido de: {pedido.nombreUsuario}</Card.Title>
+          <Card.Title>Pedido de: {pedido.nombrePedido}</Card.Title>
         </Card.Header>
         <Card.Body>
           <Card.Subtitle className="fs-5">

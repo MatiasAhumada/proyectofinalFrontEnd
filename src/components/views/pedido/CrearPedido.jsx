@@ -41,7 +41,7 @@ import {
     };
   
     useEffect(() => {
-      if (!localStorage.getItem("tokenUsuario")) {
+      if (!localStorage.getItem("usuarioBar")) {
         navegacion("/login");
       }
       consultarProductoApi().then((respuesta) => {
@@ -64,7 +64,7 @@ import {
       setValue,
     } = useForm({
       defaultValues: {
-        nombreUsuario: usuarioLogueado.nombre,
+        nombrePedido: usuarioLogueado.nombre,
         pedido: "",
         total: "",
         estado: "Pendiente",
@@ -160,13 +160,13 @@ import {
             </Card.Header>
             <Card.Body>
               <Form onSubmit={handleSubmit(onSubmit)}>
-                <Form.Group className="mb-3" controlId="formNombreUsuario">
+                <Form.Group className="mb-3" controlId="formNombrePedido">
                   <Form.Label>Nombre de usuario</Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="Ej: RollingUser"
                     disabled
-                    {...register("nombreUsuario", {
+                    {...register("nombrePedido", {
                       required: "Este dato es obligatorio",
                       minLength: {
                         value: 5,
@@ -179,7 +179,7 @@ import {
                     })}
                   />
                   <Form.Text className="text-danger">
-                    {errors.nombreUsuario?.message}
+                    {errors.nombrePedido?.message}
                   </Form.Text>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formPedido">
