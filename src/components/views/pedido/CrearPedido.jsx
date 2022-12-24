@@ -94,7 +94,7 @@ import {
             <h3 className="display-4 text-center mb-3">Menu disponible</h3>
             <Row>
               {productos.map((producto) => (
-                <Col sm={12} md={3} lg={2} key={producto._id}>
+                <Col sm={12} lg={2} key={producto._id}>
                   <Card className="mb-4">
                     <Card.Img variant="top" src={producto.imagen} />
                     <Card.Body>

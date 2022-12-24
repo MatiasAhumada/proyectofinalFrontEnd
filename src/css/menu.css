@@ -5,6 +5,9 @@ div.g-4.row-cols-md-4.row-cols-1{
 p.card-text{
     max-height: 800px;
 }
+div.dos.card{
+    display: flex;
+}
 
 @media screen and (max-width: 820px) {
    div.dos.card{
@@ -16,6 +19,45 @@ p.card-text{
    }
   
   }
+
+  @media only screen and (min-width: 767px) and (max-width: 819px){
+    div.dos.card{
+    width: 700px;
+    min-height: 300px;
+    
+  }
+  div.mt-4.container{
+    text-align: center;
+    margin: 0;
+  }
+  div.g-4.row.row-cols-md-4.row-cols-1{
+    text-align: center;
+    margin: 0;
+  }
+  article.containerRight2{
+    margin-bottom: -120px;
+  }
+
+}
+@media only screen and (min-width: 820px) and (max-width: 850px){
+div.dos.card{
+    width: 750px;
+    min-height: 300px;
+}
+div.mt-4.container{
+    text-align: center;
+    margin: 0;
+}
+div.g-4.row.row-cols-md-4.row-cols-1{
+    text-align: center;
+    margin: 0;
+}
+article.containerRight2{
+    margin-bottom: -80px;
+}
+}
+
+
   
 @media screen and (min-width: 821px) {
     div.dos.card{

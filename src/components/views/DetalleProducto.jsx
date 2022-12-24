@@ -28,11 +28,11 @@ const DetalleProducto = () => {
 
   return (
     <Card className="container mt-5  mainSection detalle">
-      <Row className="w-75 ms-5 ps-4  mt-5 ">
-        <Col md={6} lg={8} sm={12}>
-          <Image src={detalle.imagen} alt="Comida" className="mt-4 ms-4 w-75" />
+      <Row className="mt-5 ">
+        <Col md={12} lg={8} sm={12}>
+          <Image src={detalle.imagen} alt="Comida" className="w-100" />
         </Col>
-        <Col md={6} lg={4} sm={12} className="mt-4">
+        <Col md={12} lg={4} sm={12} className="mt-4">
           <Card.Title className="fs-1">{detalle.nombreProducto}</Card.Title>
           <hr />
           <Card.Text className="fs-5">{detalle.detalle}</Card.Text>

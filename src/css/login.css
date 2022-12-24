@@ -16,3 +16,15 @@ input#password.form-control::placeholder{
 section{
     min-height: 100vh;
 }
+@media only screen and (max-width: 822px) and (min-width: 769px){
+    div.login.container{
+        margin-bottom: 400px;
+    }
+}
+@media only screen and (max-width: 768px) and (min-width: 765px)
+{
+    div.login.container{
+        margin-top: 50px
+        ;
+    }
+}

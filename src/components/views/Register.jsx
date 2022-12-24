@@ -43,10 +43,11 @@ const Register = () => {
   };
 
   return (
+    
     <Container className="mt-5 registro">
       <Card className="w-100">
         <Card.Header as="h4">Registro</Card.Header>
-        <Card.Body>
+        <Card.Body className="registro">
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="formNombreApellido">
               <Form.Label>Nombre y apellido</Form.Label>

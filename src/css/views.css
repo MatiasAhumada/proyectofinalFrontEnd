@@ -160,4 +160,17 @@ button.mt-3.btn.btn-success:hover{
     color: #F1F1E4;
     transform: scale(1.1);
 }
+@media only screen and (max-width: 822px) and (min-width: 819px){
+div.mt-5.registro.container{
+    margin-bottom: 300px;
+}
+}
+@media only screen and (max-width: 769px) and (min-width: 767px){
+div.mt-5.registro.container{
+    margin-bottom: 150px;
+}
+
+}
+
+
 
