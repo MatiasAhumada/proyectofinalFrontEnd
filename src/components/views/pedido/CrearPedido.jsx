@@ -41,7 +41,7 @@ import {
     };
   
     useEffect(() => {
-      if (!localStorage.getItem("tokenUsuario")) {
+      if (!localStorage.getItem("usuarioBar")) {
         navegacion("/login");
       }
       consultarProductoApi().then((respuesta) => {
