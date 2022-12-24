@@ -108,32 +108,7 @@ const EditarUsuario = () => {
               {errors.detalleUsuario?.message}
             </Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="password">
-            <Form.Label className="editarUsuario">Contraseña*</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder=" Ej: Pepito123"
-              {...register("password", {
-                required: "El precio es un valor requerido",
-                min: {
-                  value: 1,
-                  message: "El precio debe ser como minimo de $10",
-                },
-                max: {
-                  value: 1000,
-                  message: "El precio de usuario como maximo debe ser de 10000",
-                },
-                pattern: {
-                  value: /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/,
-                  message: "La contraseña debe contener 6 caracteres minimo, compuestos por 1 letra mayuscula, 1 minuscula, 1 numero y un caracter (!?@$#/&)",
-                },
-              })}
-            />
-            <Form.Text className="text-danger">
-              {errors.precio?.message}
-            </Form.Text>
-          </Form.Group>
-
+          
           <Button variant="primary" type="submit">
             Guardar
           </Button>
