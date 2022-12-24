@@ -29,7 +29,7 @@ const CardProducto = (props) => {
         </Card.Body>
         <ListGroup className="list-group-flush">
           <ListGroup.Item className="dos">${props.precio}</ListGroup.Item>
-          <ListGroup.Item className="dos">1 Persona</ListGroup.Item>
+         
           <ListGroup.Item className="dos">{props.categoria}</ListGroup.Item>
         </ListGroup>
         <Card.Body>
