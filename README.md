@@ -22,7 +22,7 @@
 ### ¿Cómo clonar el repositorio?
 1. Creamos la carpeta FrontEnd donde vamos a tener nuestro código
 2. Click derecho dentro de la carpeta -> Git Bash Here
-3. `git clone https://github.com/MatiasAhumada/proyectofinalFrontEnd`
+3. `git clone https://github.com/MatiasAhumada/proyectofinalFrontEnd.git`
 4. `npm install`
 5. `npm run start`
 
