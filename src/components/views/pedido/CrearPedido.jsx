@@ -45,7 +45,12 @@ import {
         navegacion("/login");
       }
       consultarProductoApi().then((respuesta) => {
-        setProductos(respuesta);
+        if(respuesta){
+          setProductos(respuesta);
+        }else{
+          navegacion('/error404')
+        }
+       
       });
       const pedidoFinal = menuPedido.map((producto) => producto.nombreProducto);
       setValue("pedido", pedidoFinal);
@@ -73,7 +78,9 @@ import {
   
     const onSubmit = (datos) => {
       crearPedidoAPI(datos).then((respuesta) => {
+        
         if (respuesta.status === 201) {
+          console.log(respuesta.status)
           Swal.fire(
             "Pedido realizado",
             "El pedido fue realizado con exito!",

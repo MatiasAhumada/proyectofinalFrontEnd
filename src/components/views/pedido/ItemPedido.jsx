@@ -4,6 +4,7 @@ import { borrarPedidoAPI, consultarPedidosAPI } from "../../helpers/queris";
 import Swal from "sweetalert2";
 
 const ItemPedido = ({ pedido, setPedidos }) => {
+
   const borrarPedido = () => {
     Swal.fire({
       title: "¿Esta seguro de eliminar el pedido?",

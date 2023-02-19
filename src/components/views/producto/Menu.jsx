@@ -4,27 +4,33 @@ import "../../../css/menu.css";
 import { consultarProductoApi } from "../../helpers/queris";
 import CardProducto from "./CardProducto";
 import { Row } from "react-bootstrap";
-import Spiner from '../Spiner'
+import Spiner from "../Spiner";
+import { useNavigate } from "react-router-dom";
 
 const Menu = () => {
   const [productos, setProductos] = useState([]);
   const [mostrarSpiner, setMostrarSpiner] = useState(true);
+  const navegar = useNavigate();
   useEffect(() => {
     consultarProductoApi().then((respuesta) => {
-      try{      
-        setMostrarSpiner(true);
-        setProductos(respuesta);
-        setMostrarSpiner(false);
-
-      }catch(error){
-        console.log(error)}
+      if (respuesta) {
+        try {
+          setMostrarSpiner(true);
+          setProductos(respuesta);
+          setMostrarSpiner(false);
+        } catch (error) {
+          console.log(error);
+        }
+      } else {
+        navegar("/error404");
+      }
     });
   }, []);
   const mostrarComponente =
-  mostrarSpiner === true ? (
-   <Spiner className='mt-5 pt-5'></Spiner>
-  ) : (
-    <Row xs={1} md={4} className="g-4">
+    mostrarSpiner === true ? (
+      <Spiner className="mt-5 pt-5"></Spiner>
+    ) : (
+      <Row xs={1} md={4} className="g-4">
         {productos.map((objeto, _id) => (
           <CardProducto
             key={_id}
@@ -37,15 +43,14 @@ const Menu = () => {
           ></CardProducto>
         ))}
       </Row>
-  );
+    );
 
   return (
     <article className="containerRight2">
       <h1 className="titulo">Nuestro Menú</h1>
       <hr />
       <br />
-{mostrarComponente}
-      
+      {mostrarComponente}
 
       <br />
       <br />
