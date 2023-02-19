@@ -11,13 +11,17 @@ const Menu = () => {
   const [mostrarSpiner, setMostrarSpiner] = useState(true);
   useEffect(() => {
     consultarProductoApi().then((respuesta) => {
-      try{      
-        setMostrarSpiner(true);
-        setProductos(respuesta);
-        setMostrarSpiner(false);
-
-      }catch(error){
-        console.log(error)}
+       if (respuesta) {
+        try {
+          setMostrarSpiner(true);
+          setProductos(respuesta);
+          setMostrarSpiner(false);
+        } catch (error) {
+          console.log(error);
+        }
+      } else {
+        navegar("/error404");
+      }
     });
   }, []);
   const mostrarComponente =
