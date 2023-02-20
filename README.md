@@ -9,13 +9,22 @@
 
 <br>
 
-*Accedé a la demo del proyecto [aquí](https://stack-epil.netlify.app/)*
+*Accedé a la demo del proyecto [aquí](https://stack-epik.netlify.app/)*
 
 
 <br>
 
 ### Requerimientos del proyecto
 *En este proyecto los alumnos en forma grupal se dividirán las tareas necesarias para diseñar una aplicación para que los clientes de un restaurante elijan entre distintos productos y puedan hacer su pedido. El alcance de este proyecto se centra en realizar todos los pasos del CRUD y deberá contar con un login con diferentes opciones dependiendo el usuario que se loguea. Se considera que solo el usuario administrador podrá administrar las diferentes opciones de menú, mientras que los clientes deberán iniciar su sesión o registrarse para poder solicitar un pedido.*
+
+<br>
+
+### ¿Cómo clonar el repositorio?
+1. Creamos la carpeta FrontEnd donde vamos a tener nuestro código
+2. Click derecho dentro de la carpeta -> Git Bash Here
+3. `git clone https://github.com/MatiasAhumada/proyectofinalFrontEnd.git`
+4. `npm install`
+5. `npm run start`
 
 <br>
 
