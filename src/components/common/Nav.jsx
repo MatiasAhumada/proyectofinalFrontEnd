@@ -25,7 +25,7 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
             <NavLink to="/" className="nav">Inicio</NavLink>
             <NavLink to="/nosotros" className="nav">Nosotros</NavLink>           
             <NavLink to="/menu" className="nav">Menu</NavLink>
-            <NavLink to="/registro" className="nav">Registro</NavLink>
+           
 
             {usuarioLogueado.email ? (
               <>
@@ -34,7 +34,10 @@ function NavBar({ usuarioLogueado, setUsuarioLogueado }) {
                 </Button>
               </>
             ) : (
-              <NavLink to="/login" className="nav">Iniciar Sesión</NavLink>
+              <> <NavLink to="/registro" className="nav">Registro</NavLink>
+               <NavLink to="/login" className="nav">Iniciar Sesión</NavLink>
+               </>
+             
             )}
 
             {usuarioLogueado.isAdmin ? (

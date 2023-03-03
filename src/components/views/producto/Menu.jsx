@@ -12,6 +12,7 @@ const Menu = () => {
   const [mostrarSpiner, setMostrarSpiner] = useState(true);
   const navegar = useNavigate();
   useEffect(() => {
+    
     consultarProductoApi().then((respuesta) => {
       if (respuesta) {
         try {
