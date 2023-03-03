@@ -77,10 +77,11 @@ import {
     });
   
     const onSubmit = (datos) => {
+ 
       crearPedidoAPI(datos).then((respuesta) => {
-        
+       
         if (respuesta.status === 201) {
-          console.log(respuesta.status)
+        
           Swal.fire(
             "Pedido realizado",
             "El pedido fue realizado con exito!",
