@@ -78,7 +78,7 @@ import {
   
     const onSubmit = (datos) => {
       crearPedidoAPI(datos).then((respuesta) => {
-        
+        console.log(respuesta)
         if (respuesta.status === 201) {
           console.log(respuesta.status)
           Swal.fire(
